@@ -1,1 +1,2 @@
 admin.addPeer()
+admin.addPeer()

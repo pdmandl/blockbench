@@ -5,7 +5,7 @@
                 "eip150Block": 0,
                 "eip155Block": 0,
                 "eip158Block": 0,
-                "clique": {}
+                "ethash": {}
         },
         "nonce": "0x0000000000000042",
         "timestamp": "0x0",

@@ -13,7 +13,7 @@ LOG_DIR=/home/ubuntu/ycsb
 EXE_HOME=/home/ubuntu/blockbench/src/macro/ycsb
 # name/type of the benchmark
 #BENCHMARK=ycsb
-BENCHMARK=smallbank
+BENCHMARK=yscb
 # SSH user (with public key auth) to use to run the scripts on all machines
 USER=ubuntu
 # RPCport used by clients and ethereum nodes

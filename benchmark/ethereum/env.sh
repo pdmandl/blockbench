@@ -12,7 +12,7 @@ ETH_DATA=/home/ubuntu/node1
 # folder in which benchmark clients should store their log files
 LOG_DIR=/home/ubuntu/ycsb
 # folder that contains the benchmark (client) executable (make sure that you have build the client) (this could be on a network share)
-EXE_HOME=/home/ubuntu/blockbench/src/macro/ycsb
+EXE_HOME=/home/ubuntu/blockbench/src/macro/kvstore
 # name/type of the benchmark
 #BENCHMARK=ycsb
 BENCHMARK=yscb

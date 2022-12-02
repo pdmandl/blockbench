@@ -5,7 +5,7 @@ cd `dirname ${BASH_SOURCE-$0}`
 
 i=0
 for host in `cat $HOSTS`; do
-  ssh -oStrictHostKeyChecking=no $USER@$host "rm -rf blockbench && git clone ${GIT_REPO}"
+  ssh -oStrictHostKeyChecking=no $USER@$host "cd blockbench && git pull"
   echo done node $host
 done
 for host in `cat $CLIENTS`; do

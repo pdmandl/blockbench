@@ -25,6 +25,7 @@ PRIVATEKEY=$ETH_HOME/keys
 # Password used for unlocking the above private key or for creating a new account as ethereum coinbase
 PWD="r2d2c3po"
 
+GIT_REPO=https://github.com/pdmandl/blockbench.git
 ##comment these out for smallbank
 #EXE_HOME=$ETH_HOME/../../src/smallbank/ethereum/ycsb
 

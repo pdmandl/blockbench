@@ -11,7 +11,7 @@ LOG_DIR=$LOG_DIR/exp_$3"_"servers_$1"_"threads_$4"_"rates"_"$TIMESTAMP
 mkdir -p $LOG_DIR
 i=0
 echo "iterating over hosts for clientID=$2"
-for host in `cat $HOSTS`; do
+for host in `cat $CLIENT_HOSTS`; do
   let n=i/2
   let i=i+1
   if [[ $n -eq $2 ]]; then

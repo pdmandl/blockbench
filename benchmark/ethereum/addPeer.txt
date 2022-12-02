@@ -1,2 +1,2 @@
-'admin.addPeer("enode://d57e8e41526ab279c26fdeb008b6583081fc9a4abb5c49f721a99c3dc2cdee0f65a9809752a9f26d4cba473e0a26599dec92336846e36db8dd0f1d4ea75d7a93@192.168.4.72:30303?discport=0")'
-'admin.addPeer("enode://c939fdb2d5f27919b6ef41b35f002690385ca7fa7d913abc112f3ea456ca3d0105843fdadca5a8c30edaffdf21edfcf74b1ec7b6cacfd1b682e64d9e87bbb54f@192.168.4.150:30303?discport=0")'
+'admin.addPeer("enode://bbd9666e366f2c91656eb39ef1bde3ef8cb18898202228c0e5f8e8381277b0a211866ef7f3f82fc3fe55db2c6ada9d0fe3d4bbd3e8bac2012cad2a0a6c4c1741@192.168.4.72:30303?discport=0")'
+'admin.addPeer("enode://26fc4acabc40edbbcc35d1a1bee9b0b76a16db4e4b4ff5d1c47f711a9acf7151f2badb9d22e7160221eccb2c407f0fbb6c85040dff5ff6c8aa0c5b4776bef12e@192.168.4.150:30303?discport=0")'

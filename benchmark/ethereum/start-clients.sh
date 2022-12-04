@@ -13,6 +13,8 @@ i=0
 echo "iterating over hosts for clientID=$2"
 for host in `cat $CLIENT_HOSTS`; do
   let n=i/2
+  echo "n ist " $n
+  echo "i ist " $i
   let i=i+1
   if [[ $n -eq $2 ]]; then
     #cd $ETH_HOME/../src/ycsb

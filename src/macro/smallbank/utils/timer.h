@@ -9,11 +9,13 @@ void sleep(double t);
 long time_now();
 
 template <typename T>
-class Timer {
- public:
+class Timer
+{
+public:
   void Start() { time_ = Clock::now(); }
 
-  T End() {
+  T End()
+  {
     Duration span;
     Clock::time_point t = Clock::now();
     span = std::chrono::duration_cast<Duration>(t - time_);
@@ -22,7 +24,8 @@ class Timer {
 
   void Tic() { last_time_ = Clock::now(); }
 
-  T Toc() {
+  T Toc()
+  {
     Duration span;
     Clock::time_point t = Clock::now();
     span = std::chrono::duration_cast<Duration>(t - last_time_);
@@ -30,12 +33,11 @@ class Timer {
     return span.count();
   }
 
- private:
+private:
   typedef std::chrono::high_resolution_clock Clock;
   typedef std::chrono::duration<T> Duration;
 
   Clock::time_point time_;
   Clock::time_point last_time_;
 };
-
 #endif

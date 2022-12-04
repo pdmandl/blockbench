@@ -92,7 +92,7 @@ int StatusThread(DB *sb, string dbname, string endpoint, double interval, int st
 
   while (true)
   {
-    start_time = utils::time_now();
+    start_time = time_now();
     int tip = sb->get_tip_block_number();
     if (tip == -1) // fail
       sleep(interval);
@@ -102,7 +102,7 @@ int StatusThread(DB *sb, string dbname, string endpoint, double interval, int st
       cout << "polled block " << cur_block_height << " : " << txs.size()
            << " txs " << endl;
       cur_block_height++;
-      long block_time = utils::time_now();
+      long block_time = time_now();
       txlock_.lock();
       for (string tmp : txs)
       {
@@ -125,7 +125,7 @@ int StatusThread(DB *sb, string dbname, string endpoint, double interval, int st
     txcount = 0;
     latency = 0;
 
-    end_time = utils::time_now();
+    end_time = time_now();
 
     // sleep in nanosecond
     utils::sleep(interval - (end_time - start_time) / 1000000000.0);
@@ -183,7 +183,7 @@ int main(const int argc, const char *argv[])
   const int total_ops = stoi(props.GetProperty("total_ops", "10000"));
   vector<thread> threads;
 
-  utils::Timer<double> timer;
+  Timer<double> timer;
   timer.Start();
   stat_timer.Tic();
 

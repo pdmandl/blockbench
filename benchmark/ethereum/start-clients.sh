@@ -22,8 +22,8 @@ for host in `cat $CLIENT_HOSTS`; do
     LD_LIBRARY_PATH=/usr/local/lib
     export LD_LIBRARY_PATH
     chmod 755 driver
-    nohup ./driver -db ethereum -threads $1 -P workloads/workloada.spec -endpoint $host:8051 -txrate $4 -wl ycsb -wt 60 > $LOG_DIR/client_$2"_"$host 2>&1 &
-    #nohup ./driver -db ethereum -ops 10000 -threads $1 -txrate $4 -fp stat.txt -wl smallbank -wt 60 -endpoint $host:8051 > $LOG_DIR/client_$2"_"$host 2>&1 &
+    #nohup ./driver -db ethereum -threads $1 -P workloads/workloada.spec -endpoint $host:8051 -txrate $4 -wl ycsb -wt 60 > $LOG_DIR/client_$2"_"$host 2>&1 &
+    nohup ./driver -db ethereum -ops 10000 -threads $1 -txrate $4 -fp stat.txt -wl smallbank -wt 60 -endpoint $host:8051 > $LOG_DIR/client_$2"_"$host 2>&1 &
   else
     echo at host $i, value for n=$n did not match clientID=$2, not starting client to keep number of clients and servers equal
   fi

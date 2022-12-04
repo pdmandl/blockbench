@@ -10,12 +10,12 @@ CLIENTS=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/ethereum/cli
 # folder in which ethereum nodes should store the ethereum data
 ETH_DATA=/home/ubuntu/node1
 # folder in which benchmark clients should store their log files
-LOG_DIR=/home/ubuntu/ycsb
+LOG_DIR=/home/ubuntu/smallbank
 # folder that contains the benchmark (client) executable (make sure that you have build the client) (this could be on a network share)
-EXE_HOME=/home/ubuntu/blockbench/src/macro/kvstore
+EXE_HOME=/home/ubuntu/blockbench/src/macro/smallbank
 # name/type of the benchmark
 #BENCHMARK=ycsb
-BENCHMARK=yscb
+BENCHMARK=smallbank
 # SSH user (with public key auth) to use to run the scripts on all machines
 USER=ubuntu
 # RPCport used by clients and ethereum nodes

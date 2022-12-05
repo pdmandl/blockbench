@@ -1,5 +1,4 @@
 #!/bin/bash
-#args: number_of_nodes
 cd `dirname ${BASH_SOURCE-$0}`
 . env.sh
 
@@ -10,7 +9,7 @@ blsPubKey=""
 nodeId=""
 cat secrets.txt | while read line 
 do
-    if [[$i == 3]]
+    if [[ "$i" == "3"]];
     then
         echo $i ':' $line
     else 

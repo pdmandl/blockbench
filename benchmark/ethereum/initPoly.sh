@@ -10,7 +10,7 @@ nodeId=""
 cat secrets.txt | while read line 
 do
     let i=$i+1
-    if [[ "${i}" == "3"]]
+    if [ "$i" == "3"]
     then
         echo $i ':' $line
     else 

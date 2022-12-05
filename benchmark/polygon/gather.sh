@@ -11,5 +11,6 @@ for secret in `cat $SECRETS`; do
   command="${command} --bootnode ${secret}"
 done
 for host in `cat $HOSTS`; do
+  ssh -oStrictHostKeyChecking=no $USER@$host chmod 755 $ETH_HOME/start.sh
   ssh -oStrictHostKeyChecking=no $USER@$host $ETH_HOME/start.sh $command 
 done

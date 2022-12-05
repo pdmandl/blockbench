@@ -1,4 +1,5 @@
-sudo apt install golang-go
+sudo rm -rf /usr/local/go 
+sudo snap install go --classic
 go install
 git clone https://github.com/0xPolygon/polygon-edge.git
 cd polygon-edge/

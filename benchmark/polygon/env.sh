@@ -13,6 +13,8 @@ ETH_DATA=/home/ubuntu/node1
 LOG_DIR=/home/ubuntu/smallbank
 # folder that contains the benchmark (client) executable (make sure that you have build the client) (this could be on a network share)
 EXE_HOME=/home/ubuntu/blockbench/src/macro/smallbank
+SECRETS=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/polygon/secrets.txt
+MULTI=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/polygon/multi.txt
 # name/type of the benchmark
 #BENCHMARK=ycsb
 BENCHMARK=smallbank

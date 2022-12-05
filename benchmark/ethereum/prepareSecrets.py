@@ -1,8 +1,6 @@
-import socket
-hostname = socket.gethostname()
-IPAddr = socket.gethostbyname(hostname)
+import sys
 
 file1 = open('secrets.txt', 'r')
 Lines = file1.readlines()
 node_id = Lines[4].split("=")[1]
-print("/ip4/" + IPAddr + "/tcp/1478/p2p/" + node_id)
+print("/ip4/" + sys.argv[1] + "/tcp/1478/p2p/" + node_id[1:])

@@ -7,3 +7,4 @@ polygon-edge secrets init --data-dir $ETH_DATA > secrets.txt
 
 cat secrets.txt | while read line 
     echo $line
+done

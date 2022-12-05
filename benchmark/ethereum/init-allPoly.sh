@@ -6,7 +6,8 @@ cd `dirname ${BASH_SOURCE-$0}`
 i=0
 for host in `cat $HOSTS`; do
   if [[ $i -lt $1 ]]; then
-    ssh -oStrictHostKeyChecking=no $USER@$host polygon-edge secrets init --data-dir $ETH_DATA > secrets.txt
+    ssh -oStrictHostKeyChecking=no $USER@$host $ETH_HOME/polySetup.sh
+    ssh -oStrictHostKeyChecking=no $USER@$host $ETH_HOME/initPoly.sh > secrets.txt
     echo done node $host
   fi
   let i=$i+1

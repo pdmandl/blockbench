@@ -12,5 +12,6 @@ for secret in `cat $SECRETS`; do
 done
 for host in `cat $HOSTS`; do
   ssh -oStrictHostKeyChecking=no $USER@$host chmod 755 $ETH_HOME/start.sh
-  ssh -oStrictHostKeyChecking=no $USER@$host $ETH_HOME/start.sh "${command}"
+  ssh -oStrictHostKeyChecking=no $USER@$host "cd $ETH_HOME && $command"
+  ssh -oStrictHostKeyChecking=no $USER@$host $ETH_HOME/start.sh
 done

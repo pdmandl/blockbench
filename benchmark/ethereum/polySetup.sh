@@ -1,5 +1,4 @@
-sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.19.3.linux-amd64.tar.gz
-export PATH=$PATH:/usr/local/go/bin
+sudo apt install golang-go
 go install
 git clone https://github.com/0xPolygon/polygon-edge.git
 cd polygon-edge/

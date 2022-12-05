@@ -10,10 +10,8 @@ nodeId=""
 cat secrets.txt | while read line 
 do
     let i=$i+1
-    if [[ $i -eq 3]];
-    then
-        echo $i ':' $line
-    else 
-        echo TIME
+    if [[ $i -eq 3]]; then
+      echo $i ':' $line
+      echo TIME
     fi        
 done

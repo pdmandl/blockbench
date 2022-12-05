@@ -7,6 +7,6 @@ polygon-edge secrets init --data-dir $ETH_DATA > secrets.txt
 i=0
 cat secrets.txt | while read line 
 do
-    let i = i+1
+    let i=$i+1
     echo $i ':' $line
 done

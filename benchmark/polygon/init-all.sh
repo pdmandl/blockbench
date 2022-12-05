@@ -19,11 +19,3 @@ for host in `cat $HOSTS`; do
   fi
   let i=$i+1
 done
-command="polygon-edge genesis --consensus ibft"
-for row in `cat $MULTI`; do
-  command="${command} --ibft-validator ${row}"
-done
-for secret in `cat $SECRETS`; do
-  command="${command} --ibft-validator ${secret}"
-done
-echo $command  

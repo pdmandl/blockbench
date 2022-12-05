@@ -1,5 +1,3 @@
-import sys
-
 file1 = open('secrets.txt', 'r')
 Lines = file1.readlines()
 pubKey = Lines[2].split("=")[1]

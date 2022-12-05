@@ -1,5 +1,6 @@
 file1 = open('secrets.txt', 'r')
 Lines = file1.readlines()
 
-for line in Lines:
-    print(line)
+print(Lines[3])
+print(Lines[3])
+print(Lines[3])

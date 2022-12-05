@@ -13,7 +13,7 @@ for host in `cat $HOSTS`; do
     #enable if you want installation of polygon relevant tools
     #ssh -oStrictHostKeyChecking=no $USER@$host $ETH_HOME/polySetup.sh
     ssh -oStrictHostKeyChecking=no $USER@$host $ETH_HOME/initPoly.sh >> secrets.txt
-    ssh -oStrictHostKeyChecking=no $USER@$host python3 $ETH_HOME/prepareMultiAddress.py >> multi.txt
+    ssh -oStrictHostKeyChecking=no $USER@$host "cd $ETH_HOME && python3 prepareMultiAddress.py" >> multi.txt
     echo done node $host
   fi
   let i=$i+1

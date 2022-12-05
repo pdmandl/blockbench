@@ -6,5 +6,6 @@ cd `dirname ${BASH_SOURCE-$0}`
 polygon-edge secrets init --data-dir $ETH_DATA > secrets.txt
 
 cat secrets.txt | while read line 
+do
     echo $line
 done

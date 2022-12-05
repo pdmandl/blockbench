@@ -5,6 +5,7 @@ cd `dirname ${BASH_SOURCE-$0}`
 
 ./stop-all.sh $1 
 ./init-all.sh $1 
+./gather.sh 
 #./start-all.sh $1 
 
 let M=240+40*$1

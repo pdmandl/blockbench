@@ -14,7 +14,7 @@
 #sudo add-apt-repository -y "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
 sudo apt install -y docker-ce
 sudo groupadd docker
-#sudo usermod -aG docker ubuntu
+sudo usermod -aG docker ubuntu
 #newgrp docker
 #sudo apt-get install docker-engine
 #sudo service docker start

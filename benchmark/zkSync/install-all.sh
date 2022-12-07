@@ -4,6 +4,7 @@ cd `dirname ${BASH_SOURCE-$0}`
 . env.sh
 
 i=0
+echo $HOSTS
 for host in `cat $HOSTS`; do
   if [[ $i -lt $1 ]]; then
     #$1 is the number of nodes

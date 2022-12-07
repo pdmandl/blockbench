@@ -5,8 +5,10 @@
 #include <vector>
 #include <sstream>
 #include <cassert>
+#include "keccak.h"
+#include <stdio.h>
 
-//const std::string REQUEST_HEADERS = "text/json";
+// const std::string REQUEST_HEADERS = "text/json";
 const std::string REQUEST_HEADERS = "application/json";
 
 const std::string INVOKE_COMMAND_PREFIX =
@@ -38,40 +40,52 @@ const std::string DEPLOY_COMMAND_PREFIX =
 
 const std::string COMMON_COMMAND_SUFFIX = "] } }, \"id\": 1 }";
 
-inline std::string compose_invoke(const std::string& chaincodeID,
-                                  const std::string& func,
-                                  const std::vector<std::string>& args) {
+inline std::string compose_invoke(const std::string &chaincodeID,
+                                  const std::string &func,
+                                  const std::vector<std::string> &args)
+{
   std::string str = "";
-  if (args.size() >= 1) str += args[0];
-  for (unsigned i = 1; i < args.size(); ++i) {
+  if (args.size() >= 1)
+    str += args[0];
+  for (unsigned i = 1; i < args.size(); ++i)
+  {
     str += "\",\"" + args[i];
   }
-  if (args.size() != 0) str = "\"" + str + "\"";
+  if (args.size() != 0)
+    str = "\"" + str + "\"";
   return INVOKE_COMMAND_PREFIX + chaincodeID + COMMON_COMMAND_1 + func +
          COMMON_COMMAND_2 + str + COMMON_COMMAND_SUFFIX;
 }
 
-inline std::string compose_query(const std::string& chaincodeID,
-                                 const std::string& func,
-                                 const std::vector<std::string>& args) {
+inline std::string compose_query(const std::string &chaincodeID,
+                                 const std::string &func,
+                                 const std::vector<std::string> &args)
+{
   std::string str = "";
-  if (args.size() >= 1) str += args[0];
-  for (unsigned i = 1; i < args.size(); ++i) {
+  if (args.size() >= 1)
+    str += args[0];
+  for (unsigned i = 1; i < args.size(); ++i)
+  {
     str += "\",\"" + args[i];
   }
-  if (args.size() != 0) str = "\"" + str + "\"";
+  if (args.size() != 0)
+    str = "\"" + str + "\"";
   return QUERY_COMMAND_PREFIX + chaincodeID + COMMON_COMMAND_1 + func +
          COMMON_COMMAND_2 + str + COMMON_COMMAND_SUFFIX;
 }
 
-inline std::string compose_deploy(const std::string& path,
-                                  const std::vector<std::string>& args) {
+inline std::string compose_deploy(const std::string &path,
+                                  const std::vector<std::string> &args)
+{
   std::string str = "";
-  if (args.size() >= 1) str += args[0];
-  for (unsigned i = 1; i < args.size(); ++i) {
+  if (args.size() >= 1)
+    str += args[0];
+  for (unsigned i = 1; i < args.size(); ++i)
+  {
     str += "\",\"" + args[i];
   }
-  if (args.size() != 0) str = "\"" + str + "\"";
+  if (args.size() != 0)
+    str = "\"" + str + "\"";
   return DEPLOY_COMMAND_PREFIX + path + COMMON_COMMAND_1 + "init" +
          COMMON_COMMAND_2 + str + COMMON_COMMAND_SUFFIX;
 }
@@ -122,6 +136,14 @@ const std::string SEND_TXN_PREFIX =
                 \"gasPrice\": \"0x0\", \
                 \"from\": \"";
 
+const std::string SEND_RAW_TXN_PREFIX =
+    "{\
+  \"jsonrpc\": \"2.0\", \
+  \"method\": \"eth_sendTransaction\", \
+  \"params\": [{ \"gas\": \"0x1000000\", \
+                \"gasPrice\": \"0x0\", \
+                \"from\": \"";
+
 const std::string CALL_PREFIX =
     "{\
   \"jsonrpc\": \"2.0\", \
@@ -149,7 +171,7 @@ const std::string GET_BLOCK_BY_HASH_SUFFIX =
       \"id\": 1}";
 
 const std::string MIDDLE_PART_1 = "\", \"to\": \"";
-const std::string MIDDLE_PART_2 = "\", \"data\": \"";                
+const std::string MIDDLE_PART_2 = "\", \"data\": \"";
 const std::string SEND_TXN_SUFFIX = "\"}],\"id\":1}";
 const std::string CALL_SUFFIX = "\"},\"latest\"],\"id\":1}";
 
@@ -178,23 +200,27 @@ const std::string SENDPAYMENT_METHOD_SIG =
     "60";
 
 inline void split(const std::string &s, char delim,
-                  std::vector<std::string> *elems) {
+                  std::vector<std::string> *elems)
+{
   std::stringstream ss;
   ss.str(s);
   std::string item;
-  while (std::getline(ss, item, delim)) {
+  while (std::getline(ss, item, delim))
+  {
     (*elems).push_back(item);
   }
 }
 
-inline std::vector<std::string> split(const std::string &s, char delim) {
+inline std::vector<std::string> split(const std::string &s, char delim)
+{
   std::vector<std::string> elems;
   split(s, delim, &elems);
   return elems;
 }
 
 inline std::vector<std::string> get_list_field(const std::string &json,
-                                               const std::string &key) {
+                                               const std::string &key)
+{
   auto key_pos = json.find(key);
   auto quote_sign_pos_1 = json.find('\"', key_pos + 1);
   auto quote_sign_pos_2 = json.find('[', quote_sign_pos_1 + 1);
@@ -205,7 +231,8 @@ inline std::vector<std::string> get_list_field(const std::string &json,
                ',');
 }
 
-inline unsigned int decode_hex(const std::string &s) {
+inline unsigned int decode_hex(const std::string &s)
+{
   unsigned int ret;
   std::stringstream stm;
   stm << std::hex << s;
@@ -213,14 +240,16 @@ inline unsigned int decode_hex(const std::string &s) {
   return ret;
 }
 
-inline std::string encode_hex(unsigned int c) {
+inline std::string encode_hex(unsigned int c)
+{
   std::ostringstream stm;
   stm << std::hex << c;
   return stm.str();
 }
 
 inline std::string get_json_field(const std::string &json,
-                                  const std::string &key) {
+                                  const std::string &key)
+{
   auto key_pos = json.find(key);
   auto quote_sign_pos_1 = json.find('\"', key_pos + 1);
   auto quote_sign_pos_2 = json.find('\"', quote_sign_pos_1 + 1);
@@ -229,207 +258,239 @@ inline std::string get_json_field(const std::string &json,
                      quote_sign_pos_3 - quote_sign_pos_2 - 1);
 }
 
-inline vector<string> find_tx(string json){
+inline vector<string> find_tx(string json)
+{
   vector<string> ss;
   uint key_pos = json.find("txid");
-  while (key_pos!=string::npos){
+  while (key_pos != string::npos)
+  {
     auto quote_sign_pos_1 = json.find('\"', key_pos + 1);
     auto quote_sign_pos_2 = json.find('\"', quote_sign_pos_1 + 1);
     auto quote_sign_pos_3 = json.find('\"', quote_sign_pos_2 + 1);
     ss.push_back(json.substr(quote_sign_pos_2 + 1,
-          quote_sign_pos_3 - quote_sign_pos_2 - 1));
-    key_pos = json.find("txid", quote_sign_pos_3+1);
+                             quote_sign_pos_3 - quote_sign_pos_2 - 1));
+    key_pos = json.find("txid", quote_sign_pos_3 + 1);
   }
   return ss;
 }
 
-inline int find_tip(string json){
-  if (json.find("Failed")!=string::npos)
+inline int find_tip(string json)
+{
+  if (json.find("Failed") != string::npos)
     return -1;
   int key_pos = json.find("height");
-  auto close_quote_pos = json.find('\"',key_pos+1);
-  auto comma_pos = json.find(',', key_pos+1);
-  string sval = json.substr(close_quote_pos+2, comma_pos-close_quote_pos-2);
+  auto close_quote_pos = json.find('\"', key_pos + 1);
+  auto comma_pos = json.find(',', key_pos + 1);
+  string sval = json.substr(close_quote_pos + 2, comma_pos - close_quote_pos - 2);
   return stoi(sval);
 }
 
 inline std::string send_jsonrpc_request(const std::string &endpoint,
                                         const std::string &request_header,
-                                        const std::string &request_data) {
+                                        const std::string &request_data)
+{
   return RestClient::post(endpoint, request_header, request_data).body;
 }
 
 inline std::string deploy_smart_contract(const std::string &endpoint,
-                                  const std::string &from_address,
-                                  const string type) {
+                                         const std::string &from_address,
+                                         const string type)
+{
   std::string txn_data = DEPLOY_SMARTCONTRACT_PREFIX + from_address;
   txn_data += DEPLOY_SB_SMARTCONTRACT_SUFFIX;
   auto r = send_jsonrpc_request(endpoint, REQUEST_HEADERS, txn_data);
   return get_json_field(r, "result");
 }
 
-inline std::string get_from_address(const std::string &endpoint) {
+inline std::string get_from_address(const std::string &endpoint)
+{
   auto r = send_jsonrpc_request(endpoint, REQUEST_HEADERS, GET_ACCOUNTS);
   return get_json_field(r, "result");
 }
 
 inline std::string lookup_smart_contract_address_or_die(const std::string &endpoint,
-                                                 const std::string &receipt) {
+                                                        const std::string &receipt)
+{
   auto r = send_jsonrpc_request(endpoint, REQUEST_HEADERS,
                                 GET_SMART_CONTRACT_ADDRESS_PREFIX + receipt +
                                     GET_SMART_CONTRACT_ADDRESS_SUFFIX);
-  //std::cout << "smart contract address r:" << r << " receipt:"<< receipt << std::endl;
-  //assert(r.find("\"result\":null") == std::string::npos);
+  // std::cout << "smart contract address r:" << r << " receipt:"<< receipt << std::endl;
+  // assert(r.find("\"result\":null") == std::string::npos);
   return get_json_field(r, "contractAddress");
 }
 
-inline void unlock_address(const std::string &endpoint, const std::string &address) {
+inline void unlock_address(const std::string &endpoint, const std::string &address)
+{
   send_jsonrpc_request(endpoint, REQUEST_HEADERS,
                        UNLOCK_ACCOUNT_PREFIX + address + UNLOCK_ACCOUNT_SUFFIX);
 }
 
 /// pad '0' to the right of a string to make it 64-byte alignment
-inline std::string right_padding_string(const std::string &str) {
+inline std::string right_padding_string(const std::string &str)
+{
   std::string ret = str;
-  for (unsigned i = 0; i < 64 - (str.length() % 64); ++i) ret += '0';
+  for (unsigned i = 0; i < 64 - (str.length() % 64); ++i)
+    ret += '0';
   return ret;
 }
 
 /// if len(str) < 64, pad '0' to the left of it to make it 64-byte long
-inline std::string left_padding_string(const std::string &str) {
-  if (str.length() < 64) {
+inline std::string left_padding_string(const std::string &str)
+{
+  if (str.length() < 64)
+  {
     std::string ret = str;
-    while (ret.length() != 64) ret = "0" + ret;
+    while (ret.length() != 64)
+      ret = "0" + ret;
     return ret;
-  } else {
+  }
+  else
+  {
     return str;
   }
 }
 
-inline std::string encode_str_hex(const std::string &str) {
+inline std::string encode_str_hex(const std::string &str)
+{
   std::string result;
-  for (unsigned char c : str) result += encode_hex(c);
+  for (unsigned char c : str)
+    result += encode_hex(c);
   return result;
 }
 
-inline std::string encode_string(const std::string& str) {
+inline std::string encode_string(const std::string &str)
+{
   std::string utf8_encoded = encode_str_hex(str);
   std::string l = encode_hex(utf8_encoded.length() / 2);
   std::string ret = left_padding_string(l) + right_padding_string(utf8_encoded);
   return ret;
 }
 
-inline std::string encode_amalgate(const std::string &arg0, const std::string &arg1) {
+inline std::string encode_amalgate(const std::string &arg0, const std::string &arg1)
+{
   std::string ret = AMALGATE_METHOD_SIG;
   std::string argument_1 = encode_string(arg0);
   ret += left_padding_string(encode_hex(argument_1.length()));
-  ret += argument_1 + encode_string(arg1); 
+  ret += argument_1 + encode_string(arg1);
   return ret;
 }
 
-inline std::string encode_getBalance(const std::string &arg) {
+inline std::string encode_getBalance(const std::string &arg)
+{
   return GETBALANCE_METHOD_SIG + encode_string(arg);
 }
 
-inline std::string encode_updateBalance(const std::string &arg, const unsigned &amount) {
-  return UPDATEBALANCE_METHOD_SIG + left_padding_string(encode_hex(amount))
-      + encode_string(arg);
+inline std::string encode_updateBalance(const std::string &arg, const unsigned &amount)
+{
+  return UPDATEBALANCE_METHOD_SIG + left_padding_string(encode_hex(amount)) + encode_string(arg);
 }
 
-inline std::string encode_updateSaving(const std::string &arg, const unsigned &amount) {
-  return UPDATESAVING_METHOD_SIG + left_padding_string(encode_hex(amount))
-      + encode_string(arg);
+inline std::string encode_updateSaving(const std::string &arg, const unsigned &amount)
+{
+  return UPDATESAVING_METHOD_SIG + left_padding_string(encode_hex(amount)) + encode_string(arg);
 }
 
-inline std::string encode_writeCheck(const std::string &arg, const unsigned &amount) {
-  return WRITECHECK_METHOD_SIG + left_padding_string(encode_hex(amount))
-      + encode_string(arg);
+inline std::string encode_writeCheck(const std::string &arg, const unsigned &amount)
+{
+  return WRITECHECK_METHOD_SIG + left_padding_string(encode_hex(amount)) + encode_string(arg);
 }
 
 inline std::string encode_sendPayment(const std::string &arg0, const std::string &arg1,
-                                 const unsigned &amount) {
+                                      const unsigned &amount)
+{
   std::string ret = SENDPAYMENT_METHOD_SIG;
   std::string argument_1 = encode_string(arg0);
-  ret += left_padding_string(encode_hex(argument_1.length())) 
-        + left_padding_string(encode_hex(amount));
-  ret += argument_1 + encode_string(arg1); 
+  ret += left_padding_string(encode_hex(argument_1.length())) + left_padding_string(encode_hex(amount));
+  ret += argument_1 + encode_string(arg1);
   return ret;
 }
 
 inline std::string submit_amalgate_txn(const std::string &arg0, const std::string &arg1,
-                           const std::string &endpoint, const std::string &from_address,
-                           const std::string &to_address) {
-  
+                                       const std::string &endpoint, const std::string &from_address,
+                                       const std::string &to_address)
+{
+
   std::string request_json = SEND_TXN_PREFIX + from_address + MIDDLE_PART_1 + to_address +
-         MIDDLE_PART_2 + encode_amalgate(arg0, arg1) + SEND_TXN_SUFFIX;
-  //std::cout << "request_json:" << request_json << std::endl;
+                             MIDDLE_PART_2 + encode_amalgate(arg0, arg1) + SEND_TXN_SUFFIX;
+  std::string filename = "/home/abc/xyz/script.py";
+  std::string command = "python ";
+  command += filename;
+  FILE *in = popen(command.c_str(), "r");
+  fscanf(in, "*");
+  std::cout << "request_json:" << fscanf(in, "*") << std::endl;
   auto r = send_jsonrpc_request(endpoint, REQUEST_HEADERS, request_json);
-  //std::cout << "result:" << r << std::endl;
+  // std::cout << "result:" << r << std::endl;
   return get_json_field(r, "result");
 }
 
 inline std::string submit_getBalance_txn(const std::string &arg,
-                           const std::string &endpoint, const std::string &from_address,
-                           const std::string &to_address) {
-  
+                                         const std::string &endpoint, const std::string &from_address,
+                                         const std::string &to_address)
+{
+
   std::string request_json = SEND_TXN_PREFIX + from_address + MIDDLE_PART_1 + to_address +
-         MIDDLE_PART_2 + encode_getBalance(arg) + SEND_TXN_SUFFIX;
-  //std::cout << "request_json:" << request_json << std::endl;
+                             MIDDLE_PART_2 + encode_getBalance(arg) + SEND_TXN_SUFFIX;
+  // std::cout << "request_json:" << request_json << std::endl;
   auto r = send_jsonrpc_request(endpoint, REQUEST_HEADERS, request_json);
-  //std::cout << "result:" << r << std::endl;
+  // std::cout << "result:" << r << std::endl;
   return get_json_field(r, "result");
 }
 
 inline std::string submit_updateBalance_txn(const std::string &arg, const unsigned &amount,
-                           const std::string &endpoint, const std::string &from_address,
-                           const std::string &to_address) {
-  
+                                            const std::string &endpoint, const std::string &from_address,
+                                            const std::string &to_address)
+{
+
   std::string request_json = SEND_TXN_PREFIX + from_address + MIDDLE_PART_1 + to_address +
-         MIDDLE_PART_2 + encode_updateBalance(arg, amount) + SEND_TXN_SUFFIX;
-  //std::cout << "request_json:" << request_json << std::endl;
+                             MIDDLE_PART_2 + encode_updateBalance(arg, amount) + SEND_TXN_SUFFIX;
+  // std::cout << "request_json:" << request_json << std::endl;
   auto r = send_jsonrpc_request(endpoint, REQUEST_HEADERS, request_json);
-  //std::cout << "result:" << r << std::endl;
+  // std::cout << "result:" << r << std::endl;
   return get_json_field(r, "result");
 }
 
 inline std::string submit_updateSaving_txn(const std::string &arg, const unsigned &amount,
-                           const std::string &endpoint, const std::string &from_address,
-                           const std::string &to_address) {
-  
+                                           const std::string &endpoint, const std::string &from_address,
+                                           const std::string &to_address)
+{
+
   std::string request_json = SEND_TXN_PREFIX + from_address + MIDDLE_PART_1 + to_address +
-         MIDDLE_PART_2 + encode_updateSaving(arg, amount) + SEND_TXN_SUFFIX;
-  //std::cout << "request_json:" << request_json << std::endl;
+                             MIDDLE_PART_2 + encode_updateSaving(arg, amount) + SEND_TXN_SUFFIX;
+  // std::cout << "request_json:" << request_json << std::endl;
   auto r = send_jsonrpc_request(endpoint, REQUEST_HEADERS, request_json);
-  //std::cout << "result:" << r << std::endl;
+  // std::cout << "result:" << r << std::endl;
   return get_json_field(r, "result");
 }
 
 inline std::string submit_writeCheck_txn(const std::string &arg, const unsigned &amount,
-                           const std::string &endpoint, const std::string &from_address,
-                           const std::string &to_address) {
-  
+                                         const std::string &endpoint, const std::string &from_address,
+                                         const std::string &to_address)
+{
+
   std::string request_json = SEND_TXN_PREFIX + from_address + MIDDLE_PART_1 + to_address +
-         MIDDLE_PART_2 + encode_writeCheck(arg, amount) + SEND_TXN_SUFFIX;
-  //std::cout << "request_json:" << request_json << std::endl;
+                             MIDDLE_PART_2 + encode_writeCheck(arg, amount) + SEND_TXN_SUFFIX;
+  // std::cout << "request_json:" << request_json << std::endl;
   auto r = send_jsonrpc_request(endpoint, REQUEST_HEADERS, request_json);
-  //std::cout << "result:" << r << std::endl;
+  // std::cout << "result:" << r << std::endl;
   return get_json_field(r, "result");
 }
 
 inline std::string submit_sendPayment_txn(const std::string &arg0, const std::string &arg1, const unsigned &amount,
-                           const std::string &endpoint, const std::string &from_address,
-                           const std::string &to_address) {
-  
+                                          const std::string &endpoint, const std::string &from_address,
+                                          const std::string &to_address)
+{
+
   std::string request_json = SEND_TXN_PREFIX + from_address + MIDDLE_PART_1 + to_address +
-         MIDDLE_PART_2 + encode_sendPayment(arg0, arg1, amount) + SEND_TXN_SUFFIX;
-  //std::cout << "request_json:" << request_json << std::endl;
+                             MIDDLE_PART_2 + encode_sendPayment(arg0, arg1, amount) + SEND_TXN_SUFFIX;
+  // std::cout << "request_json:" << request_json << std::endl;
   auto r = send_jsonrpc_request(endpoint, REQUEST_HEADERS, request_json);
-  //std::cout << "result:" << r << std::endl;
+  // std::cout << "result:" << r << std::endl;
   return get_json_field(r, "result");
 }
 
 inline std::vector<std::string> poll_txs_by_block_hash(const std::string &endpoint,
-                                                std::string block_hash) {
+                                                       std::string block_hash)
+{
   std::string request =
       GET_BLOCK_BY_HASH_PREFIX + block_hash + GET_BLOCK_BY_HASH_SUFFIX;
   auto r = send_jsonrpc_request(endpoint, REQUEST_HEADERS, request);
@@ -438,7 +499,8 @@ inline std::vector<std::string> poll_txs_by_block_hash(const std::string &endpoi
 }
 
 inline std::vector<std::string> poll_txs_by_block_number(const std::string &endpoint,
-                                                  int block_number) {
+                                                         int block_number)
+{
   std::string request = GET_BLOCK_BY_NUMBER_PREFIX +
                         ("0x" + encode_hex(block_number)) +
                         GET_BLOCK_BY_NUMBER_SUFFIX;
@@ -447,13 +509,14 @@ inline std::vector<std::string> poll_txs_by_block_number(const std::string &endp
 
   std::vector<std::string> ret = get_list_field(r, "transactions");
   std::vector<std::string> uncles = get_list_field(r, "uncles");
-  for (std::string uncle : uncles) {
+  for (std::string uncle : uncles)
+  {
     string s = uncle.substr(1, uncle.length() - 2); // get rid of ""
     std::vector<std::string> uncletxs = poll_txs_by_block_hash(endpoint, uncle);
-    for (std::string tx : uncletxs) ret.push_back(tx);
+    for (std::string tx : uncletxs)
+      ret.push_back(tx);
   }
   return ret;
 }
-
 
 #endif

@@ -10,6 +10,7 @@
 #include "api_adapters/DB.h"
 #include "api_adapters/SmallBank.h"
 #include "api_adapters/EVMDB.h"
+#include "api_adapters/POLYDB.h"
 #include "api_adapters/Fabric.h"
 #include "api_adapters/FabricV2.h"
 #include "utils/generators.h"
@@ -85,6 +86,8 @@ int StatusThread(DB *sb, string dbname, string endpoint, double interval, int st
   int confirm_duration = 1;
   if (dbname == "ethereum")
     confirm_duration = CONFIRM_BLOCK_LENGTH;
+  if (dbname == "polygon")
+    confirm_duration = CONFIRM_BLOCK_LENGTH;
   else if (dbname == "parity")
     confirm_duration = PARITY_CONFIRM_BLOCK_LENGTH;
   else
@@ -146,6 +149,10 @@ DB *CreateDB(std::string dbname, std::string endpoint)
   else if (dbname == "fabric-v1.4")
   {
     return Fabric::GetInstance(dbname, endpoint);
+  }
+  else if (dbname == "polygon")
+  {
+    return POLYDB::GetInstance(dbname, endpoint);
   }
   else if (dbname == "fabric-v2.2")
   {

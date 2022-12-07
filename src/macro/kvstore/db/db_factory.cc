@@ -17,31 +17,48 @@ using namespace std;
 using ycsbc::DB;
 using ycsbc::DBFactory;
 
-DB* DBFactory::CreateDB(utils::Properties& props) {
-  if (props["dbname"] == "hyperledger") {
+DB *DBFactory::CreateDB(utils::Properties &props)
+{
+  if (props["dbname"] == "hyperledger")
+  {
     const string endpoint = props["endpoint"];
     string wl_name = props.GetProperty("workload", "donothing");
-    if (wl_name == "smallbank") {
+    if (wl_name == "smallbank")
+    {
       cout << "Please use the dedicated SmallBank driver for HyperLedger"
            << endl;
       exit(0);
     }
     return new HyperLedgerDB(endpoint, wl_name);
-  } else if (props["dbname"] == "fabric-v2.2") {
+  }
+  else if (props["dbname"] == "fabric-v2.2")
+  {
     const string endpoint = props["endpoint"];
     string wl_name = props.GetProperty("workload", "donothing");
     return new FabricV2DB(endpoint, wl_name);
-
-  } else if (props["dbname"] == "fabric-v1.4") {
+  }
+  else if (props["dbname"] == "fabric-v1.4")
+  {
     const string endpoint = props["endpoint"];
     string wl_name = props.GetProperty("workload", "donothing");
     return new FabricDB(endpoint, wl_name);
-  } else if (props["dbname"] == "ethereum" || props["dbname"] == "parity") {
+  }
+  else if (props["dbname"] == "ethereum" || props["dbname"] == "parity")
+  {
     const string endpoint = props["endpoint"];
     int deploy_wait = stoi(props.GetProperty("deploy_wait", "20"));
     string wl_name = props.GetProperty("workload", "donothing");
     return new EVMDB(endpoint, props["dbname"], wl_name, deploy_wait);
-  } else {
+  }
+  else if (props["dbname"] == "polygon")
+  {
+    const string endpoint = props["endpoint"];
+    int deploy_wait = stoi(props.GetProperty("deploy_wait", "20"));
+    string wl_name = props.GetProperty("workload", "donothing");
+    return new POLYDB(endpoint, props["dbname"], wl_name, deploy_wait);
+  }
+  else
+  {
     return NULL;
   }
 }

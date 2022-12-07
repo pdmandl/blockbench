@@ -3,7 +3,7 @@ ETH_HOME=/home/ubuntu/blockbench/benchmark/polygon
 # file that contains ip addresses of servers that should be used for setting up the ethereum network
 HOSTS=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/polygon/hosts
 # where is your hostfile on your client vm?
-CLIENT_HOSTS=/home/ubuntu/blockbench/benchmark/polygon/hosts_priv
+HOSTS_ON_CLIENT=/home/ubuntu/blockbench/benchmark/polygon/hosts_priv
 RPC_PORT=8051
 # file that contains ip addresses of servers that should be used for running the benchmark clients
 CLIENTS=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/polygon/clients

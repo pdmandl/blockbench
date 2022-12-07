@@ -1,12 +1,12 @@
 # folder that contains all benchmark scripts (this could be on a network share)
-ETH_HOME=/home/ubuntu/blockbench/benchmark/zkSync
+ETH_HOME=/home/ubuntu/blockbench/benchmark/zksync
 # file that contains ip addresses of servers that should be used for setting up the ethereum network
-HOSTS=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/zkSync/hosts
+HOSTS=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/zksync/hosts
 # where is your hostfile on your client vm?
-HOSTS_ON_CLIENT=/home/ubuntu/blockbench/benchmark/zkSync/hosts_priv
+HOSTS_ON_CLIENT=/home/ubuntu/blockbench/benchmark/zksync/hosts_priv
 RPC_PORT=8051
 # file that contains ip addresses of servers that should be used for running the benchmark clients
-CLIENTS=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/zkSync/clients
+CLIENTS=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/zksync/clients
 # folder in which ethereum nodes should store the ethereum data
 ETH_DATA=/home/ubuntu/node1
 # folder in which benchmark clients should store their log files

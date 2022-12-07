@@ -13,10 +13,9 @@ sudo apt install -y apt-transport-https ca-certificates curl software-properties
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository -y "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
 sudo apt install -y docker-ce
-#sudo groupadd docker
+sudo groupadd docker
 sudo usermod -aG docker ubuntu
 newgrp docker
-reboot
 #sudo apt-get install docker-engine
 #sudo service docker start
 

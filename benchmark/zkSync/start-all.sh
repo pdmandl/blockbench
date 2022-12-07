@@ -12,7 +12,7 @@ for host in `cat $HOSTS`; do
     echo start mining on node $host
     ssh -oStrictHostKeyChecking=no $USER@$host chmod 755 $ETH_HOME/start-mining.sh
     ssh -oStrictHostKeyChecking=no $USER@$host $ETH_HOME/start-mining.sh
-    ssh -oStrictHostKeyChecking=no $USER@$host $ETH_HOME/local-setup/start.sh
+    ssh -oStrictHostKeyChecking=no $USER@$host $ETH_HOME/zk_local/start.sh
     echo done node $host
   fi
   let i=$i+1

@@ -15,7 +15,7 @@
 sudo apt install -y docker-ce
 sudo groupadd docker
 #sudo usermod -aG docker ubuntu
-newgrp docker
+#newgrp docker
 #sudo apt-get install docker-engine
 #sudo service docker start
 

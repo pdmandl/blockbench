@@ -11,7 +11,7 @@ for host in `cat $HOSTS`; do
     echo "'admin.addPeer(` ssh $USER@$host $ETH_HOME/enode.sh $host 2>/dev/null | grep enode`)'" >> addPeer.txt
     echo -n `ssh $USER@$host $ETH_HOME/enode.sh $host 2>/dev/null | grep enode`, >> bootnode.txt
     sleep 1
-    sed '$ s/.$//' bootnode.txt
+   sed -i '$ s/.$//' bootnode.txt
   fi
   let i=$i+1
   echo $i

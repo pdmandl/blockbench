@@ -4,4 +4,4 @@ cd `dirname ${BASH_SOURCE-$0}`
 
 bootnode -genkey boot.key
 sudo kill -9 `sudo lsof -t -i:30310`
-bootnode -nodekey boot.key -verbosity 9 -addr :30310
+bootnode -nodekey boot.key -verbosity 9 -addr :30310 2>/dev/null |grep enode

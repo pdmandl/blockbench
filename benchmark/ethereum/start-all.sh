@@ -4,6 +4,7 @@ cd `dirname ${BASH_SOURCE-$0}`
 . env.sh
 
 rm -rf addPeer.txt
+rm -rf bootnode.txt
 ./gather.sh $1
 sleep 3
 i=0

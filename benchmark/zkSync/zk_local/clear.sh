@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-rm -rf ./volumes
+sudo rm -rf ./volumes

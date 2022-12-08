@@ -7,7 +7,7 @@ i=0
 for host in `cat $HOSTS`; do
   if [[ $i -lt 1 ]]; then
     ssh $USER@$host chmod 755 $ETH_HOME/bootnode_startup.sh
-    echo -n `ssh $USER@$host $ETH_HOME/bootnode_startup.sh 2>/dev/null | grep enode`, >> bootnode.txt
+    echo -n `ssh $USER@$host $ETH_HOME/bootnode_startup.sh 2>/dev/null` >> bootnode.txt
   fi
   if [[ $i -lt $1 ]]; then
     echo "adding peer to network, rpcport $RPCPORT"

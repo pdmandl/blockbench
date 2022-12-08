@@ -14,7 +14,7 @@ for host in `cat $HOSTS`; do
   if [[ $i -lt $1 ]]; then
     echo start mining on node $host
     ssh -oStrictHostKeyChecking=no $USER@$host chmod 755 $ETH_HOME/start-mining.sh
-    ssh -oStrictHostKeyChecking=no $USER@$host $ETH_HOME/start-mining.sh $PEERS $BOOTNODE
+    ssh -oStrictHostKeyChecking=no $USER@$host $ETH_HOME/start-mining.sh $PEERS//$'\n'/ $BOOTNODE//$'\n'/
     echo done node $host
   fi
   let i=$i+1

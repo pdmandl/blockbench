@@ -2,7 +2,7 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-
 sudo chmod +x /usr/local/bin/docker-compose
 
 cd /home/ubuntu/blockbench/benchmark/zkSync/zk_local
-rm -rf ./volumes
+sudo rm -rf ./volumes
 mkdir -p ./volumes
 mkdir -p ./volumes/postgres ./volumes/geth ./volumes/zksync/env/dev ./volumes/zksync/data
 

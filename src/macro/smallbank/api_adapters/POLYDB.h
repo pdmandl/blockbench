@@ -44,7 +44,7 @@ public:
         txlock_ = lock;
     }
 
-    ~POLYDB() {}
+    virtual ~POLYDB() {}
 
     int get_tip_block_number();
     vector<string> poll_tx(int block_number);

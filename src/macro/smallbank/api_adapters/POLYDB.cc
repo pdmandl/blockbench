@@ -41,7 +41,7 @@ void POLYDB::deploy(const std::string &dbname, const std::string &endpoint)
   endpoint_ = endpoint;
   std::vector<std::string> args;
   from_address_ = get_from_address(endpoint_);
-  cout << "from address: " << from_address_ << endl;
+  cout << "from address poly: " << from_address_ << endl;
   auto receipt = deploy_smart_contract(endpoint_, from_address_, "smallbank");
   int deploy_wait_sec = 20;
   while (to_address_.size() < 10)

@@ -1,6 +1,16 @@
-# Node.js libraries
-node_modules/
 data/
 ycsb/
+greeter-example/node_modules
+# Node.js libraries
+node_modules/
 package-lock.json
 .node-*
+coverage
+coverage.json
+typechain
+typechain-types
+
+# Hardhat files
+cache
+artifacts
+

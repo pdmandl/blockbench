@@ -23,7 +23,7 @@ for host in `cat $HOSTS_ON_CLIENT`; do
     #both ycsbc and smallbank use the same driver
     LD_LIBRARY_PATH=/usr/local/lib
     export LD_LIBRARY_PATH
-    chmod 755 driver
+    chmod 755 driver || make driver && chmod 755 driver
     #nohup ./driver -db ethereum -threads $1 -P workloads/workloada.spec -endpoint $host:8545 -txrate $4 -wl ycsb -wt 60 > $LOG_DIR/client_$2"_"$host 2>&1 &
     nohup ./driver -db ethereum -ops 1000 -threads $1 -txrate $4 -fp stat.txt -wl smallbank -wt 60 -endpoint $host:8545 > $LOG_DIR/client_$2"_"$host 2>&1 &
   else

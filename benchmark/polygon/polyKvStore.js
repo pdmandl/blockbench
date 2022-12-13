@@ -79,23 +79,18 @@ const readPacket = async (id) => {
   }
   console.log("Reading id " + id + " finished.");
 };
-const doTransactions = async (queue) => {
-  for (let i in queue) {
-    try {
-      const res = await savePacket();
-      queue.shift();
-      console.log(res);
-    } catch (e) {
-      console.log(e);
-    }
+const doTransaction = async (i) => {
+  try {
+    const res = await savePacket(i, "TEST");
+    console.log(res);
+  } catch (e) {
+    console.log(e);
   }
 };
 const txs = Array.from(Array(process.argv[4]).keys());
-console.log(txs);
-for (let i of txs) {
-  queue.push(i);
-}
-while (queue.length > 0) doTransactions(queue);
-for (let i of txs) {
+
+while (txs.length > 0) {
+  const i = txs.shift();
+  doTransaction(i);
   readPacket(i.toString());
 }

@@ -51,13 +51,15 @@ var abi = [
 ];
 myContract_write = new ethers.Contract(address, abi, signer); // Write only
 myContract_read = new ethers.Contract(address, abi, provider); // Read only
-const getGasPrice = async () => {
+const getGasPrice = async (id, value) => {
   console.log(
-    (await myContract_write.estimateGas.set(10, "TEST123")).toNumber()
+    "Gas price is: ",
+    (await myContract_write.estimateGas.set(id, value)).toNumber()
   );
 };
 const savePacket = async (id, value) => {
   console.log("Saving Packet: " + value + " to id " + id + " started...");
+  console.log(getGasPrice(id, value));
   try {
     const res = await myContract_write.set(id, value);
     console.log(res);

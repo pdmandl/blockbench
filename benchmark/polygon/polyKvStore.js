@@ -1,10 +1,8 @@
 const ethers = require("ethers");
 const txs = [];
 for (let i = 0; i < parseInt(process.argv[4]); i++) {
-  console.log(i);
   txs[i] = i;
 }
-console.log(txs);
 let url = process.argv[3];
 let provider = new ethers.providers.JsonRpcProvider(url);
 var signer = new ethers.Wallet(process.argv[2], provider);
@@ -92,7 +90,13 @@ const doTransaction = async (i) => {
     console.log(e);
   }
 };
-const doTransactions = async () => {};
+const doTransactions = async () => {
+  while (txs.length > 0) {
+    const i = txs.shift();
+    await doTransaction(i);
+    await readPacket(i);
+  }
+};
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const printer = async () => {
   sleep(1000);

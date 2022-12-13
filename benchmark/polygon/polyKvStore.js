@@ -97,7 +97,7 @@ const doTransactions = async () => {
 };
 const printer = async () => {
   while (txs.length > 0) {
-    setTimeout(resolve, 1000);
+    setTimeout(console.log, 1000);
     console.log(
       `Still ${txs.length} of ${process.argv[4]} transactions to process.`
     );

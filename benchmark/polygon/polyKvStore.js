@@ -1,5 +1,5 @@
 const ethers = require("ethers");
-const txs = Array(Number(process.argv[4]));
+const txs = Array(parseInt(process.argv[4]));
 console.log(txs);
 let url = process.argv[3];
 let provider = new ethers.providers.JsonRpcProvider(url);
@@ -50,7 +50,6 @@ var abi = [
     type: "function",
   },
 ];
-const queue = [];
 const myContract_write = new ethers.Contract(address, abi, signer); // Write only
 const myContract_read = new ethers.Contract(address, abi, provider); // Read only
 const getGasPrice = async (id, value) => {
@@ -92,6 +91,7 @@ const doTransaction = async (i) => {
 const doTransactions = async () => {
   while (txs.length > 0) {
     const i = txs.shift();
+    console.log(i);
     await doTransaction(i);
     await readPacket(i.toString());
   }

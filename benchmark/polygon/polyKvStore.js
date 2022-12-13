@@ -1,5 +1,5 @@
 const ethers = require("ethers");
-
+const txs = Array.from(Array(process.argv[4]).keys());
 let url = process.argv[3];
 let provider = new ethers.providers.JsonRpcProvider(url);
 var signer = new ethers.Wallet(process.argv[2], provider);
@@ -103,6 +103,5 @@ const printer = async () => {
     );
   }
 };
-const txs = Array.from(Array(process.argv[4]).keys());
 printer();
 doTransactions();

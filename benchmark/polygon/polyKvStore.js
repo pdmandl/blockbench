@@ -49,8 +49,9 @@ var abi = [
     type: "function",
   },
 ];
-myContract_write = new ethers.Contract(address, abi, signer); // Write only
-myContract_read = new ethers.Contract(address, abi, provider); // Read only
+const queue = [];
+const myContract_write = new ethers.Contract(address, abi, signer); // Write only
+const myContract_read = new ethers.Contract(address, abi, provider); // Read only
 const getGasPrice = async (id, value) => {
   console.log(
     "Gas price is: ",
@@ -68,7 +69,7 @@ const savePacket = async (id, value) => {
   }
   console.log("Saving Packet: " + value + " to id " + id + " finished.");
 };
-const readPacket = async (id, value) => {
+const readPacket = async (id) => {
   console.log("Reading id " + id + " started...");
   try {
     const res = await myContract_read.get(id);
@@ -78,10 +79,23 @@ const readPacket = async (id, value) => {
   }
   console.log("Reading id " + id + " finished.");
 };
+const doTransactions = async (queue) => {
+  for (let i in queue) {
+    try {
+      const res = await savePacket();
+      queue.shift();
+      console.log(res);
+    } catch (e) {
+      console.log(e);
+    }
+  }
+};
 const txs = Array.from(Array(process.argv[4]).keys());
+console.log(txs);
 for (let i of txs) {
-  savePacket(i.toString(), "TEST");
+  queue.push(i);
 }
+while (queue.length > 0) doTransactions(queue);
 for (let i of txs) {
   readPacket(i.toString());
 }

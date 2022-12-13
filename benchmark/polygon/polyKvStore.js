@@ -66,17 +66,20 @@ const savePacket = async (id, value) => {
   }
   console.log("Saving Packet: " + value + " to id " + id + " finished.");
 };
+const readPacket = async (id, value) => {
+  console.log("Reading id " + id + " started...");
+  try {
+    const res = await myContract_read.get(id);
+    console.log(res);
+  } catch (e) {
+    console.log(e);
+  }
+  console.log("Reading id " + id + " finished.");
+};
 const txs = Array.from(Array(process.argv[4]).keys());
 for (let i of txs) {
-  savePacket(i, "TEST");
+  savePacket(i.toString(), "TEST");
 }
 for (let i of txs) {
-  myContract_read
-    .get(i.toString())
-    .then((result) => {
-      console.log(result);
-    })
-    .catch((e) => {
-      console.log(e);
-    });
+  readPacket(i.toString());
 }

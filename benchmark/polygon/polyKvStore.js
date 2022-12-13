@@ -1,5 +1,6 @@
 const ethers = require("ethers");
 const txs = Array(process.argv[4]);
+console.log(txs);
 let url = process.argv[3];
 let provider = new ethers.providers.JsonRpcProvider(url);
 var signer = new ethers.Wallet(process.argv[2], provider);

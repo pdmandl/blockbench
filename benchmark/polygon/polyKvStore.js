@@ -84,7 +84,7 @@ const readPacket = async (id) => {
 };
 const doTransaction = async (i) => {
   try {
-    const res = await savePacket(i, "TEST");
+    const res = await savePacket(i, "TEST" + i);
     console.log(res);
   } catch (e) {
     console.log(e);

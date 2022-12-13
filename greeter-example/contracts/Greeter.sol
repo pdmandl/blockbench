@@ -2,17 +2,34 @@
 pragma solidity ^0.8.0;
 
 contract Greeter {
-    string private greeting;
+    struct MyStruct {
+        string name;
+    }
 
-    constructor(string memory _greeting) {
-        greeting = _greeting;
+    MyStruct private greeting;
+
+    int256 num;
+    string secondStr;
+
+    constructor(
+        MyStruct[] memory myStr,
+        int256[] memory myArgNum,
+        string memory mySecondStr
+    ) {
+        greeting = myStr[1];
+        num = myArgNum[0];
+        secondStr = mySecondStr;
     }
 
     function greet() public view returns (string memory) {
-        return greeting;
+        return greeting.name;
     }
 
-    function setGreeting(string memory _greeting) public {
-        greeting = _greeting;
+    function greetNum() public view returns (int256) {
+        return num;
+    }
+
+    function greetSecond() public view returns (string memory) {
+        return secondStr;
     }
 }

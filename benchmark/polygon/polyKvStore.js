@@ -99,10 +99,12 @@ const doTransactions = async () => {
 };
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const printer = async () => {
-  sleep(1000);
-  console.log(
-    `Still ${txs.length} of ${process.argv[4]} transactions to process.`
-  );
+  while (txs.length > 0) {
+    sleep(1000);
+    console.log(
+      `Still ${txs.length} of ${process.argv[4]} transactions to process.`
+    );
+  }
 };
 printer();
 doTransactions();

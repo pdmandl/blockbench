@@ -15,5 +15,6 @@ for host in `cat $HOSTS`; do
   ssh -oStrictHostKeyChecking=no $USER@$host rm -rf $ETH_HOME/genesis.json
   ssh -oStrictHostKeyChecking=no $USER@$host "cd $ETH_HOME && $command"
   ssh -oStrictHostKeyChecking=no $USER@$host "cd $ETH_HOME && polygon-edge genesis predeploy --chain genesis.json --artifacts-path Greeter.json --predeploy-address '0x01110' --constructor-args '[[name 1],[name 2]]' --constructor-args '[123, 456, 655]' --constructor-args 'Testing Edge'"
+  ssh -oStrictHostKeyChecking=no $USER@$host "cd $ETH_HOME && polygon-edge genesis predeploy --chain genesis.json --artifacts-path Smallbank.json --predeploy-address '0x01110'"
   ssh -oStrictHostKeyChecking=no $USER@$host $ETH_HOME/start.sh
 done

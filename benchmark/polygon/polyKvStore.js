@@ -79,10 +79,20 @@ myContract_write = new ethers.Contract(address, abi, signer); // Write only
 myContract_read = new ethers.Contract(address, abi, provider); // Read only
 
 // Writing to Smart Contract
-myContract_write.greet().then((result) => {
-  console.log(result);
-});
+myContract_write
+  .greet()
+  .then((result) => {
+    console.log(result);
+  })
+  .catch((e) => {
+    console.log(e);
+  });
 // Reading from Smart Contract
-myContract_read.greetNum().then((result) => {
-  console.log(result);
-});
+myContract_read
+  .greetNum()
+  .then((result) => {
+    console.log(result);
+  })
+  .catch((e) => {
+    console.log(e);
+  });

@@ -95,5 +95,14 @@ const doTransactions = async () => {
     await readPacket(i.toString());
   }
 };
+const printer = () => {
+  while (txs.length > 0) {
+    setTimeout(1000);
+    console.log(
+      `Still ${txs.length} of ${process.argv[4]} transactions to process.`
+    );
+  }
+};
 const txs = Array.from(Array(process.argv[4]).keys());
 doTransactions();
+printer();

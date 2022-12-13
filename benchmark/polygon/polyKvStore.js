@@ -68,7 +68,6 @@ const getGasPriceR = async (id) => {
 };
 const savePacket = async (id, value) => {
   console.log("Saving Packet: " + value + " to id " + id + " started...");
-  await getGasPriceW(id, value);
   try {
     const res = await myContract_write.set(id, value);
     const receipt = await res.wait();
@@ -80,7 +79,6 @@ const savePacket = async (id, value) => {
 };
 const readPacket = async (id) => {
   console.log("Reading id " + id + " started...");
-  await getGasPriceR();
   try {
     const res = await myContract_read.get(id);
     console.log(res);

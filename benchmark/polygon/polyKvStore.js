@@ -51,20 +51,24 @@ var abi = [
 ];
 myContract_write = new ethers.Contract(address, abi, signer); // Write only
 myContract_read = new ethers.Contract(address, abi, provider); // Read only
+const getGasPrice = async () => {
+  console.log(await myContract_write.estimateGas.set(1, "TEST123"));
+};
 const txs = Array.from(Array(process.argv[4]).keys());
 for (let i of txs) {
-  myContract_write
+  getGasPrice();
+  /* myContract_write
     .set(i.toString(), "TEST 123")
     .then((result) => {
       console.log(result);
     })
     .catch((e) => {
       console.log(e);
-    });
+    }); */
 }
 for (let i of txs) {
   myContract_read
-    .get(i)
+    .get(i.toString())
     .then((result) => {
       console.log(result);
     })

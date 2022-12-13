@@ -74,7 +74,7 @@ var abi = [
     type: "function",
   },
 ];
-
+console.log(provider.getCode(address));
 myContract_write = new ethers.Contract(address, abi, signer); // Write only
 myContract_read = new ethers.Contract(address, abi, provider); // Read only
 

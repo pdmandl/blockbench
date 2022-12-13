@@ -95,7 +95,7 @@ const doTransactions = async () => {
     await readPacket(i.toString());
   }
 };
-const printer = () => {
+const printer = async () => {
   while (txs.length > 0) {
     setTimeout(1000);
     console.log(
@@ -104,5 +104,5 @@ const printer = () => {
   }
 };
 const txs = Array.from(Array(process.argv[4]).keys());
-doTransactions();
 printer();
+doTransactions();

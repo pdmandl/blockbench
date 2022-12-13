@@ -2,7 +2,7 @@ const ethers = require("ethers");
 
 let url = "http://192.168.4.150:8545";
 let provider = new ethers.providers.JsonRpcProvider(url);
-var signer = new ethers.Wallet(privateKey, provider);
+var signer = new ethers.Wallet(process.argv[2], provider);
 
 var address = "0x0000000000000000000000000000000000001110";
 var abi = [

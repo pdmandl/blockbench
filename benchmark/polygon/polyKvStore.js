@@ -69,13 +69,6 @@ const savePacket = async (id, value) => {
 const txs = Array.from(Array(process.argv[4]).keys());
 for (let i of txs) {
   savePacket(i, "TEST");
-    .set(i.toString(), "TEST 123")
-    .then((result) => {
-      console.log(result);
-    })
-    .catch((e) => {
-      console.log(e);
-    }); */
 }
 for (let i of txs) {
   myContract_read

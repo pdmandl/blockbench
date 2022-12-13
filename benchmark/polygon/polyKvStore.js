@@ -100,7 +100,7 @@ const doTransactions = async () => {
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const printer = async () => {
   while (txs.length > 0) {
-    sleep(1000);
+    await sleep(1000);
     console.log(
       `Still ${txs.length} of ${process.argv[4]} transactions to process.`
     );

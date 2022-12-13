@@ -88,10 +88,12 @@ const doTransaction = async (i) => {
     console.log(e);
   }
 };
+const doTransactions = async () => {
+  while (txs.length > 0) {
+    const i = txs.shift();
+    await doTransaction(i);
+    await readPacket(i.toString());
+  }
+};
 const txs = Array.from(Array(process.argv[4]).keys());
-
-while (txs.length > 0) {
-  const i = txs.shift();
-  doTransaction(i);
-  readPacket(i.toString());
-}
+doTransactions();

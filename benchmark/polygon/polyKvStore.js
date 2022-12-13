@@ -95,12 +95,14 @@ const doTransactions = async () => {
     await readPacket(i.toString());
   }
 };
+const print = () => {
+  console.log(
+    `Still ${txs.length} of ${process.argv[4]} transactions to process.`
+  );
+};
 const printer = async () => {
   while (txs.length > 0) {
-    setTimeout(console.log, 1000);
-    console.log(
-      `Still ${txs.length} of ${process.argv[4]} transactions to process.`
-    );
+    setTimeout(print, 3000);
   }
 };
 printer();

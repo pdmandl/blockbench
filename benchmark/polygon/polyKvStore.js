@@ -54,15 +54,21 @@ var abi = [
 ];
 const myContract_write = new ethers.Contract(address, abi, signer); // Write only
 const myContract_read = new ethers.Contract(address, abi, provider); // Read only
-const getGasPrice = async (id, value) => {
+const getGasPriceW = async (id, value) => {
   console.log(
     "Gas price is: ",
     (await myContract_write.estimateGas.set(id, value)).toNumber()
   );
 };
+const getGasPriceR = async (id) => {
+  console.log(
+    "Gas price is: ",
+    (await myContract_read.estimateGas.get(id)).toNumber()
+  );
+};
 const savePacket = async (id, value) => {
   console.log("Saving Packet: " + value + " to id " + id + " started...");
-  console.log(getGasPrice(id, value));
+  await getGasPriceW(id, value);
   try {
     const res = await myContract_write.set(id, value);
     const receipt = await res.wait();
@@ -74,6 +80,7 @@ const savePacket = async (id, value) => {
 };
 const readPacket = async (id) => {
   console.log("Reading id " + id + " started...");
+  await getGasPriceR();
   try {
     const res = await myContract_read.get(id);
     console.log(res);
@@ -100,7 +107,7 @@ const doTransactions = async () => {
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const printer = async () => {
   while (txs.length > 0) {
-    await sleep(1000);
+    await sleep(2000);
     console.log(
       `Still ${txs.length} of ${process.argv[4]} transactions to process.`
     );

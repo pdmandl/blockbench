@@ -52,7 +52,7 @@ var abi = [
 myContract_write = new ethers.Contract(address, abi, signer); // Write only
 myContract_read = new ethers.Contract(address, abi, provider); // Read only
 const getGasPrice = async () => {
-  console.log(await myContract_write.estimateGas.set(1, "TEST123"));
+  console.log(await myContract_write.estimateGas.set(1, "TEST123").toNumber());
 };
 const txs = Array.from(Array(process.argv[4]).keys());
 for (let i of txs) {

@@ -5,32 +5,73 @@ let url = "http://192.168.4.150:8545";
 let provider = new ethers.providers.JsonRpcProvider(url);
 var signer = new ethers.Wallet(privateKey, provider);
 
-var address = "<Deployed Contract Address>";
+var address = "0x0000000000000000000000000000000000001110";
 var abi = [
   {
+    inputs: [
+      {
+        components: [
+          {
+            internalType: "string",
+            name: "name",
+            type: "string",
+          },
+        ],
+        internalType: "struct Greeter.MyStruct[]",
+        name: "myStr",
+        type: "tuple[]",
+      },
+      {
+        internalType: "int256[]",
+        name: "myArgNum",
+        type: "int256[]",
+      },
+      {
+        internalType: "string",
+        name: "mySecondStr",
+        type: "string",
+      },
+    ],
+    stateMutability: "nonpayable",
+    type: "constructor",
+  },
+  {
     inputs: [],
-    name: "retrieve",
+    name: "greet",
     outputs: [
       {
-        internalType: "uint256",
+        internalType: "string",
         name: "",
-        type: "uint256",
+        type: "string",
       },
     ],
     stateMutability: "view",
     type: "function",
   },
   {
-    inputs: [
+    inputs: [],
+    name: "greetNum",
+    outputs: [
       {
-        internalType: "uint256",
-        name: "num",
-        type: "uint256",
+        internalType: "int256",
+        name: "",
+        type: "int256",
       },
     ],
-    name: "store",
-    outputs: [],
-    stateMutability: "nonpayable",
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "greetSecond",
+    outputs: [
+      {
+        internalType: "string",
+        name: "",
+        type: "string",
+      },
+    ],
+    stateMutability: "view",
     type: "function",
   },
 ];

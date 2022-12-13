@@ -1,6 +1,9 @@
 const ethers = require("ethers");
 const txs = [];
-for (let i = 0; i < parseInt(process.argv[4]); i++) console.log(i);
+for (let i = 0; i < parseInt(process.argv[4]); i++) {
+  console.log(i);
+  txs[i] = i;
+}
 console.log(txs);
 let url = process.argv[3];
 let provider = new ethers.providers.JsonRpcProvider(url);

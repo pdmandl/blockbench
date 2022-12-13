@@ -63,7 +63,7 @@ const savePacket = async (id, value) => {
   console.log(getGasPrice(id, value));
   try {
     const res = await myContract_write.set(id, value);
-    const receipt = await wait(res);
+    const receipt = await res.wait();
     console.log(receipt);
   } catch (e) {
     console.log(e);

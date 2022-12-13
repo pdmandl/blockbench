@@ -1,4 +1,3 @@
-const Tx = require("ethereumjs-tx").Transaction;
 const ethers = require("ethers");
 
 let url = "http://192.168.4.150:8545";

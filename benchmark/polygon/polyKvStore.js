@@ -64,6 +64,7 @@ const savePacket = async (id, value) => {
   } catch (e) {
     console.log(e);
   }
+  txs.splice(id, 1);
   console.log("Saving Packet: " + value + " to id " + id + " finished.");
 };
 for (let i = 0; i < parseInt(process.argv[4]); i++) {

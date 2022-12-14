@@ -1,5 +1,6 @@
 const ethers = require("ethers");
 const txs = [];
+const doneTxs = [];
 for (let i = 0; i < parseInt(process.argv[4]); i++) {
   txs[i] = i;
 }
@@ -94,12 +95,19 @@ const doTransaction = async (i) => {
     console.log(e);
   }
 };
-const doTransactions = async () => {
+const doRTransactions = async () => {
+  while (doneTxs.length > 0) {
+    const i = doneTxs.shift();
+    await readPacket(i);
+  }
+};
+const doWTransactions = async () => {
   while (txs.length > 0) {
     const i = txs.shift();
     await doTransaction(i);
-    await readPacket(i);
+    doneTxs.push(i);
   }
+  doRTransactions();
 };
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const printer = async () => {
@@ -111,4 +119,4 @@ const printer = async () => {
   }
 };
 printer();
-doTransactions();
+doWTransactions();

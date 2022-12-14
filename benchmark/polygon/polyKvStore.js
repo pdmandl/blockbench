@@ -102,7 +102,7 @@ const doTransaction = async (i) => {
 const doRTransactions = async () => {
   while (doneTxs.length > 0) {
     const i = doneTxs.shift();
-    await readPacket(i);
+    await i;
   }
 };
 const doWTransactions = async () => {
@@ -111,7 +111,7 @@ const doWTransactions = async () => {
     await i;
     doneTxs.push(i);
   }
-  doRTransactions();
+  //doRTransactions();
 };
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const printer = async () => {

@@ -106,11 +106,8 @@ const doRTransactions = async () => {
   }
 };
 const doWTransactions = async () => {
-  while (txs.length > 0) {
-    const i = txs.shift();
-    await i;
-    doneTxs.push(i);
-  }
+  const doneTxs = await Promise.all(txs);
+  for (let tx of doneTxs) console.log(tx);
   //doRTransactions();
 };
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));

@@ -61,7 +61,7 @@ const savePacket = async (id, value) => {
     const receipt = await res.wait();
     const end = Date.now();
     console.log("transaction took " + (end - start) + "ms");
-    console.log(receipt);
+    console.log("receipt", receipt);
   } catch (e) {
     console.log(e);
   }
@@ -112,8 +112,8 @@ const doWTransactions = async () => {
   const doneTxs = await Promise.all(txs.map((res) => (res = res.tx)));
   for (let tx of doneTxs) {
     result = [...result, tx];
-    console.log(tx);
   }
+  console.table(result);
   //doRTransactions();
 };
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));

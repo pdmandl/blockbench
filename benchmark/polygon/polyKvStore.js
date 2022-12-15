@@ -116,7 +116,7 @@ const printer = async () => {
       `Still ${txs.length} of ${process.argv[4]} transactions to process.`
     );
     console.log(
-      `an ${txsR.length} of ${process.argv[4]} transactions to read.`
+      `and ${txsR.length} of ${process.argv[4]} transactions to read.`
     );
   }
 };

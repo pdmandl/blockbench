@@ -123,7 +123,7 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const printer = async () => {
   while (txs.length > 0) {
     await sleep(2000);
-    console.table(txs);
+    console.log(txs);
     console.log(
       `Still ${txs.length} of ${process.argv[4]} transactions to process.`
     );

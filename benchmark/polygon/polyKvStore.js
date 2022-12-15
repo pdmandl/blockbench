@@ -82,15 +82,13 @@ const readPacket = async (id) => {
   return end - start;
 };
 for (let i = 0; i < parseInt(process.argv[4]); i++) {
-  txs[i] = { tx: savePacket, id: i, args: [i, "TEST" + i] };
-  txsR[i] = { tx: readPacket, id: i, arg: i };
+  txs[i] = { tx: () => savePacket(i, "TEST" + i), id: i };
+  txsR[i] = { tx: () => readPacket(i), id: i };
 }
 const doRTransactions = async () => {
   let result = [];
   try {
-    const doneTxs = await Promise.all(
-      txsR.map((res) => res.tx(res.args[0], res.args[1]))
-    );
+    const doneTxs = await Promise.all(txsR.map((res) => (res = res.tx)));
     for (let tx of doneTxs) {
       result = [...result, tx];
     }
@@ -100,7 +98,7 @@ const doRTransactions = async () => {
 const doWTransactions = async () => {
   let result = [];
   try {
-    const doneTxs = await Promise.all(txs.map((res) => res.tx(res.arg)));
+    const doneTxs = await Promise.all(txs.map((res) => (res = res.tx)));
     for (let tx of doneTxs) {
       result = [...result, tx];
     }

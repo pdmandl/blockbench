@@ -105,7 +105,7 @@ const doWTransactions = async () => {
     }
     console.table(txs);
   } catch (e) {}
-  doRTransactions();
+  // doRTransactions();
 };
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const printer = async () => {

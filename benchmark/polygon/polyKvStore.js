@@ -89,7 +89,7 @@ const doRTransactions = async () => {
   let result = [];
   try {
     const doneTxs = await Promise.all(
-      txsR.map((res) => (res = res.tx(res.args[0], res.args[1])))
+      txsR.map((res) => res.tx(res.args[0], res.args[1]))
     );
     for (let tx of doneTxs) {
       result = [...result, tx];
@@ -100,9 +100,7 @@ const doRTransactions = async () => {
 const doWTransactions = async () => {
   let result = [];
   try {
-    const doneTxs = await Promise.all(
-      txs.map((res) => (res = res.tx(res.arg)))
-    );
+    const doneTxs = await Promise.all(txs.map((res) => res.tx(res.arg)));
     for (let tx of doneTxs) {
       result = [...result, tx];
     }

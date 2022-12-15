@@ -1,6 +1,6 @@
 const ethers = require("ethers");
 const { NonceManager } = require("@ethersproject/experimental");
-const txs = [];
+let txs = [];
 const doneTxs = [];
 let url = process.argv[3];
 let provider = new ethers.providers.JsonRpcProvider(url);
@@ -65,10 +65,7 @@ const savePacket = async (id, value) => {
   } catch (e) {
     console.log(e);
   }
-  var index = txs.indexOf(savePacket(id));
-  if (index !== -1) {
-    txs.splice(index, 1);
-  }
+  txs = txs.filter((res) => res.id !== id);
   console.log(`remove packet with id ${id}`);
   console.log("Saving Packet: " + value + " to id " + id + " finished.");
 };
@@ -112,7 +109,7 @@ const doRTransactions = async () => {
 };
 const doWTransactions = async () => {
   let result = [];
-  const doneTxs = await Promise.all(txs);
+  const doneTxs = await Promise.all(txs.map((res) => (res = res.tx)));
   for (let tx of doneTxs) {
     result = [...result, tx];
     console.log(tx);

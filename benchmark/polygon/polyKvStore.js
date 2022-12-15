@@ -64,9 +64,7 @@ const savePacket = async (id, value) => {
     console.log(e);
   }
   const end = Date.now();
-  console.log("transaction took " + (end - start) + "ms");
   txs = txs.filter((res) => res.id !== id);
-  console.log(`remove packet with id ${id}`);
   console.log("Saving Packet: " + value + " to id " + id + " finished.");
   return end - start;
 };
@@ -80,9 +78,7 @@ const readPacket = async (id) => {
     console.log(e);
   }
   const end = Date.now();
-  console.log("transaction took " + (end - start) + "ms");
   txsR = txsR.filter((res) => res.id !== id);
-  console.log(`remove packet with id ${id}`);
   console.log("Reading Packet: " + value + " at id " + id + " finished.");
   return end - start;
 };
@@ -92,25 +88,31 @@ for (let i = 0; i < parseInt(process.argv[4]); i++) {
 }
 const doRTransactions = async () => {
   let result = [];
-  const doneTxs = await Promise.all(txsR.map((res) => (res = res.tx)));
-  for (let tx of doneTxs) {
-    result = [...result, tx];
-  }
+  try {
+    const doneTxs = await Promise.all(txsR.map((res) => (res = res.tx)));
+    for (let tx of doneTxs) {
+      result = [...result, tx];
+    }
+  } catch (e) {}
   console.table(txsR);
 };
 const doWTransactions = async () => {
   let result = [];
-  const doneTxs = await Promise.all(txs.map((res) => (res = res.tx)));
-  for (let tx of doneTxs) {
-    result = [...result, tx];
-  }
-  console.table(txs);
+  try {
+    const doneTxs = await Promise.all(txs.map((res) => (res = res.tx)));
+    for (let tx of doneTxs) {
+      result = [...result, tx];
+    }
+    console.table(txs);
+  } catch (e) {}
   doRTransactions();
 };
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const printer = async () => {
   while (txs.length > 0) {
-    await sleep(2000);
+    try {
+      await sleep(2000);
+    } catch (e) {}
     console.log(
       `Still ${txs.length} of ${process.argv[4]} transactions to process.`
     );

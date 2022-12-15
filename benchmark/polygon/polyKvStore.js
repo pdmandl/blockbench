@@ -88,7 +88,7 @@ for (let i = 0; i < parseInt(process.argv[4]); i++) {
 const doRTransactions = async () => {
   let result = [];
   try {
-    const doneTxs = await Promise.all(txsR.map((res) => (res = res.tx)));
+    const doneTxs = await Promise.all(txsR.map((res) => res.tx()));
     for (let tx of doneTxs) {
       result = [...result, tx];
     }
@@ -98,7 +98,7 @@ const doRTransactions = async () => {
 const doWTransactions = async () => {
   let result = [];
   try {
-    const doneTxs = await Promise.all(txs.map((res) => (res = res.tx)));
+    const doneTxs = await Promise.all(txs.map((res) => res.tx()));
     for (let tx of doneTxs) {
       result = [...result, tx];
     }

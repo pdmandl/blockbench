@@ -70,7 +70,7 @@ const savePacket = async (id, value) => {
   console.log("Saving Packet: " + value + " to id " + id + " finished.");
 };
 for (let i = 0; i < parseInt(process.argv[4]); i++) {
-  txs[i] = savePacket(i, "TEST" + i);
+  txs[i] = { tx: savePacket(i, "TEST" + i), id: id };
 }
 const getGasPriceW = async (id, value) => {
   console.log(

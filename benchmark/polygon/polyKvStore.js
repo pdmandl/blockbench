@@ -65,7 +65,7 @@ const savePacket = async (id, value) => {
   } catch (e) {
     console.log(e);
   }
-  var index = array.indexOf(savePacket(id));
+  var index = txs.indexOf(savePacket(id));
   if (index !== -1) {
     txs.splice(index, 1);
   }

@@ -73,7 +73,6 @@ const readPacket = async (id) => {
   const start = Date.now();
   try {
     const res = await myContract_read.get(id);
-    console.log(res);
   } catch (e) {
     console.log(e);
   }

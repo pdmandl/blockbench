@@ -60,6 +60,7 @@ const savePacket = async (id, value) => {
     const res = await myContract_write.set(id, value);
     const receipt = await res.wait();
     const end = Date.now();
+    return end - start + ms;
     console.log("transaction took " + (end - start) + "ms");
     console.log("receipt", receipt);
   } catch (e) {

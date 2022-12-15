@@ -57,7 +57,7 @@ const savePacket = async (id, value) => {
   console.log("Saving Packet: " + value + " to id " + id + " started...");
   try {
     const start = Date.now();
-    const res = await newContact.set(id, value);
+    const res = await myContract_write.set(id, value);
     const receipt = await res.wait();
     const end = Date.now();
     console.log("transaction took " + (end - start) + "ms");

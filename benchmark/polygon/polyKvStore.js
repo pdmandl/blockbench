@@ -73,7 +73,7 @@ const savePacket = async (id, value) => {
   console.log("Saving Packet: " + value + " to id " + id + " finished.");
 };
 for (let i = 0; i < parseInt(process.argv[4]); i++) {
-  txs[i] = savePacket(i, "TEST" + i);
+  txs[i] = { tx: savePacket(i, "TEST" + i), id: i };
 }
 const getGasPriceW = async (id, value) => {
   console.log(
@@ -112,6 +112,7 @@ const doRTransactions = async () => {
 };
 const doWTransactions = async () => {
   let result = [];
+  txs.map((res) => (res = res.tx));
   const doneTxs = await Promise.all(txs);
   for (let tx of doneTxs) {
     result = [...result, tx];

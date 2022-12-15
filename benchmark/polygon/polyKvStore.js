@@ -55,20 +55,19 @@ const myContract_write = new ethers.Contract(address, abi, managedSigner); // Wr
 const myContract_read = new ethers.Contract(address, abi, provider); // Read only
 const savePacket = async (id, value) => {
   console.log("Saving Packet: " + value + " to id " + id + " started...");
+  const start = Date.now();
   try {
-    const start = Date.now();
     const res = await myContract_write.set(id, value);
     const receipt = await res.wait();
-    const end = Date.now();
-    return end - start + "ms";
-    console.log("transaction took " + (end - start) + "ms");
-    console.log("receipt", receipt);
   } catch (e) {
     console.log(e);
   }
+  const end = Date.now();
+  console.log("transaction took " + (end - start) + "ms");
   txs = txs.filter((res) => res.id !== id);
   console.log(`remove packet with id ${id}`);
   console.log("Saving Packet: " + value + " to id " + id + " finished.");
+  return end - start + "ms";
 };
 for (let i = 0; i < parseInt(process.argv[4]); i++) {
   txs[i] = { tx: savePacket(i, "TEST" + i), id: i };

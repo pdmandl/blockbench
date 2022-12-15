@@ -83,7 +83,7 @@ const readPacket = async (id) => {
 };
 for (let i = 0; i < parseInt(process.argv[4]); i++) {
   txs[i] = { tx: savePacket(i, "TEST" + i), id: i };
-  txsR[i] = { tx: readPacket(i), id: i };
+  //txsR[i] = { tx: readPacket(i), id: i };
 }
 const doRTransactions = async () => {
   let result = [];

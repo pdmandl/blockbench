@@ -65,7 +65,11 @@ const savePacket = async (id, value) => {
   } catch (e) {
     console.log(e);
   }
-  txs.splice(id, 1);
+  var index = array.indexOf(id);
+  if (index !== -1) {
+    txs.splice(index, 1);
+  }
+  console.log(`remove packet with id ${id}`);
   console.log("Saving Packet: " + value + " to id " + id + " finished.");
 };
 for (let i = 0; i < parseInt(process.argv[4]); i++) {

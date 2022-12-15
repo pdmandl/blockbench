@@ -67,7 +67,7 @@ const savePacket = async (id, value) => {
   txs = txs.filter((res) => res.id !== id);
   console.log(`remove packet with id ${id}`);
   console.log("Saving Packet: " + value + " to id " + id + " finished.");
-  return end - start + "ms";
+  return end - start;
 };
 for (let i = 0; i < parseInt(process.argv[4]); i++) {
   txs[i] = { tx: savePacket(i, "TEST" + i), id: i };
@@ -106,6 +106,12 @@ const doRTransactions = async () => {
     const i = doneTxs.shift();
     await i;
   }
+  let result = [];
+  const doneTxs = await Promise.all(txs.map((res) => (res = res.tx)));
+  for (let tx of doneTxs) {
+    result = [...result, tx];
+  }
+  console.table(result);
 };
 const doWTransactions = async () => {
   let result = [];
@@ -113,8 +119,8 @@ const doWTransactions = async () => {
   for (let tx of doneTxs) {
     result = [...result, tx];
   }
-  console.table(result);
-  //doRTransactions();
+  console.table(txs);
+  doRTransactions();
 };
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const printer = async () => {

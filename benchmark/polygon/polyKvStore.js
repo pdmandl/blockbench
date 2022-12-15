@@ -82,13 +82,15 @@ const readPacket = async (id) => {
   return end - start;
 };
 for (let i = 0; i < parseInt(process.argv[4]); i++) {
-  txs[i] = { tx: savePacket(i, "TEST" + i), id: i };
-  txsR[i] = { tx: readPacket(i), id: i };
+  txs[i] = { tx: savePacket, id: i, args: [i, "TEST" + i] };
+  txsR[i] = { tx: readPacket, id: i, arg: i };
 }
 const doRTransactions = async () => {
   let result = [];
   try {
-    const doneTxs = await Promise.all(txsR.map((res) => (res = res.tx)));
+    const doneTxs = await Promise.all(
+      txsR.map((res) => (res = res.tx(res.args[0], res.args[1])))
+    );
     for (let tx of doneTxs) {
       result = [...result, tx];
     }
@@ -98,13 +100,15 @@ const doRTransactions = async () => {
 const doWTransactions = async () => {
   let result = [];
   try {
-    const doneTxs = await Promise.all(txs.map((res) => (res = res.tx)));
+    const doneTxs = await Promise.all(
+      txs.map((res) => (res = res.tx(res.arg)))
+    );
     for (let tx of doneTxs) {
       result = [...result, tx];
     }
     console.table(result);
   } catch (e) {}
-  // doRTransactions();
+  doRTransactions();
 };
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const printer = async () => {

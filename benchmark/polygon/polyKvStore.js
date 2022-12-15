@@ -1,6 +1,7 @@
 const ethers = require("ethers");
 const { NonceManager } = require("@ethersproject/experimental");
 let txs = [];
+let txsR = [];
 const doneTxs = [];
 let url = process.argv[3];
 let provider = new ethers.providers.JsonRpcProvider(url);
@@ -71,19 +72,8 @@ const savePacket = async (id, value) => {
 };
 for (let i = 0; i < parseInt(process.argv[4]); i++) {
   txs[i] = { tx: savePacket(i, "TEST" + i), id: i };
+  txsR[i] = { tx: readPacket(i), id: i };
 }
-const getGasPriceW = async (id, value) => {
-  console.log(
-    "Gas price is: ",
-    (await myContract_write.estimateGas.set(id, value)).toNumber()
-  );
-};
-const getGasPriceR = async (id) => {
-  console.log(
-    "Gas price is: ",
-    (await myContract_read.estimateGas.get(id)).toNumber()
-  );
-};
 const readPacket = async (id) => {
   console.log("Reading id " + id + " started...");
   try {
@@ -92,26 +82,20 @@ const readPacket = async (id) => {
   } catch (e) {
     console.log(e);
   }
-  console.log("Reading id " + id + " finished.");
-};
-const doTransaction = async (i) => {
-  try {
-    await savePacket(i, "TEST" + i);
-  } catch (e) {
-    console.log(e);
-  }
+  const end = Date.now();
+  console.log("transaction took " + (end - start) + "ms");
+  txsR = txsR.filter((res) => res.id !== id);
+  console.log(`remove packet with id ${id}`);
+  console.log("Reading Packet: " + value + " at id " + id + " finished.");
+  return end - start;
 };
 const doRTransactions = async () => {
-  while (doneTxs.length > 0) {
-    const i = doneTxs.shift();
-    await i;
-  }
   let result = [];
-  const doneTxs = await Promise.all(txs.map((res) => (res = res.tx)));
+  const doneTxs = await Promise.all(txsR.map((res) => (res = res.tx)));
   for (let tx of doneTxs) {
     result = [...result, tx];
   }
-  console.table(result);
+  console.table(txsR);
 };
 const doWTransactions = async () => {
   let result = [];

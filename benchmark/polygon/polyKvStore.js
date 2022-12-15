@@ -126,3 +126,4 @@ const printer = async () => {
 };
 printer();
 doWTransactions();
+console.log("test");

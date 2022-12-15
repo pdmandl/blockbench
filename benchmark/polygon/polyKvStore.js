@@ -78,7 +78,7 @@ const readPacket = async (id) => {
   }
   const end = Date.now();
   txsR = txsR.filter((res) => res.id !== id);
-  console.log("Reading Packet: " + value + " at id " + id + " finished.");
+  console.log("Reading Packet at id: " + id + " finished.");
   return end - start;
 };
 for (let i = 0; i < parseInt(process.argv[4]); i++) {

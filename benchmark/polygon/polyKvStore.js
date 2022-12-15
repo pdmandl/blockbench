@@ -72,6 +72,7 @@ const savePacket = async (id, value) => {
 };
 const readPacket = async (id) => {
   console.log("Reading id " + id + " started...");
+  const start = Date.now();
   try {
     const res = await myContract_read.get(id);
     console.log(res);

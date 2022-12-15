@@ -108,12 +108,15 @@ const doWTransactions = async () => {
 };
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const printer = async () => {
-  while (txs.length > 0) {
+  while (txs.length > 0 || txsR.length > 0) {
     try {
       await sleep(2000);
     } catch (e) {}
     console.log(
       `Still ${txs.length} of ${process.argv[4]} transactions to process.`
+    );
+    console.log(
+      `an ${txsR.length} of ${process.argv[4]} transactions to read.`
     );
   }
 };

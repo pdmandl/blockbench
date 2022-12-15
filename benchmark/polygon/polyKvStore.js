@@ -70,10 +70,6 @@ const savePacket = async (id, value) => {
   console.log("Saving Packet: " + value + " to id " + id + " finished.");
   return end - start;
 };
-for (let i = 0; i < parseInt(process.argv[4]); i++) {
-  txs[i] = { tx: savePacket(i, "TEST" + i), id: i };
-  txsR[i] = { tx: readPacket(i), id: i };
-}
 const readPacket = async (id) => {
   console.log("Reading id " + id + " started...");
   try {
@@ -89,6 +85,10 @@ const readPacket = async (id) => {
   console.log("Reading Packet: " + value + " at id " + id + " finished.");
   return end - start;
 };
+for (let i = 0; i < parseInt(process.argv[4]); i++) {
+  txs[i] = { tx: savePacket(i, "TEST" + i), id: i };
+  txsR[i] = { tx: readPacket(i), id: i };
+}
 const doRTransactions = async () => {
   let result = [];
   const doneTxs = await Promise.all(txsR.map((res) => (res = res.tx)));

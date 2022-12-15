@@ -50,13 +50,14 @@ var abi = [
     type: "function",
   },
 ];
-const myContract_write = new ethers.Contract(address, abi, managedSigner); // Write only
+const myContract_write = new ethers.Contract(address, abi, signer); // Write only
+const newContact = myContract_write.connect(managedSigner);
 const myContract_read = new ethers.Contract(address, abi, provider); // Read only
 const savePacket = async (id, value) => {
   console.log("Saving Packet: " + value + " to id " + id + " started...");
   try {
     const start = Date.now();
-    const res = await myContract_write.set(id, value);
+    const res = await newContact.set(id, value);
     const receipt = await res.wait();
     const end = Date.now();
     console.log("transaction took " + (end - start) + "ms");

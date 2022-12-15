@@ -83,7 +83,7 @@ const readPacket = async (id) => {
 };
 for (let i = 0; i < parseInt(process.argv[4]); i++) {
   txs[i] = { tx: savePacket(i, "TEST" + i), id: i };
-  //txsR[i] = { tx: readPacket(i), id: i };
+  txsR[i] = { tx: readPacket(i), id: i };
 }
 const doRTransactions = async () => {
   let result = [];
@@ -93,7 +93,7 @@ const doRTransactions = async () => {
       result = [...result, tx];
     }
   } catch (e) {}
-  console.table(txsR);
+  console.table(result);
 };
 const doWTransactions = async () => {
   let result = [];
@@ -102,7 +102,7 @@ const doWTransactions = async () => {
     for (let tx of doneTxs) {
       result = [...result, tx];
     }
-    console.table(txs);
+    console.table(result);
   } catch (e) {}
   // doRTransactions();
 };

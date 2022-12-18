@@ -104,7 +104,6 @@ const doWTransactions = async (numberOfTxsPerRun, run) => {
       result = [...result, tx];
       total = [...total, tx];
     }
-    console.table(result);
   } catch (e) {}
   //doRTransactions();
 };
@@ -116,11 +115,11 @@ const printer = async () => {
       await sleep(1000);
     } catch (e) {}
     console.log(
-      `Still ${txs.length} of ${process.argv[4]} transactions to process.`
+      `Still ${txs.length} of ${process.argv[5]} transactions to process.`
     );
-    console.log(
+    /*console.log(
       `and ${txsR.length} of ${process.argv[4]} transactions to read.`
-    );
+    );*/
   }
 };
 const measureTime = async () => {
@@ -132,8 +131,7 @@ const measureTime = async () => {
   const end = Date.now();
   console.log(end);
   console.log("the test ended at " + end);
-  console.log("the test took " + (end - start) + " to finish.");
-  console.log(total);
+  console.log("the test took " + (end - start) / 1000 + "s to finish.");
   let ttl = 0;
   for (let t of total) {
     ttl = ttl + t;

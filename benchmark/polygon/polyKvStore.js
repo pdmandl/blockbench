@@ -96,6 +96,8 @@ const doRTransactions = async () => {
 const doWTransactions = async (numberOfTxsPerRun, run) => {
   let result = [];
   const txsForRun = txs.slice(run * numberOfTxsPerRun, numberOfTxsPerRun);
+  console.log(numberOfTxsPerRun, run);
+  console.table(txsForRun);
   try {
     const doneTxs = await Promise.all(txsForRun.map((res) => res.tx()));
     for (let tx of doneTxs) {

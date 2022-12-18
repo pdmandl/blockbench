@@ -131,6 +131,7 @@ const doTxs = async (txCount, run) => {
   doWTransactions(txCount, run);
 };
 const doTransactions = async () => {
+  console.table(txs);
   let run = 0;
   while (run * parseInt(process.argv[4]) < parseInt(process.argv[5])) {
     await doTxs(

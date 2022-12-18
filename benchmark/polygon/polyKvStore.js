@@ -123,7 +123,7 @@ const printer = async () => {
     );
   }
 };
-const measureTime = () => {
+const measureTime = async () => {
   const start = Date.now();
   while (txs.length > 0) {}
   const end = Date.now();

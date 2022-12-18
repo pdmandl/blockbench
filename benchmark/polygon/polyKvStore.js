@@ -129,7 +129,7 @@ const measureTime = async () => {
     await sleep(1);
   }
   const end = Date.now();
-  return end - start;
+  console.log("the test took " + end - start + " to finish.");
 };
 const doTxs = async (txCount, run) => {
   await sleep(1000);

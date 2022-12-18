@@ -1,5 +1,6 @@
 const ethers = require("ethers");
 const { NonceManager } = require("@ethersproject/experimental");
+let allTxs = [];
 let txs = [];
 let txsR = [];
 const doneTxs = [];
@@ -64,7 +65,7 @@ const savePacket = async (id, value) => {
     console.log(e);
   }
   const end = Date.now();
-  //txs = txs.filter((res) => res.id !== id);
+  txs = txs.filter((res) => res.id !== id);
   console.log("Saving Packet: " + value + " to id " + id + " finished.");
   return end - start;
 };
@@ -94,20 +95,16 @@ const doRTransactions = async () => {
 };
 const doWTransactions = async (numberOfTxsPerRun, run) => {
   let result = [];
-  const txsForRun = txs.slice(
+  const txsForRun = allTxs.slice(
     run * numberOfTxsPerRun,
     numberOfTxsPerRun + run * numberOfTxsPerRun
   );
-  console.log(
-    run * numberOfTxsPerRun,
-    numberOfTxsPerRun + run * numberOfTxsPerRun
-  );
-  console.table(txsForRun);
   try {
     const doneTxs = await Promise.all(txsForRun.map((res) => res.tx()));
     for (let tx of doneTxs) {
       result = [...result, tx];
     }
+    console.log(result);
   } catch (e) {}
   //doRTransactions();
 };
@@ -147,5 +144,6 @@ for (let i = 0; i < parseInt(process.argv[5]); i++) {
   txs[i] = { tx: () => savePacket(i, "TEST" + i), id: i };
   txsR[i] = { tx: () => readPacket(i), id: i };
 }
+allTxs = txs;
 printer();
 doTransactions();

@@ -93,9 +93,9 @@ const doRTransactions = async () => {
   } catch (e) {}
   console.table(result);
 };
-const doWTransactions = async (numberOfTxsPerRun) => {
+const doWTransactions = async (numberOfTxsPerRun, run) => {
   let result = [];
-  const txsForRun = txs.slice(1, numberOfTxsPerRun);
+  const txsForRun = txs.slice(run * numberOfTxsPerRun, numberOfTxsPerRun);
   try {
     const doneTxs = await Promise.all(txsForRun.map((res) => res.tx()));
     for (let tx of doneTxs) {
@@ -120,16 +120,16 @@ const printer = async () => {
     );
   }
 };
-const doTxs = async (txCount) => {
+const doTxs = async (txCount, run) => {
   await sleep(1000);
-  doWTransactions(txCount);
+  doWTransactions(txCount, run);
 };
 printer();
 for (let i = 0; i < parseInt(process.argv[5]); i++) {
   txs[i] = { tx: () => savePacket(i, "TEST" + i), id: i };
   txsR[i] = { tx: () => readPacket(i), id: i };
 }
-let run = 1;
+let run = 0;
 while (txs.length > 0) {
   await doTxs(process.argv[4] < txs.length ? process.argv[4] : txs.length, run);
   run += 1;

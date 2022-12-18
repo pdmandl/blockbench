@@ -95,7 +95,10 @@ const doRTransactions = async () => {
 };
 const doWTransactions = async (numberOfTxsPerRun, run) => {
   let result = [];
-  const txsForRun = txs.slice(run * numberOfTxsPerRun, numberOfTxsPerRun);
+  const txsForRun = txs.slice(
+    run * numberOfTxsPerRun,
+    numberOfTxsPerRun + run * numberOfTxsPerRun
+  );
   console.log(run * numberOfTxsPerRun, run);
   console.table(txsForRun);
   try {

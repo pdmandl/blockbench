@@ -136,9 +136,9 @@ const doTransactions = async () => {
     run += 1;
   }
 };
-printer();
 for (let i = 0; i < parseInt(process.argv[5]); i++) {
   txs[i] = { tx: () => savePacket(i, "TEST" + i), id: i };
   txsR[i] = { tx: () => readPacket(i), id: i };
 }
+printer();
 doTransactions();

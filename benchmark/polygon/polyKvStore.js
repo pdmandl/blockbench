@@ -125,7 +125,9 @@ const printer = async () => {
 };
 const measureTime = async () => {
   const start = Date.now();
-  while (txs.length > 0) {}
+  while (txs.length > 0) {
+    await sleep(1);
+  }
   const end = Date.now();
   return end - start;
 };

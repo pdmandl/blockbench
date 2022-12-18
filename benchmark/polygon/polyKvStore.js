@@ -124,13 +124,19 @@ const doTxs = async (txCount, run) => {
   await sleep(1000);
   doWTransactions(txCount, run);
 };
+const doTransactions = async () => {
+  let run = 0;
+  while (txs.length > 0) {
+    await doTxs(
+      process.argv[4] < txs.length ? process.argv[4] : txs.length,
+      run
+    );
+    run += 1;
+  }
+};
 printer();
 for (let i = 0; i < parseInt(process.argv[5]); i++) {
   txs[i] = { tx: () => savePacket(i, "TEST" + i), id: i };
   txsR[i] = { tx: () => readPacket(i), id: i };
 }
-let run = 0;
-while (txs.length > 0) {
-  await doTxs(process.argv[4] < txs.length ? process.argv[4] : txs.length, run);
-  run += 1;
-}
+doTransactions();

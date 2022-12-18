@@ -64,7 +64,7 @@ const savePacket = async (id, value) => {
     console.log(e);
   }
   const end = Date.now();
-  txs = txs.filter((res) => res.id !== id);
+  //txs = txs.filter((res) => res.id !== id);
   console.log("Saving Packet: " + value + " to id " + id + " finished.");
   return end - start;
 };

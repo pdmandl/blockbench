@@ -139,7 +139,7 @@ const measureTime = async () => {
     ttl = ttl + t;
   }
   console.log("Avg. latenzy: " + ttl / total.length);
-  console.log("Durchsatz: " + (end - start) / total.length);
+  console.log("Durchsatz: " + total.length / ((end - start) / 1000));
 };
 const doTxs = async (txCount, run) => {
   await sleep(1000);

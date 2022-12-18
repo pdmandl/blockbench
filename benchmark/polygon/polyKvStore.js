@@ -104,7 +104,7 @@ const doWTransactions = async (numberOfTxsPerRun, run) => {
     for (let tx of doneTxs) {
       result = [...result, tx];
     }
-    console.log(result);
+    console.table(result);
   } catch (e) {}
   //doRTransactions();
 };
@@ -134,7 +134,6 @@ const doTxs = async (txCount, run) => {
   doWTransactions(txCount, run);
 };
 const doTransactions = async () => {
-  console.table(txs);
   let run = 0;
   while (run * parseInt(process.argv[4]) < parseInt(process.argv[5])) {
     await doTxs(

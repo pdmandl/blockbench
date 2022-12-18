@@ -113,7 +113,7 @@ const printer = async () => {
   //while (txs.length > 0 || txsR.length > 0) {
   while (txs.length > 0) {
     try {
-      await sleep(2000);
+      await sleep(1000);
     } catch (e) {}
     console.log(
       `Still ${txs.length} of ${process.argv[4]} transactions to process.`
@@ -122,6 +122,12 @@ const printer = async () => {
       `and ${txsR.length} of ${process.argv[4]} transactions to read.`
     );
   }
+};
+const measureTime = () => {
+  const start = Date.now();
+  while (txs.length > 0) {}
+  const end = Date.now();
+  return end - start;
 };
 const doTxs = async (txCount, run) => {
   await sleep(1000);
@@ -145,5 +151,6 @@ for (let i = 0; i < parseInt(process.argv[5]); i++) {
   txsR[i] = { tx: () => readPacket(i), id: i };
 }
 allTxs = txs;
+measureTime();
 printer();
 doTransactions();

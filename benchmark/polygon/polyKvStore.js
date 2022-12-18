@@ -60,7 +60,6 @@ const savePacket = async (id, value) => {
   try {
     const res = await myContract_write.set(id, value);
     const receipt = await res.wait();
-    console.log(receipt);
   } catch (e) {
     console.log(e);
   }
@@ -99,14 +98,16 @@ const doWTransactions = async (numberOfTxsPerRun, run) => {
     run * numberOfTxsPerRun,
     numberOfTxsPerRun + run * numberOfTxsPerRun
   );
-  console.log(run * numberOfTxsPerRun, run);
+  console.log(
+    run * numberOfTxsPerRun,
+    numberOfTxsPerRun + run * numberOfTxsPerRun
+  );
   console.table(txsForRun);
   try {
     const doneTxs = await Promise.all(txsForRun.map((res) => res.tx()));
     for (let tx of doneTxs) {
       result = [...result, tx];
     }
-    console.table(result);
   } catch (e) {}
   //doRTransactions();
 };

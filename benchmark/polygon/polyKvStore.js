@@ -125,12 +125,13 @@ const printer = async () => {
 };
 const measureTime = async () => {
   const start = Date.now();
+  console.log("the test started at " + start);
   while (txs.length > 0) {
     await sleep(1);
   }
   const end = Date.now();
-  console.log(start);
   console.log(end);
+  console.log("the test ended at " + end);
   console.log("the test took " + (end - start) + " to finish.");
 };
 const doTxs = async (txCount, run) => {

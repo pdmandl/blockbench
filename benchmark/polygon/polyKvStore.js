@@ -120,11 +120,17 @@ const printer = async () => {
     );
   }
 };
+const doTxs = async (txCount) => {
+  await sleep(1000);
+  doWTransactions(txCount);
+};
 printer();
 for (let i = 0; i < parseInt(process.argv[5]); i++) {
   txs[i] = { tx: () => savePacket(i, "TEST" + i), id: i };
   txsR[i] = { tx: () => readPacket(i), id: i };
 }
+let run = 1;
 while (txs.length > 0) {
-  doWTransactions(process.argv[4] < txs.length ? process.argv[4] : txs.length);
+  await doTxs(process.argv[4] < txs.length ? process.argv[4] : txs.length, run);
+  run += 1;
 }

@@ -121,10 +121,10 @@ const printer = async () => {
   }
 };
 printer();
+for (let i = 0; i < parseInt(process.argv[5]); i++) {
+  txs[i] = { tx: () => savePacket(i, "TEST" + i), id: i };
+  txsR[i] = { tx: () => readPacket(i), id: i };
+}
 while (txs.length > 0) {
-  for (let i = 0; i < parseInt(process.argv[5]); i++) {
-    txs[i] = { tx: () => savePacket(i, "TEST" + i), id: i };
-    txsR[i] = { tx: () => readPacket(i), id: i };
-  }
   doWTransactions(process.argv[4] < txs.length ? process.argv[4] : txs.length);
 }

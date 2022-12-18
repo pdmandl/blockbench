@@ -130,7 +130,7 @@ const doTransactions = async () => {
   let run = 0;
   while (txs.length > 0) {
     await doTxs(
-      process.argv[4] < txs.length ? process.argv[4] : txs.length,
+      parseInt(process.argv[4]) < txs.length ? process.argv[4] : txs.length,
       run
     );
     run += 1;

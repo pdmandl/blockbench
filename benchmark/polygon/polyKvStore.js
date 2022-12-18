@@ -5,6 +5,7 @@ let txs = [];
 let txsR = [];
 const doneTxs = [];
 let url = process.argv[3];
+let total = [];
 let provider = new ethers.providers.JsonRpcProvider(url);
 var signer = new ethers.Wallet(process.argv[2], provider);
 var managedSigner = new NonceManager(signer);
@@ -56,7 +57,6 @@ var abi = [
 const myContract_write = new ethers.Contract(address, abi, managedSigner); // Write only
 const myContract_read = new ethers.Contract(address, abi, provider); // Read only
 const savePacket = async (id, value) => {
-  console.log("Saving Packet: " + value + " to id " + id + " started...");
   const start = Date.now();
   try {
     const res = await myContract_write.set(id, value);
@@ -66,7 +66,6 @@ const savePacket = async (id, value) => {
   }
   const end = Date.now();
   txs = txs.filter((res) => res.id !== id);
-  console.log("Saving Packet: " + value + " to id " + id + " finished.");
   return end - start;
 };
 const readPacket = async (id) => {
@@ -103,6 +102,7 @@ const doWTransactions = async (numberOfTxsPerRun, run) => {
     const doneTxs = await Promise.all(txsForRun.map((res) => res.tx()));
     for (let tx of doneTxs) {
       result = [...result, tx];
+      total = [...total, tx];
     }
     console.table(result);
   } catch (e) {}
@@ -133,6 +133,13 @@ const measureTime = async () => {
   console.log(end);
   console.log("the test ended at " + end);
   console.log("the test took " + (end - start) + " to finish.");
+  console.log(total);
+  let ttl = 0;
+  for (let t of total) {
+    ttl = ttl + t;
+  }
+  console.log("Avg. latenzy: " + ttl / total.length);
+  console.log("Durchsatz: " + (end - start) / total.length);
 };
 const doTxs = async (txCount, run) => {
   await sleep(1000);

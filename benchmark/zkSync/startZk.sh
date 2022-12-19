@@ -8,6 +8,6 @@ mkdir -p ./volumes
 mkdir -p ./volumes/postgres ./volumes/geth ./volumes/zksync/env/dev ./volumes/zksync/data
 sudo chmod 755 ./volumes ./volumes/postgres ./volumes/geth ./volumes/zksync/env/dev ./volumes/zksync/data
 sudo chown ubuntu:ubuntu ./volumes ./volumes/postgres ./volumes/geth ./volumes/zksync/env/dev ./volumes/zksync/data
-#sudo kill -9 $(sudo lsof -t -i:8555)
+sudo kill -9 $(sudo lsof -t -i:8555)
 docker-compose up
 

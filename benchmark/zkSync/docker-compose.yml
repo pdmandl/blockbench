@@ -5,7 +5,7 @@ services:
     logging:
         driver: none 
     ports:
-      - "8555:8555"
+      - "8545:8545"
       - "8546:8546"
     volumes:
       - type: bind

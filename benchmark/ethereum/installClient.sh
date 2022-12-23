@@ -1,6 +1,6 @@
 
-sudo apt-get install -y nodejs
-sudo apt-get install -y npm
+sudo snap install nodejs
+sudo snap install npm
 
 npm install -g truffle
 npm install -g ethers

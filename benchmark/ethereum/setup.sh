@@ -9,7 +9,7 @@ for host in `cat $HOSTS`; do
   echo done node $host
 done
 for host in `cat $CLIENTS`; do
-  ssh -oStrictHostKeyChecking=no $USER@$host "cd blockbench && git pull"
+  ssh -oStrictHostKeyChecking=no $USER@$host "rm -rf blockbench && git clone ${GIT_REPO}"
   echo done node $host
 done
 

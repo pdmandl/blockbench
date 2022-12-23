@@ -31,4 +31,10 @@ module.exports = {
       network_id: "*", // Match any network id
     },
   },
+  compilers: {
+    solc: {
+      version: "0.8.4",
+      parser: "solcjs", // Leverages solc-js purely for speedy parsing
+    },
+  },
 };

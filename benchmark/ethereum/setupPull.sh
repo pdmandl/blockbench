@@ -5,6 +5,8 @@ cd `dirname ${BASH_SOURCE-$0}`
 
 i=0
 for host in `cat $HOSTS`; do
+  git config --global user.email $GIT_USER_MAIL
+  git config --global user.name $GIT_USER
   ssh -oStrictHostKeyChecking=no $USER@$host "cd blockbench && git add . && git stash && git pull"
   echo done node $host
 done

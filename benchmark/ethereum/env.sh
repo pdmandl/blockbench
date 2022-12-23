@@ -28,6 +28,8 @@ PRIVATEKEY=$ETH_HOME/keys
 PWD="r2d2c3po"
 
 GIT_REPO=https://github.com/pdmandl/blockbench.git
+GIT_USER_MAIL=p.d.mandl@gmail.com
+GIT_USER=pdmandl
 ##comment these out for smallbank
 #EXE_HOME=$ETH_HOME/../../src/smallbank/ethereum/ycsb
 

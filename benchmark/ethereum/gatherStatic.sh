@@ -26,6 +26,3 @@ for host in `cat $HOSTS`; do
   echo $i
 done
 echo "]" >> static-nodes.json
-for host in `cat $HOSTS`; do
-  if [[ $i -lt $1 ]]; then
-    ssh $USER@$host 

@@ -1,8 +1,9 @@
 sudo apt autoremove
-sudo apt update
 curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-sudo aptitude install nodejs
-sudo aptitude install npm
+sudo apt-mark unhold nodejs
+sudo apt-mark unhold npm
+sudo apt install nodejs
+sudo apt install npm
 
 sudo npm install -g truffle
 sudo npm install -g ethers

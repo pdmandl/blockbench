@@ -10,7 +10,7 @@ for host in `cat $HOSTS`; do
   if [[ $i -lt 1 ]]; then
     echo "starting gathering boot"
     ssh $USER@$host chmod 755 $ETH_HOME/bootnode_startup.sh
-    nohup ssh $USER@$host $ETH_HOME/bootnode_startup.sh | head -n 1 > bootnode.txt
+    ssh $USER@$host nohup $ETH_HOME/bootnode_startup.sh | head -n 1 > bootnode.txt
   fi
   if [[ $i -lt $1 ]]; then
     echo "adding peer to network, rpcport $RPCPORT"

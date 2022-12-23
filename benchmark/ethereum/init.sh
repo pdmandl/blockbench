@@ -3,7 +3,7 @@
 cd `dirname ${BASH_SOURCE-$0}`
 . env.sh
 
-geth --datadir $ETH_DATA init $ETH_HOME/CustomGenesis_1.json
+geth --datadir $ETH_DATA init $ETH_HOME/CustomGenesis"_"$1".json"
 if [ -z "$2" ]; then
 echo "No private key file specified, an account will be generated"
 geth --datadir $ETH_DATA --password <(echo -n "${PWD}") account new;

@@ -10,7 +10,7 @@ for host in `cat $HOSTS`; do
   if [[ $i -lt 1 ]]; then
     echo deploying contracts on chain
 #  ssh -oStrictHostKeyChecking=no $client 'cd /users/dinhtta/blockchain-perf/ethereum ; ./start-clients.sh '$3 $i $2
-    ssh -oStrictHostKeyChecking=no $USER@$client "cd $ETH_HOME && truffle compile && truffle migrate --reset"
+    ssh -oStrictHostKeyChecking=no $USER@$host "cd $ETH_HOME && truffle compile && truffle migrate --reset"
     #ssh -oStrictHostKeyChecking=no $USER@$client $ETH_HOME/start-clients.sh $3 $i $2 $4 
   fi
   let i=$i+1

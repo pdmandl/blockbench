@@ -1,5 +1,4 @@
 sudo apt autoremove
-y
 sudo apt-mark unhold nodejs
 sudo apt-mark unhold npm
 curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -

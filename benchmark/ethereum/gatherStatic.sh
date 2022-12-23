@@ -9,7 +9,7 @@ echo "[" >> static-nodes.json
 for host in `cat $HOSTS`; do
   if [[ $i -lt 1 ]]; then
     echo "starting gathering boot"
-    #ssh $USER@$host chmod 755 $ETH_HOME/bootnode_startup.sh
+    ssh $USER@$host chmod 755 $ETH_HOME/bootnode_startup.sh
     #echo -n `ssh $USER@$host $ETH_HOME/bootnode_startup.sh 2>/dev/null | grep enode` >> bootnode.txt
   fi
   if [[ $i -lt $1 ]]; then

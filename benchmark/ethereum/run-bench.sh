@@ -4,6 +4,10 @@ cd `dirname ${BASH_SOURCE-$0}`
 . env.sh
 
 ./stop-all.sh $1 
+
+#enable if you want installation in runtime
+#./install-all $1
+
 ./init-all.sh $1 
 ./start-all.sh $1 
 

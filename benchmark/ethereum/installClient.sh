@@ -1,5 +1,5 @@
-
-sudo ap install nodejs
+sudo apt autoremove
+sudo apt install nodejs
 sudo apt install npm
 
 sudo npm install -g truffle

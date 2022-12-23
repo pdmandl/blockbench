@@ -2,14 +2,17 @@ require("@nomiclabs/hardhat-ethers");
 require("@nomiclabs/hardhat-etherscan");
 
 module.exports = {
-  defaultNetwork: "matic",
   networks: {
-    hardhat: {
+    private: {
+      url: "http://localhost:8545", // URL of the Ethereum provider (e.g., Ganache)
+      accounts: [
+        {
+          privateKey:
+            "0x1234567890123456789012345678901234567890123456789012345678901234", // Private key of an Ethereum account
+          balance: "100000000000000000000", // Initial balance of the Ethereum account (in wei)
+        },
+      ],
     },
-    polygon_mumbai: {
-      url: "https://rpc-mumbai.maticvigil.com",
-      accounts: ["6ea44ded1928c25f5eb73e5240937379f451c7aaef49d32c065f78dc0cbf6da7"]
-    }
   },
   solidity: {
     version: "0.8.9",
@@ -20,4 +23,4 @@ module.exports = {
       }
     }
   },
-}
+};

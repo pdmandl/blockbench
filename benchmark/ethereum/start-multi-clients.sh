@@ -16,7 +16,7 @@ for host in `cat $HOSTS`; do
   let i=$i+1
 done
 let j=0
-array=($(cat $HOSTS))
+array=($(cat $HOSTS_PRIV))
 for client in `cat $CLIENTS`; do
   if [[ $j -lt $1 ]]; then
     echo starting client $client  threads=$3 clientNo=$i nservers=$2 txrate=$4
@@ -24,7 +24,7 @@ for client in `cat $CLIENTS`; do
     for out in `cat $ETH_HOME_LOCAL/Output.txt`; do
       if [[ "$BENCHMARK" = "ycsb" ]]; then
         if [[ $z -eq 0 ]]; then
-          ssh -oStrictHostKeyChecking=no $USER@$client "cd $ETH_HOME && sudo npm install ethers && sudo npm install @ethersproject/experimental && node polyKvStore.js 0x7726827caac94a7f9e1b160f7ea819f172f7b6f9d2a97f992c38edeab82d4110 http://${array[j]} 10 100 $out" > "${client}"_kv.txt
+          ssh -oStrictHostKeyChecking=no $USER@$client "cd $ETH_HOME && sudo npm install ethers && sudo npm install @ethersproject/experimental && node polyKvStore.js 0x7726827caac94a7f9e1b160f7ea819f172f7b6f9d2a97f992c38edeab82d4110 http://${array[j]}:8051 10 100 $out" > "${client}"_kv.txt
           echo host: "${array[j]}" contract: $out
         fi
       fi

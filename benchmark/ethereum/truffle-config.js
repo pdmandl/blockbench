@@ -36,8 +36,9 @@ module.exports = {
 
   networks: {
     private: {
-      provider: () => new HDWalletProvider(mnemonic, `http://127.0.0.1:8051`),
-      network_id: 2111, // This network is yours, in the cloud.
+      provider: () =>
+        new HDWalletProvider(mnemonic, `http://192.168.4.116:8051`),
+      network_id: "*", // This network is yours, in the cloud.
       production: true, // Treats this network as if it was a public net. (default: false)
     },
     // Useful for testing. The `development` name is special - truffle uses it by default

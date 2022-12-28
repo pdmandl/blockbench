@@ -71,7 +71,9 @@ const myContract_read = new ethers.Contract(address, abi, provider); // Read onl
 const savePacket = async (id, value) => {
   const start = Date.now();
   try {
-    const res = await myContract_write.set(id, value);
+    const res = await myContract_write.set(id, value, {
+      gasLimit: 5000000,
+    });
     const receipt = await res.wait();
   } catch (e) {
     console.log(e);
@@ -84,7 +86,9 @@ const readPacket = async (id) => {
   console.log("Reading id " + id + " started...");
   const start = Date.now();
   try {
-    const res = await myContract_read.get(id);
+    const res = await myContract_read.get(id, {
+      gasLimit: 5000000,
+    });
     console.log(res);
   } catch (e) {
     console.log(e);

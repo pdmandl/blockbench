@@ -13,7 +13,7 @@ for host in `cat $HOSTS`; do
     ssh $USER@$host nohup $ETH_HOME/bootnode_startup.sh | head -n 1 > bootnode.txt
   fi
   if [[ $i -lt $1 ]]; then
-    echo "adding peer to network, rpcport $RPCPORT"
+    echo "adding peer $i to network, rpcport $RPCPORT"
     ssh $USER@$host chmod 755 $ETH_HOME/enode.sh
     if [[ $i -lt `expr $1 - 1` ]]; then
       echo "`ssh $USER@$host $ETH_HOME/enode.sh $host 2>/dev/null | grep enode`," >> static-nodes.json
@@ -23,6 +23,5 @@ for host in `cat $HOSTS`; do
     sleep 1
   fi
   let i=$i+1
-  echo $i
 done
 echo "]" >> static-nodes.json

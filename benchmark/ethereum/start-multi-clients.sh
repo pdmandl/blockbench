@@ -9,7 +9,7 @@ echo starting clients
 for host in `cat $HOSTS`; do
   if [[ $i -lt 1 ]]; then
     echo deploying contracts on chain
-    ssh -oStrictHostKeyChecking=no $USER@$host "cd $ETH_HOME && rm Output.txt && truffle compile && truffle migrate --reset --network=private"
+    ssh -oStrictHostKeyChecking=no $USER@$host "cd $ETH_HOME && truffle compile && rm Output.txt && truffle migrate --reset --network=private"
     scp -oStrictHostKeyChecking=no $USER@$host:$ETH_HOME/Output.txt $ETH_HOME_LOCAL/Output.txt 
   fi
   let i=$i+1
@@ -17,6 +17,9 @@ done
 let j=0
 for client in `cat $CLIENTS`; do
   if [[ $j -lt $1 ]]; then
+    for out in `cat $ETH_HOME/Output.txt`; do
+      echo $out
+    done
     echo starting client $client  threads=$3 clientNo=$i nservers=$2 txrate=$4
     ssh -oStrictHostKeyChecking=no $USER@$client chmod 755 $ETH_HOME/start-clients.sh
     ssh -oStrictHostKeyChecking=no $USER@$client $ETH_HOME/start-clients.sh $3 $i $2 $4 

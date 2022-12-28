@@ -1,4 +1,7 @@
 const fs = require("fs");
+fs.writeFile("Output.txt", "", function () {
+  console.log("done");
+});
 
 var Kvstore = artifacts.require("Kvstore");
 var Smallbank = artifacts.require("Smallbank");

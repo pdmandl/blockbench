@@ -9,20 +9,19 @@ echo starting clients
 for host in `cat $HOSTS`; do
   if [[ $i -lt 1 ]]; then
     echo deploying contracts on chain
-#  ssh -oStrictHostKeyChecking=no $client 'cd /users/dinhtta/blockchain-perf/ethereum ; ./start-clients.sh '$3 $i $2
     ssh -oStrictHostKeyChecking=no $USER@$host "cd $ETH_HOME && truffle compile && truffle migrate --reset --network=private"
-    #ssh -oStrictHostKeyChecking=no $USER@$client $ETH_HOME/start-clients.sh $3 $i $2 $4 
+    scp -oStrictHostKeyChecking=no $USER@$host:$ETH_HOME/Output.txt $ETH_HOME_LOCAL/Output.txt 
   fi
   let i=$i+1
 done
-let i = 0
+let j=0
 for client in `cat $CLIENTS`; do
-  if [[ $i -lt $1 ]]; then
+  if [[ $j -lt $1 ]]; then
     echo starting client $client  threads=$3 clientNo=$i nservers=$2 txrate=$4
     ssh -oStrictHostKeyChecking=no $USER@$client chmod 755 $ETH_HOME/start-clients.sh
     ssh -oStrictHostKeyChecking=no $USER@$client $ETH_HOME/start-clients.sh $3 $i $2 $4 
   fi
-  let i=$i+1
+  let j=$j+1
 done
 
 if [[ $5 == "-drop" ]]; then

@@ -1,7 +1,7 @@
 //SPDX-License-Identifier: Unlicense
 pragma solidity ^0.8.0;
 
-contract SmallBank {
+contract Smallbank {
     //uint constant MAX_ACCOUNT = 10000;
     //uint constant BALANCE = 10000;
     //bytes20 constant accountTab = "account";

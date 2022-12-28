@@ -1,6 +1,8 @@
-var KVStore = artifacts.require("KVStore");
+var Kvstore = artifacts.require("Kvstore");
+var Smallbank = artifacts.require("Smallbank");
 
 module.exports = function (deployer) {
   // deployment steps
-  deployer.deploy(KVStore);
+  deployer.deploy(Kvstore);
+  deployer.deploy(Smallbank);
 };

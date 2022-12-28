@@ -15,10 +15,10 @@ for host in `cat $HOSTS`; do
   fi
   let i=$i+1
 done
+let i = 0
 for client in `cat $CLIENTS`; do
-  if [[ $i -lt $IDX ]]; then
+  if [[ $i -lt $1 ]]; then
     echo starting client $client  threads=$3 clientNo=$i nservers=$2 txrate=$4
-#  ssh -oStrictHostKeyChecking=no $client 'cd /users/dinhtta/blockchain-perf/ethereum ; ./start-clients.sh '$3 $i $2
     ssh -oStrictHostKeyChecking=no $USER@$client chmod 755 $ETH_HOME/start-clients.sh
     ssh -oStrictHostKeyChecking=no $USER@$client $ETH_HOME/start-clients.sh $3 $i $2 $4 
   fi

@@ -24,12 +24,13 @@ for client in `cat $CLIENTS`; do
     for out in `cat $ETH_HOME_LOCAL/Output.txt`; do
       if [[ "$BENCHMARK" = "ycsb" ]]; then
         if [[ $z -eq 0 ]]; then
+          ssh -oStrictHostKeyChecking=no $USER@$client "cd $ETH_HOME && sudo npm install ethers && sudo npm install @ethersproject/experimental && node polyKvStore.js 0x7726827caac94a7f9e1b160f7ea819f172f7b6f9d2a97f992c38edeab82d4110 http://${array[j]} 10 100 $out" > "${client}"_kv.txt
           echo host: "${array[j]}" contract: $out
         fi
       fi
       if [[ "$BENCHMARK" = "smallbank" ]]; then
         if [[ $z -eq 1 ]]; then
-          ssh -oStrictHostKeyChecking=no $USER@$client "cd $ETH_HOME && node 0x7726827caac94a7f9e1b160f7ea819f172f7b6f9d2a97f992c38edeab82d4110 http://${array[j]} 10 100 $out" > "${client}".txt
+          ssh -oStrictHostKeyChecking=no $USER@$client "cd $ETH_HOME && node polyKvStore.js 0x7726827caac94a7f9e1b160f7ea819f172f7b6f9d2a97f992c38edeab82d4110 http://${array[j]} 10 100 $out" > "${client}"_sb.txt
           echo host: "${array[j]}" contract: $out
         fi
       fi  

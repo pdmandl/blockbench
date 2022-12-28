@@ -18,7 +18,8 @@ LOG_DIR=/home/ubuntu/smallbank
 EXE_HOME=/home/ubuntu/blockbench/src/macro/smallbank
 # name/type of the benchmark
 #BENCHMARK=ycsb
-BENCHMARK=smallbank
+#BENCHMARK=nft
+BENCHMARK=ycsb
 # SSH user (with public key auth) to use to run the scripts on all machines
 USER=ubuntu
 # RPCport used by clients and ethereum nodes

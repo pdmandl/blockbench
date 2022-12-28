@@ -1,0 +1,1802 @@
++ ethers@5.7.2
+updated 1 package and audited 47 packages in 6.409s
+
+10 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
++ @ethersproject/experimental@5.7.0
+updated 1 package and audited 47 packages in 2.109s
+
+32 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+the test started at 1672264557383
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+Error: could not detect network (event="noNetwork", code=NETWORK_ERROR, version=providers/5.7.2)
+    at Logger.makeError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:238:21)
+    at Logger.throwError (/home/ubuntu/blockbench/node_modules/@ethersproject/logger/lib/index.js:247:20)
+    at JsonRpcProvider.<anonymous> (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:609:54)
+    at step (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:48:23)
+    at Object.throw (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:29:53)
+    at rejected (/home/ubuntu/blockbench/node_modules/@ethersproject/providers/lib/json-rpc-provider.js:21:65)
+    at runNextTicks (internal/process/task_queues.js:60:5)
+    at processTimers (internal/timers.js:497:9) {
+  reason: 'could not detect network',
+  code: 'NETWORK_ERROR',
+  event: 'noNetwork'
+}
+1672265037445
+the test ended at 1672265037445
+the test took 480.062s to finish.
+Durschn. Latenz: 474540.75 ms
+Durchsatz: 0.20830642708650132 tx/s
+Still 0 of 100 transactions to process.

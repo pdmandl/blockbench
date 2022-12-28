@@ -1,10 +1,15 @@
 /**
  * FIRST ARGUMENT: WALLET PK
- * SECOND ARGUMENT: RPC_UR
+ * SECOND ARGUMENT: RPC_URL
  * THIRD ARGUMENT: NR_REQUESTS_PER_SECOND
  * FOURTH ARGUMENT: TOTAL_NR_REQUESTS
  * FIFTH ARGUMENT: CONTRACT ADDRESS
  */
+console.log("WALLET" + process.argv[2]);
+console.log("RPC_URL" + process.argv[3]);
+console.log("NR_REQUESTS_PER_SECOND" + process.argv[4]);
+console.log("TOTAL_NR_REQUESTS" + process.argv[5]);
+console.log("CONTRACT ADDRESS" + process.argv[6]);
 const ethers = require("ethers");
 const { NonceManager } = require("@ethersproject/experimental");
 let allTxs = [];

@@ -1,0 +1,94 @@
++ ethers@5.7.2
+updated 1 package and audited 45 packages in 3.96s
+
+1 package is looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
++ @ethersproject/experimental@5.7.0
+added 1 package from 1 contributor and audited 46 packages in 6.695s
+
+32 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+the test started at 1672265061038
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.
+Still 100 of 100 transactions to process.

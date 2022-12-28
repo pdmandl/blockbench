@@ -5,6 +5,6 @@ module.exports = function (deployer) {
   // deployment steps
   deployer.deploy(Kvstore).then(() => console.log(Kvstore.address));
   deployer
-    .deploy(Smallbank, { gas: 5000000 })
+    .deploy(Smallbank, { gas: 524288 })
     .then(() => console.log(Smallbank.address));
 };

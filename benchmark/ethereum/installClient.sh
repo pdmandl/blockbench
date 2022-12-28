@@ -7,6 +7,7 @@ echo Installation startet at $(date -u)
 
 sudo npm install -g truffle
 sudo npm install -g ethers
+sudo npm install -g fs
 sudo npm install -g @ethersproject/experimental
 sudo npm install -g @truffle/hdwallet-provider
 echo Installation finished at $(date -u)

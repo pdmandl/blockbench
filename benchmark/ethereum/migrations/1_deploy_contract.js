@@ -15,7 +15,7 @@ module.exports = function (deployer) {
     });
   });
   deployer.deploy(Smallbank, { gas: 5000000 }).then(() => {
-    fs.appendFile("Output.txt", Smallbank.address, function (err) {
+    fs.appendFile("Output.txt", `\n${Smallbank.address}`, function (err) {
       if (err) {
         // append failed
       } else {

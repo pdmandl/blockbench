@@ -148,7 +148,7 @@ const measureTime = async () => {
     });
   });
   workbook.xlsx.writeFile(
-    "Transactions_${process.argv[4]}tps_${process.argv[5]}tts.xlsx"
+    `Transactions_${process.argv[4]}tps_${process.argv[5]}tts.xlsx`
   );
   console.log("Successful Txs:" + success);
   console.log("Failed Txs:" + fail);

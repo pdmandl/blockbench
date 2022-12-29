@@ -114,7 +114,6 @@ const printer = async () => {
     console.log(
       `Still ${txs.length} of ${process.argv[5]} transactions to process.`
     );
-    console.table(txs);
   }
 };
 const measureTime = async () => {

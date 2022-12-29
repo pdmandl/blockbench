@@ -4,14 +4,17 @@
  * THIRD ARGUMENT: NR_REQUESTS_PER_SECOND
  * FOURTH ARGUMENT: TOTAL_NR_REQUESTS
  * FIFTH ARGUMENT: CONTRACT ADDRESS
+ * SIXTH ARGUMENT: INDEX
  */
 console.log("WALLET" + process.argv[2]);
 console.log("RPC_URL" + process.argv[3]);
 console.log("NR_REQUESTS_PER_SECOND" + process.argv[4]);
 console.log("TOTAL_NR_REQUESTS" + process.argv[5]);
 console.log("CONTRACT ADDRESS" + process.argv[6]);
+console.log("INDEX" + process.argv[7]);
 const ethers = require("ethers");
 const { NonceManager } = require("@ethersproject/experimental");
+
 let allTxs = [];
 let txs = [];
 let txsR = [];
@@ -68,6 +71,9 @@ var abi = [
 ];
 const myContract_write = new ethers.Contract(address, abi, managedSigner); // Write only
 const myContract_read = new ethers.Contract(address, abi, provider); // Read only
+managedSigner.incrementTransactionCount(
+  parseInt(process.argv[5]) * parseInt(process.argv[7])
+);
 const savePacket = async (id, value) => {
   const start = Date.now();
   try {

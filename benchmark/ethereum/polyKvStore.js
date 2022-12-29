@@ -16,7 +16,11 @@ console.log("NR_OF_CLIENTS" + process.argv[8]);
 
 const ethers = require("ethers");
 const { NonceManager } = require("@ethersproject/experimental");
-
+const Excel = require("exceljs");
+let workbook = new Excel.Workbook();
+let worksheet = workbook.addWorksheet(
+  `Transactions_${process.argv[4]}tps_${process.argv[5]}tts`
+);
 let allTxs = [];
 let txs = [];
 let url = process.argv[3];
@@ -134,6 +138,18 @@ const measureTime = async () => {
   for (let t of total) {
     ttl = ttl + t;
   }
+  worksheet.columns = [
+    { header: "Tx nr.", key: "id" },
+    { header: "Latency", key: "value" },
+  ];
+  total.forEach((e, index) => {
+    worksheet.addRow({
+      ...{ id: index, value: e },
+    });
+  });
+  workbook.xlsx.writeFile(
+    "Transactions_${process.argv[4]}tps_${process.argv[5]}tts.xlsx"
+  );
   console.log("Durschn. Latenz: " + ttl / total.length + " ms");
   console.log("Durchsatz: " + total.length / ((end - start) / 1000) + " tx/s");
 };

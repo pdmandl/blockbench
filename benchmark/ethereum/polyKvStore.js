@@ -20,7 +20,6 @@ const { NonceManager } = require("@ethersproject/experimental");
 let allTxs = [];
 let txs = [];
 let txsR = [];
-const nonce = 0;
 const doneTxs = [];
 let url = process.argv[3];
 let total = [];
@@ -83,37 +82,11 @@ const savePacket = async (id, value) => {
     });
     const receipt = await res.wait();
   } catch (e) {
-    console.log(e);
+    console.error(e);
   }
   const end = Date.now();
   txs = txs.filter((res) => res.id !== id);
   return end - start;
-};
-const readPacket = async (id) => {
-  console.log("Reading id " + id + " started...");
-  const start = Date.now();
-  try {
-    const res = await myContract_read.get(id, {
-      gasLimit: 5000000,
-    });
-    console.log(res);
-  } catch (e) {
-    console.log(e);
-  }
-  const end = Date.now();
-  txsR = txsR.filter((res) => res.id !== id);
-  console.log("Reading Packet at id: " + id + " finished.");
-  return end - start;
-};
-const doRTransactions = async () => {
-  let result = [];
-  try {
-    const doneTxs = await Promise.all(txsR.map((res) => res.tx()));
-    for (let tx of doneTxs) {
-      result = [...result, tx];
-    }
-  } catch (e) {}
-  console.table(result);
 };
 const doWTransactions = async (numberOfTxsPerRun, run) => {
   let result = [];
@@ -128,13 +101,12 @@ const doWTransactions = async (numberOfTxsPerRun, run) => {
       total = [...total, tx];
     }
   } catch (e) {
-    console.log(e);
+    console.error(e);
   }
   //doRTransactions();
 };
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const printer = async () => {
-  //while (txs.length > 0 || txsR.length > 0) {
   while (txs.length > 0) {
     try {
       await sleep(1000);
@@ -142,9 +114,6 @@ const printer = async () => {
     console.log(
       `Still ${txs.length} of ${process.argv[5]} transactions to process.`
     );
-    /*console.log(
-      `and ${txsR.length} of ${process.argv[4]} transactions to read.`
-    );*/
   }
 };
 const measureTime = async () => {
@@ -170,7 +139,6 @@ const doTxs = async (txCount, run) => {
 };
 const doTransactions = async () => {
   let run = 0;
-  await sleep(100 * parseInt(process.argv[7]));
   while (run * parseInt(process.argv[4]) < parseInt(process.argv[5])) {
     await doTxs(
       parseInt(process.argv[4]) < txs.length
@@ -183,9 +151,7 @@ const doTransactions = async () => {
 };
 for (let i = 0; i < parseInt(process.argv[5]); i++) {
   const saveIndex = parseInt(process.argv[7]) * parseInt(process.argv[5]) + i;
-  console.log(saveIndex);
-  txs[i] = { tx: () => savePacket(saveIndex, "TEST" + i), id: i };
-  // txsR[i] = { tx: () => readPacket(i), id: i };
+  txs[i] = { tx: () => savePacket(saveIndex, "TEST" + i), id: saveIndex };
 }
 allTxs = txs;
 measureTime();

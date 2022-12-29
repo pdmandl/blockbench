@@ -12,6 +12,7 @@ console.log("NR_REQUESTS_PER_SECOND" + process.argv[4]);
 console.log("TOTAL_NR_REQUESTS" + process.argv[5]);
 console.log("CONTRACT ADDRESS" + process.argv[6]);
 console.log("INDEX" + process.argv[7]);
+console.log("NR_OF_CLIENTS" + process.argv[8]);
 
 const ethers = require("ethers");
 const { NonceManager } = require("@ethersproject/experimental");
@@ -178,7 +179,9 @@ const doTransactions = async () => {
     run += 1;
   }
 };
+const txCount = parseInt(process.argv[7]);
 for (let i = 0; i < parseInt(process.argv[5]); i++) {
+  managedSigner.incrementTransactionCount(parseInt(process.argv[8]));
   txs[i] = { tx: () => savePacket(i, "TEST" + i), id: i };
   txsR[i] = { tx: () => readPacket(i), id: i };
 }

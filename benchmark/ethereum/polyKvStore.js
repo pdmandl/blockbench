@@ -72,14 +72,16 @@ var abi = [
     type: "function",
   },
 ];
-const myContract_write = new ethers.Contract(address, abi, managedSigner); // Write only
+const myContract_write = new ethers.Contract(address, abi, signer); // Write only
 const myContract_read = new ethers.Contract(address, abi, provider); // Read only
 
 const savePacket = async (id, value) => {
   const start = Date.now();
   try {
+    const txCount = await provider.getTransactionCount(signer.address);
     const res = await myContract_write.set(id, value, {
       gasLimit: 5000000,
+      nonce: txCount + 1,
     });
     const receipt = await res.wait();
     console.log(receipt);

@@ -69,11 +69,9 @@ var abi = [
     type: "function",
   },
 ];
-const myContract_write = new ethers.Contract(address, abi, managedSigner); // Write only
+const myContract_write = new ethers.Contract(address, abi, signer); // Write only
 const myContract_read = new ethers.Contract(address, abi, provider); // Read only
-managedSigner.incrementTransactionCount(
-  parseInt(process.argv[5]) * parseInt(process.argv[7])
-);
+
 const savePacket = async (id, value) => {
   const start = Date.now();
   try {

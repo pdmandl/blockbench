@@ -164,11 +164,12 @@ const measureTime = async () => {
   console.log("Durchsatz: " + total.length / ((end - start) / 1000) + " tx/s");
 };
 const doTxs = async (txCount, run) => {
-  await sleep((1000 / parseInt(process.argv[8])) * parseInt(process.argv[7]));
+  await sleep(1000);
   doWTransactions(txCount, run);
 };
 const doTransactions = async () => {
   let run = 0;
+  await sleep(1000 * parseInt(process.argv[7]));
   while (run * parseInt(process.argv[4]) < parseInt(process.argv[5])) {
     await doTxs(
       parseInt(process.argv[4]) < txs.length
@@ -179,7 +180,6 @@ const doTransactions = async () => {
     run += 1;
   }
 };
-const txCount = parseInt(process.argv[7]);
 for (let i = 0; i < parseInt(process.argv[5]); i++) {
   txs[i] = { tx: () => savePacket(i, "TEST" + i), id: i };
   txsR[i] = { tx: () => readPacket(i), id: i };

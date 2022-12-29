@@ -12,6 +12,7 @@ console.log("NR_REQUESTS_PER_SECOND" + process.argv[4]);
 console.log("TOTAL_NR_REQUESTS" + process.argv[5]);
 console.log("CONTRACT ADDRESS" + process.argv[6]);
 console.log("INDEX" + process.argv[7]);
+
 const ethers = require("ethers");
 const { NonceManager } = require("@ethersproject/experimental");
 
@@ -74,26 +75,19 @@ const myContract_write = new ethers.Contract(address, abi, managedSigner); // Wr
 const myContract_read = new ethers.Contract(address, abi, provider); // Read only
 
 const savePacket = async (id, value) => {
-  nonce = nonce + 1;
-  console.log(nonce % (parseInt(process.argv[7]) + 2));
-  if (nonce % (parseInt(process.argv[7]) + 2) == 0) {
-    const start = Date.now();
-    try {
-      const res = await myContract_write.set(id, value, {
-        gasLimit: 5000000,
-      });
-      const receipt = await res.wait();
-      console.log(receipt);
-    } catch (e) {
-      console.log(e);
-    }
-    const end = Date.now();
-    txs = txs.filter((res) => res.id !== id);
-    return end - start;
-  } else {
-    console.log(nonce % (parseInt(process.argv[7]) + 2));
-    return 0;
+  const start = Date.now();
+  try {
+    const res = await myContract_write.set(id, value, {
+      gasLimit: 5000000,
+    });
+    const receipt = await res.wait();
+    console.log(receipt);
+  } catch (e) {
+    console.log(e);
   }
+  const end = Date.now();
+  txs = txs.filter((res) => res.id !== id);
+  return end - start;
 };
 const readPacket = async (id) => {
   console.log("Reading id " + id + " started...");

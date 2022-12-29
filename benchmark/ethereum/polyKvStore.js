@@ -84,6 +84,7 @@ const savePacket = async (id, value) => {
     console.error(e);
   }
   const end = Date.now();
+  console.log("id: " + id, "value: " + value);
   txs = txs.filter((res) => res.id !== id);
   return end - start;
 };
@@ -99,6 +100,7 @@ const doWTransactions = async (numberOfTxsPerRun, run) => {
       result = [...result, tx];
       total = [...total, tx];
     }
+    console.table(doneTxs);
   } catch (e) {
     console.error(e);
   }

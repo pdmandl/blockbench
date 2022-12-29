@@ -5,6 +5,7 @@ ETH_HOME_LOCAL=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/ether
 # file that contains ip addresses of servers that should be used for setting up the ethereum network
 HOSTS=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/ethereum/hosts
 HOSTS_PRIV=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/ethereum/hosts_priv
+RICH_WALLETS=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/ethereum/rich_wallets
 # where is your hostfile on your client vm?
 HOSTS_ON_CLIENT=/home/ubuntu/blockbench/benchmark/ethereum/hosts_priv
 RPC_PORT=8051

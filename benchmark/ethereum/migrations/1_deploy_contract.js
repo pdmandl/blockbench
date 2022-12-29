@@ -4,7 +4,7 @@ fs.writeFile("Output.txt", "", function () {
 });
 
 var Kvstore = artifacts.require("Kvstore");
-var Smallbank = artifacts.require("Smallbank");
+// var Smallbank = artifacts.require("Smallbank");
 
 module.exports = function (deployer) {
   // deployment steps
@@ -17,7 +17,7 @@ module.exports = function (deployer) {
       }
     });
   });
-  deployer.deploy(Smallbank, { gas: 5000000 }).then(() => {
+  /*deployer.deploy(Smallbank, { gas: 5000000 }).then(() => {
     fs.appendFile("Output.txt", `\n${Smallbank.address}`, function (err) {
       if (err) {
         // append failed
@@ -25,5 +25,5 @@ module.exports = function (deployer) {
         // done
       }
     });
-  });
+  });*/
 };

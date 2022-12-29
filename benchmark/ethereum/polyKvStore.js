@@ -74,7 +74,7 @@ const myContract_write = new ethers.Contract(address, abi, managedSigner); // Wr
 const myContract_read = new ethers.Contract(address, abi, provider); // Read only
 
 const savePacket = async (id, value) => {
-  console.log(nonce % parseInt(process.argv[7]));
+  console.log(nonce % (parseInt(process.argv[7]) + 2));
   if (nonce % (parseInt(process.argv[7]) + 2) == 0) {
     nonce = nonce + 1;
     const start = Date.now();
@@ -92,7 +92,7 @@ const savePacket = async (id, value) => {
     txs = txs.filter((res) => res.id !== id);
     return end - start;
   } else {
-    console.log(nonce % parseInt(process.argv[7]));
+    console.log(nonce % (parseInt(process.argv[7]) + 2));
     nonce = nonce + 1;
     return 0;
   }

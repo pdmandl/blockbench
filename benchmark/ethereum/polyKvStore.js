@@ -18,6 +18,7 @@ const { NonceManager } = require("@ethersproject/experimental");
 let allTxs = [];
 let txs = [];
 let txsR = [];
+const nonce = 0;
 const doneTxs = [];
 let url = process.argv[3];
 let total = [];
@@ -73,18 +74,25 @@ const myContract_write = new ethers.Contract(address, abi, signer); // Write onl
 const myContract_read = new ethers.Contract(address, abi, provider); // Read only
 
 const savePacket = async (id, value) => {
-  const start = Date.now();
-  try {
-    const res = await myContract_write.set(id, value, {
-      gasLimit: 5000000,
-    });
-    const receipt = await res.wait();
-  } catch (e) {
-    console.log(e);
+  if (nonce % parseInt(process.argv[7]) == 0) {
+    nonce = nonce + 1;
+    const start = Date.now();
+    try {
+      const res = await myContract_write.set(id, value, {
+        gasLimit: 5000000,
+        nonce: nonce,
+      });
+      const receipt = await res.wait();
+    } catch (e) {
+      console.log(e);
+    }
+    const end = Date.now();
+    txs = txs.filter((res) => res.id !== id);
+    return end - start;
+  } else {
+    nonce = nonce + 1;
+    return 0;
   }
-  const end = Date.now();
-  txs = txs.filter((res) => res.id !== id);
-  return end - start;
 };
 const readPacket = async (id) => {
   console.log("Reading id " + id + " started...");

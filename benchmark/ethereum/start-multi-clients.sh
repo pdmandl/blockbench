@@ -25,7 +25,7 @@ for client in `cat $CLIENTS`; do
     for out in `cat $ETH_HOME_LOCAL/Output.txt`; do
       if [[ "$BENCHMARK" = "ycsb" ]]; then
         if [[ $z -eq 0 ]]; then
-          nohup ssh -oStrictHostKeyChecking=no $USER@$client "cd $ETH_HOME && sudo npm install ethers && sudo npm install @ethersproject/experimental && node polyKvStore.js ${wallets[j]} http://${array[j]}:8051 10 100 $out $j $1" > "${client}"_kv.txt &
+          nohup ssh -oStrictHostKeyChecking=no $USER@$client "cd $ETH_HOME && node polyKvStore.js ${wallets[j]} http://${array[j]}:8051 10 100 $out $j $1" > "${client}"_kv.txt &
           echo host: "${array[j]}" contract: $out
         fi
       fi
@@ -66,7 +66,7 @@ if [[ $5 == "-drop" ]]; then
     let i=$i+1
   done
 else
-  let M=$2*10+320
+  let M=$2*10+1020
   echo "sleeping $M seconds before killing drivers (clients)"
   sleep $M
   for client in `cat $CLIENTS`; do

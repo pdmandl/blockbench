@@ -16,6 +16,13 @@ console.log("NR_OF_CLIENTS" + process.argv[8]);
 
 const ethers = require("ethers");
 const { NonceManager } = require("@ethersproject/experimental");
+const providers = [];
+for (host of hosts) {
+  let provider = new ethers.providers.JsonRpcProvider("http://" + host);
+}
+let provider = new ethers.providers.JsonRpcProvider(url);
+var signer = new ethers.Wallet(process.argv[2], provider);
+var managedSigner = new NonceManager(signer);
 
 let allTxs = [];
 let txs = [];
@@ -24,9 +31,6 @@ const nonce = 0;
 const doneTxs = [];
 let url = process.argv[3];
 let total = [];
-let provider = new ethers.providers.JsonRpcProvider(url);
-var signer = new ethers.Wallet(process.argv[2], provider);
-var managedSigner = new NonceManager(signer);
 var address = process.argv[6];
 var abi = [
   {
@@ -164,7 +168,7 @@ const measureTime = async () => {
   console.log("Durchsatz: " + total.length / ((end - start) / 1000) + " tx/s");
 };
 const doTxs = async (txCount, run) => {
-  await sleep((1000 / parseInt(process.argv[8])) * parseInt(process.argv[7]));
+  await sleep(1000);
   doWTransactions(txCount, run);
 };
 const doTransactions = async () => {

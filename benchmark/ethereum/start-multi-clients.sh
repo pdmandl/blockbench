@@ -25,6 +25,7 @@ for client in `cat $CLIENTS`; do
     for out in `cat $ETH_HOME_LOCAL/Output.txt`; do
       if [[ "$BENCHMARK" = "ycsb" ]]; then
         if [[ $z -eq 0 ]]; then
+          rm "${client}"_kv.txt
           nohup ssh -oStrictHostKeyChecking=no $USER@$client "cd $ETH_HOME && node polyKvStore.js ${wallets[j]} http://${array[j]}:8051 10 100 $out $j $1" > "${client}"_kv.txt &
           echo host: "${array[j]}" contract: $out
         fi

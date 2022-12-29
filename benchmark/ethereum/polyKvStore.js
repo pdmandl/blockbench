@@ -82,7 +82,6 @@ const savePacket = async (id, value) => {
       gasLimit: 5000000,
     });
     const receipt = await res.wait();
-    console.log(receipt);
   } catch (e) {
     console.log(e);
   }
@@ -179,7 +178,13 @@ const doTransactions = async () => {
     run += 1;
   }
 };
-for (let i = 0; i < parseInt(process.argv[5]); i++) {
+for (
+  let i = parseInt(process.argv[7]) * parseInt(process.argv[5]);
+  i <
+  parseInt(process.argv[7]) * parseInt(process.argv[5]) +
+    parseInt(process.argv[5]);
+  i++
+) {
   txs[i] = { tx: () => savePacket(i, "TEST" + i), id: i };
   txsR[i] = { tx: () => readPacket(i), id: i };
 }

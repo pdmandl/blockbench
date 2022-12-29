@@ -168,6 +168,7 @@ const doTxs = async (txCount, run) => {
 };
 const doTransactions = async () => {
   let run = 0;
+  await sleep(100 * parseInt(process.argv[7]));
   while (run * parseInt(process.argv[4]) < parseInt(process.argv[5])) {
     await doTxs(
       parseInt(process.argv[4]) < txs.length
@@ -181,7 +182,7 @@ const doTransactions = async () => {
 for (let i = 0; i < parseInt(process.argv[5]); i++) {
   const saveIndex = parseInt(process.argv[7]) * parseInt(process.argv[5]) + i;
   txs[i] = { tx: () => savePacket(saveIndex, "TEST" + i), id: i };
-  txsR[i] = { tx: () => readPacket(i), id: i };
+  // txsR[i] = { tx: () => readPacket(i), id: i };
 }
 allTxs = txs;
 measureTime();

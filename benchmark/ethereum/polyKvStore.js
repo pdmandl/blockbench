@@ -74,14 +74,13 @@ const myContract_write = new ethers.Contract(address, abi, managedSigner); // Wr
 const myContract_read = new ethers.Contract(address, abi, provider); // Read only
 
 const savePacket = async (id, value) => {
+  nonce = nonce + 1;
   console.log(nonce % (parseInt(process.argv[7]) + 2));
   if (nonce % (parseInt(process.argv[7]) + 2) == 0) {
-    nonce = nonce + 1;
     const start = Date.now();
     try {
       const res = await myContract_write.set(id, value, {
         gasLimit: 5000000,
-        nonce: nonce,
       });
       const receipt = await res.wait();
       console.log(receipt);
@@ -93,7 +92,6 @@ const savePacket = async (id, value) => {
     return end - start;
   } else {
     console.log(nonce % (parseInt(process.argv[7]) + 2));
-    nonce = nonce + 1;
     return 0;
   }
 };

@@ -178,14 +178,9 @@ const doTransactions = async () => {
     run += 1;
   }
 };
-for (
-  let i = parseInt(process.argv[7]) * parseInt(process.argv[5]);
-  i <
-  parseInt(process.argv[7]) * parseInt(process.argv[5]) +
-    parseInt(process.argv[5]);
-  i++
-) {
-  txs[i] = { tx: () => savePacket(i, "TEST" + i), id: i };
+for (let i = 0; i < parseInt(process.argv[5]); i++) {
+  const saveIndex = parseInt(process.argv[7]) * parseInt(process.argv[5]) + i;
+  txs[i] = { tx: () => savePacket(saveIndex, "TEST" + i), id: i };
   txsR[i] = { tx: () => readPacket(i), id: i };
 }
 allTxs = txs;

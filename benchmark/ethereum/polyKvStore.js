@@ -75,7 +75,7 @@ const myContract_read = new ethers.Contract(address, abi, provider); // Read onl
 
 const savePacket = async (id, value) => {
   console.log(nonce % parseInt(process.argv[7]));
-  if (nonce % parseInt(process.argv[7]) == 0) {
+  if (nonce % (parseInt(process.argv[7]) + 2) == 0) {
     nonce = nonce + 1;
     const start = Date.now();
     try {

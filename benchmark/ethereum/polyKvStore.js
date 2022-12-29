@@ -19,8 +19,6 @@ const { NonceManager } = require("@ethersproject/experimental");
 
 let allTxs = [];
 let txs = [];
-let txsR = [];
-const doneTxs = [];
 let url = process.argv[3];
 let total = [];
 let provider = new ethers.providers.JsonRpcProvider(url);
@@ -75,6 +73,7 @@ const myContract_write = new ethers.Contract(address, abi, managedSigner); // Wr
 const myContract_read = new ethers.Contract(address, abi, provider); // Read only
 
 const savePacket = async (id, value) => {
+  console.log("id: " + id, "value: " + value);
   const start = Date.now();
   try {
     const res = await myContract_write.set(id, value, {

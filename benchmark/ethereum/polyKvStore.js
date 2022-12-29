@@ -150,6 +150,8 @@ const measureTime = async () => {
   workbook.xlsx.writeFile(
     "Transactions_${process.argv[4]}tps_${process.argv[5]}tts.xlsx"
   );
+  console.log("Successful Txs:" + success);
+  console.log("Failed Txs:" + fail);
   console.log("Durschn. Latenz: " + ttl / total.length + " ms");
   console.log("Durchsatz: " + total.length / ((end - start) / 1000) + " tx/s");
 };

@@ -21,6 +21,8 @@ let allTxs = [];
 let txs = [];
 let url = process.argv[3];
 let total = [];
+let success = 0;
+let fail = 0;
 let provider = new ethers.providers.JsonRpcProvider(url);
 var signer = new ethers.Wallet(process.argv[2], provider);
 var managedSigner = new NonceManager(signer);
@@ -80,7 +82,9 @@ const savePacket = async (id, value) => {
       gasLimit: 5000000,
     });
     const receipt = await res.wait();
+    success += 1;
   } catch (e) {
+    fail += 1;
     console.error(e);
   }
   const end = Date.now();

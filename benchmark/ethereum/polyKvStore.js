@@ -127,7 +127,9 @@ const doWTransactions = async (numberOfTxsPerRun, run) => {
       result = [...result, tx];
       total = [...total, tx];
     }
-  } catch (e) {}
+  } catch (e) {
+    console.log(e);
+  }
   //doRTransactions();
 };
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -181,6 +183,7 @@ const doTransactions = async () => {
 };
 for (let i = 0; i < parseInt(process.argv[5]); i++) {
   const saveIndex = parseInt(process.argv[7]) * parseInt(process.argv[5]) + i;
+  console.log(saveIndex);
   txs[i] = { tx: () => savePacket(saveIndex, "TEST" + i), id: i };
   // txsR[i] = { tx: () => readPacket(i), id: i };
 }

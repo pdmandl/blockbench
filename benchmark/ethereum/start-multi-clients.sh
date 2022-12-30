@@ -10,7 +10,8 @@ for host in `cat $HOSTS`; do
   if [[ $i -lt 1 ]]; then
     echo deploying contracts on chain
     #sed -i ".bak" sed -i "4s/.*/const rpc = $host;/" truffle-config.js 
-    ssh -oStrictHostKeyChecking=no $USER@$host "cd $ETH_HOME && truffle compile && rm Output.txt && truffle migrate --reset --network=private"
+    ssh -oStrictHostKeyChecking=no $USER@$host "cd $ETH_HOME && rm Output.txt"
+    ssh -oStrictHostKeyChecking=no $USER@$host "cd $ETH_HOME && truffle compile && truffle migrate --reset --network=private"
     scp -oStrictHostKeyChecking=no $USER@$host:$ETH_HOME/Output.txt $ETH_HOME_LOCAL/Output.txt 
   fi
   let i=$i+1
@@ -26,6 +27,7 @@ for client in `cat $CLIENTS`; do
       if [[ "$BENCHMARK" = "ycsb" ]]; then
         if [[ $z -eq 0 ]]; then
           rm "${client}"_kv.txt
+          echo $4
           nohup ssh -oStrictHostKeyChecking=no $USER@$client "cd $ETH_HOME && sudo npm install ethers && sudo npm install @ethersproject/experimental && sudo npm install exceljs && node polyKvStore.js ${wallets[j]} http://${array[j]}:8051 $4 500 $out $j $1" > "${client}"_kv.txt &
           echo host: "${array[j]}" contract: $out
         fi
@@ -67,11 +69,12 @@ if [[ $5 == "-drop" ]]; then
     let i=$i+1
   done
 else
-  let M=$2*10+720
-  echo "sleeping $M seconds before killing drivers (clients)"
+  let M=$2*100+720
+  echo "sleeping $M seconds before killing drivers (clients) and retrieving xls files"
   sleep $M
   for client in `cat $CLIENTS`; do
     echo killing client $client
+    scp -oStrictHostKeyChecking=no $USER@$client:$ETH_HOME/Transactions_$4tps_500tts.xlsx $ETH_HOME_LOCAL/Transactions_$4tps_500tts_$client.xlsx
     ssh -oStrictHostKeyChecking=no $USER@$client 'killall -KILL driver' 
     let i=$i+1
   done

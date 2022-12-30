@@ -21,6 +21,7 @@ let workbook = new Excel.Workbook();
 let worksheet = workbook.addWorksheet(
   `Transactions_${process.argv[4]}tps_${process.argv[5]}tts`
 );
+let worksheet2 = workbook.addWorksheet(`General`);
 let allTxs = [];
 let txs = [];
 let url = process.argv[3];
@@ -142,10 +143,24 @@ const measureTime = async () => {
     { header: "Tx nr.", key: "id" },
     { header: "Latency", key: "value" },
   ];
+  worksheet2.columns = [
+    { header: "Successful", key: "success" },
+    { header: "Failed", key: "fail" },
+    { header: "Durschn. Latenz:", key: "latency" },
+    { header: "Dursatz:", key: "throughput" },
+    { header: "Total Time", key: "time" },
+  ];
   total.forEach((e, index) => {
     worksheet.addRow({
       ...{ id: index, value: e },
     });
+  });
+  worksheet2.addRow({
+    success: success,
+    fail: fail,
+    latency: ttl / total.length + " ms",
+    throughput: total.length / ((end - start) / 1000) + " tx/s",
+    time: (end - start) / 1000,
   });
   workbook.xlsx.writeFile(
     `Transactions_${process.argv[4]}tps_${process.argv[5]}tts.xlsx`

@@ -69,7 +69,7 @@ if [[ $5 == "-drop" ]]; then
     let i=$i+1
   done
 else
-  let M=$2*100+720
+  let M=$2*120+1000
   echo "sleeping $M seconds before killing drivers (clients) and retrieving xls files"
   sleep $M
   for client in `cat $CLIENTS`; do

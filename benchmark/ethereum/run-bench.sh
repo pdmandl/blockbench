@@ -3,6 +3,8 @@
 cd `dirname ${BASH_SOURCE-$0}`
 . env.sh
 
+echo Test startet at $(date -u)
+
 ./stop-all.sh $1 
 
 #enable if you want installation in runtime
@@ -24,4 +26,5 @@ sleep $M
 ./stop-all.sh $1
 
 sleep 5
+echo Test finished at $(date -u)
 

@@ -16,21 +16,20 @@ console.log("NR_OF_CLIENTS" + process.argv[8]);
 
 const ethers = require("ethers");
 const { NonceManager } = require("@ethersproject/experimental");
-const providers = [];
-for (host of hosts) {
-  let provider = new ethers.providers.JsonRpcProvider("http://" + host);
-}
+const Excel = require("exceljs");
+let workbook = new Excel.Workbook();
+let worksheet = workbook.addWorksheet(
+  `Transactions_${process.argv[4]}tps_${process.argv[5]}tts`
+);
+let allTxs = [];
+let txs = [];
+let url = process.argv[3];
+let total = [];
+let success = 0;
+let fail = 0;
 let provider = new ethers.providers.JsonRpcProvider(url);
 var signer = new ethers.Wallet(process.argv[2], provider);
 var managedSigner = new NonceManager(signer);
-
-let allTxs = [];
-let txs = [];
-let txsR = [];
-const nonce = 0;
-const doneTxs = [];
-let url = process.argv[3];
-let total = [];
 var address = process.argv[6];
 var abi = [
   {
@@ -42,16 +41,34 @@ var abi = [
     inputs: [
       {
         internalType: "string",
-        name: "key",
+        name: "arg0",
+        type: "string",
+      },
+      {
+        internalType: "string",
+        name: "arg1",
         type: "string",
       },
     ],
-    name: "get",
-    outputs: [
+    name: "almagate",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
       {
         internalType: "string",
-        name: "",
+        name: "arg0",
         type: "string",
+      },
+    ],
+    name: "getBalance",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "balance",
+        type: "uint256",
       },
     ],
     stateMutability: "view",
@@ -61,16 +78,75 @@ var abi = [
     inputs: [
       {
         internalType: "string",
-        name: "key",
+        name: "arg0",
         type: "string",
       },
       {
         internalType: "string",
-        name: "value",
+        name: "arg1",
         type: "string",
       },
+      {
+        internalType: "uint256",
+        name: "arg2",
+        type: "uint256",
+      },
     ],
-    name: "set",
+    name: "sendPayment",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "string",
+        name: "arg0",
+        type: "string",
+      },
+      {
+        internalType: "uint256",
+        name: "arg1",
+        type: "uint256",
+      },
+    ],
+    name: "updateBalance",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "string",
+        name: "arg0",
+        type: "string",
+      },
+      {
+        internalType: "uint256",
+        name: "arg1",
+        type: "uint256",
+      },
+    ],
+    name: "updateSaving",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "string",
+        name: "arg0",
+        type: "string",
+      },
+      {
+        internalType: "uint256",
+        name: "arg1",
+        type: "uint256",
+      },
+    ],
+    name: "writeCheck",
     outputs: [],
     stateMutability: "nonpayable",
     type: "function",
@@ -80,45 +156,22 @@ const myContract_write = new ethers.Contract(address, abi, managedSigner); // Wr
 const myContract_read = new ethers.Contract(address, abi, provider); // Read only
 
 const savePacket = async (id, value) => {
+  console.log("id: " + id, "value: " + value);
   const start = Date.now();
   try {
     const res = await myContract_write.set(id, value, {
       gasLimit: 5000000,
     });
     const receipt = await res.wait();
-    console.log(receipt);
+    success += 1;
   } catch (e) {
-    console.log(e);
+    fail += 1;
+    console.error(e);
   }
   const end = Date.now();
+  console.log("done id: " + id, "value: " + value);
   txs = txs.filter((res) => res.id !== id);
   return end - start;
-};
-const readPacket = async (id) => {
-  console.log("Reading id " + id + " started...");
-  const start = Date.now();
-  try {
-    const res = await myContract_read.get(id, {
-      gasLimit: 5000000,
-    });
-    console.log(res);
-  } catch (e) {
-    console.log(e);
-  }
-  const end = Date.now();
-  txsR = txsR.filter((res) => res.id !== id);
-  console.log("Reading Packet at id: " + id + " finished.");
-  return end - start;
-};
-const doRTransactions = async () => {
-  let result = [];
-  try {
-    const doneTxs = await Promise.all(txsR.map((res) => res.tx()));
-    for (let tx of doneTxs) {
-      result = [...result, tx];
-    }
-  } catch (e) {}
-  console.table(result);
 };
 const doWTransactions = async (numberOfTxsPerRun, run) => {
   let result = [];
@@ -132,12 +185,13 @@ const doWTransactions = async (numberOfTxsPerRun, run) => {
       result = [...result, tx];
       total = [...total, tx];
     }
-  } catch (e) {}
+  } catch (e) {
+    console.error(e);
+  }
   //doRTransactions();
 };
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const printer = async () => {
-  //while (txs.length > 0 || txsR.length > 0) {
   while (txs.length > 0) {
     try {
       await sleep(1000);
@@ -145,9 +199,6 @@ const printer = async () => {
     console.log(
       `Still ${txs.length} of ${process.argv[5]} transactions to process.`
     );
-    /*console.log(
-      `and ${txsR.length} of ${process.argv[4]} transactions to read.`
-    );*/
   }
 };
 const measureTime = async () => {
@@ -164,6 +215,20 @@ const measureTime = async () => {
   for (let t of total) {
     ttl = ttl + t;
   }
+  worksheet.columns = [
+    { header: "Tx nr.", key: "id" },
+    { header: "Latency", key: "value" },
+  ];
+  total.forEach((e, index) => {
+    worksheet.addRow({
+      ...{ id: index, value: e },
+    });
+  });
+  workbook.xlsx.writeFile(
+    `Transactions_${process.argv[4]}tps_${process.argv[5]}tts.xlsx`
+  );
+  console.log("Successful Txs:" + success);
+  console.log("Failed Txs:" + fail);
   console.log("Durschn. Latenz: " + ttl / total.length + " ms");
   console.log("Durchsatz: " + total.length / ((end - start) / 1000) + " tx/s");
 };
@@ -183,12 +248,9 @@ const doTransactions = async () => {
     run += 1;
   }
 };
-const txCount = parseInt(process.argv[7]);
 for (let i = 0; i < parseInt(process.argv[5]); i++) {
-  managedSigner.setTransactionCount(txCount);
-  managedSigner.incrementTransactionCount(parseInt(process.argv[8]));
-  txs[i] = { tx: () => savePacket(i, "TEST" + i), id: i };
-  txsR[i] = { tx: () => readPacket(i), id: i };
+  const saveIndex = parseInt(process.argv[7]) * parseInt(process.argv[5]) + i;
+  txs[i] = { tx: () => savePacket(saveIndex, "TEST" + i), id: saveIndex };
 }
 allTxs = txs;
 measureTime();

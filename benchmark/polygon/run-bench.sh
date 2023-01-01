@@ -10,7 +10,7 @@ echo done init
 echo done gather
 #./start-all.sh $1 
 
-let M=140+40*$1
+let M=40*$1
 echo "Sleeping $M seconds to allow network to bootstrap"
 sleep $M
 

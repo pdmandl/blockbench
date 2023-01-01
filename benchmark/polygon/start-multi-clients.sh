@@ -5,33 +5,25 @@ cd `dirname ${BASH_SOURCE-$0}`
 
 let IDX=$1 #$1 is #clients, we take only half of them 
 echo starting clients
-let j=0
+j=0
 array=($(cat $HOSTS_PRIV))
 wallets=($(cat $RICH_WALLETS))
 for client in `cat $CLIENTS`; do
   if [[ $j -lt $1 ]]; then
-    echo starting client $client  threads=$3 clientNo=$i nservers=$2 txrate=$4
-    let z=0
-      if [[ "$BENCHMARK" = "ycsb" ]]; then
-        if [[ $z -eq 0 ]]; then
-          rm "${client}"_kv.txt
-          echo $4
-          nohup ssh -oStrictHostKeyChecking=no $USER@$client "cd $ETH_HOME && sudo npm install ethers && sudo npm install @ethersproject/experimental && sudo npm install exceljs && node polyKvStore.js ${wallets[j]} http://${array[j]}:8051 $4 500 0x0000000000000000000000000000000000001111 $j $1" > "${client}"_kv.txt &
-          echo host: "${array[j]}" contract: $out
-        fi
-      fi
-      if [[ "$BENCHMARK" = "smallbank" ]]; then
-        if [[ $z -eq 1 ]]; then
-          nohup ssh -oStrictHostKeyChecking=no $USER@$client "cd $ETH_HOME && node polyKvStore.js 0x7726827caac94a7f9e1b160f7ea819f172f7b6f9d2a97f992c38edeab82d4110 http://${array[j]} 10 100 $out" > "${client}"_sb.txt
-          echo host: "${array[j]}" contract: $out
-        fi
-      fi  
-      if [[ "$BENCHMARK" = "nft" ]]; then
-        if [[ $z -eq 2 ]]; then
-          echo dritter: $out
-        fi
-      fi  
-      let z=$z+1
+    echo starting client $client  threads=$3 clientNo=$j nservers=$2 txrate=$4
+    if [[ "$BENCHMARK" = "ycsb" ]]; then
+        rm "${client}"_kv.txt
+        echo $4
+        nohup ssh -oStrictHostKeyChecking=no $USER@$client "cd $ETH_HOME && sudo npm install ethers && sudo npm install @ethersproject/experimental && sudo npm install exceljs && node polyKvStore.js ${wallets[j]} http://${array[j]}:8545 $4 500 0x0000000000000000000000000000000000001111 $j $1" > "${client}"_kv.txt &
+        echo host: "${array[j]}" contract: 0x0000000000000000000000000000000000001111
+    fi
+    if [[ "$BENCHMARK" = "smallbank" ]]; then
+        nohup ssh -oStrictHostKeyChecking=no $USER@$client "cd $ETH_HOME && sudo npm install ethers && sudo npm install @ethersproject/experimental && sudo npm install exceljs && node polyKvStore.js ${wallets[j]} http://${array[j]}:8545 $4 500 0x0000000000000000000000000000000000001111 $j $1" > "${client}"_kv.txt &
+        echo host: "${array[j]}" contract: $out
+    fi  
+    if [[ "$BENCHMARK" = "nft" ]]; then
+        echo dritter: $out
+    fi  
   fi
   let j=$j+1
 done

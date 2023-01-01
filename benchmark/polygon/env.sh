@@ -1,7 +1,10 @@
 # folder that contains all benchmark scripts (this could be on a network share)
 ETH_HOME=/home/ubuntu/blockbench/benchmark/polygon
+ETH_HOME_LOCAL=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/polygon
 # file that contains ip addresses of servers that should be used for setting up the ethereum network
 HOSTS=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/polygon/hosts
+HOSTS_PRIV=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/polygon/hosts_priv
+RICH_WALLETS=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/polygon/rich_wallets
 # where is your hostfile on your client vm?
 HOSTS_ON_CLIENT=/home/ubuntu/blockbench/benchmark/polygon/hosts_priv
 RPC_PORT=8051
@@ -17,7 +20,7 @@ SECRETS=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/polygon/secr
 MULTI=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/polygon/multi.txt
 # name/type of the benchmark
 #BENCHMARK=ycsb
-BENCHMARK=smallbank
+BENCHMARK=ycsb
 # SSH user (with public key auth) to use to run the scripts on all machines
 USER=ubuntu
 # RPCport used by clients and ethereum nodes

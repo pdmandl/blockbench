@@ -265,6 +265,7 @@ const doTransactions = async () => {
   }
 };
 for (let i = 0; i < parseInt(process.argv[5]); i++) {
+  console.log(toAddress);
   txs[i] = { tx: () => sendPayment(signer.address, toAddress, 1, i), id: i };
 }
 allTxs = txs;

@@ -156,7 +156,7 @@ var abi = [
 const myContract_write = new ethers.Contract(address, abi, managedSigner); // Write only
 const myContract_read = new ethers.Contract(address, abi, provider); // Read only
 
-const sendPayment = async (from, to, value) => {
+const sendPayment = async (from, to, value, id) => {
   console.log("from: " + from, "to: " + to, "value: " + value);
   const start = Date.now();
   try {
@@ -265,7 +265,7 @@ const doTransactions = async () => {
   }
 };
 for (let i = 0; i < parseInt(process.argv[5]); i++) {
-  txs[i] = { tx: () => sendPayment(signer.address, toAddress, 1), id: i };
+  txs[i] = { tx: () => sendPayment(signer.address, toAddress, 1, i), id: i };
 }
 allTxs = txs;
 measureTime();

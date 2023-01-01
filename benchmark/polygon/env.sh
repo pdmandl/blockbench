@@ -5,6 +5,7 @@ ETH_HOME_LOCAL=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/polyg
 HOSTS=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/polygon/hosts
 HOSTS_PRIV=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/polygon/hosts_priv
 RICH_WALLETS=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/polygon/rich_wallets
+ADDRESSES=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/polygon/addresses
 # where is your hostfile on your client vm?
 HOSTS_ON_CLIENT=/home/ubuntu/blockbench/benchmark/polygon/hosts_priv
 RPC_PORT=8051
@@ -20,7 +21,7 @@ SECRETS=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/polygon/secr
 MULTI=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/polygon/multi.txt
 # name/type of the benchmark
 #BENCHMARK=ycsb
-BENCHMARK=ycsb
+BENCHMARK=smallbank
 # SSH user (with public key auth) to use to run the scripts on all machines
 USER=ubuntu
 # RPCport used by clients and ethereum nodes

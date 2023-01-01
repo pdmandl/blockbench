@@ -15,7 +15,7 @@ console.log("TO_ADDRESS" + process.argv[7]);
 
 const ethers = require("ethers");
 const { NonceManager } = require("@ethersproject/experimental");
-const toAddress = process.argv[9];
+const toAddress = process.argv[7];
 const Excel = require("exceljs");
 let workbook = new Excel.Workbook();
 let worksheet = workbook.addWorksheet(

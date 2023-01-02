@@ -19,22 +19,22 @@ done
 let j=0
 array=($(cat $HOSTS_PRIV))
 wallets=($(cat $RICH_WALLETS))
+addresses=($(cat $ADDRESSES))
+contracts=($(cat $ETH_HOME_LOCAL/Output.txt))
 for client in `cat $CLIENTS`; do
   if [[ $j -lt $1 ]]; then
     echo starting client $client  threads=$3 clientNo=$i nservers=$2 txrate=$4
-    let z=0
-    for out in `cat $ETH_HOME_LOCAL/Output.txt`; do
       if [[ "$BENCHMARK" = "ycsb" ]]; then
         if [[ $z -eq 0 ]]; then
           rm "${client}"_kv.txt
           echo $4
-          nohup ssh -oStrictHostKeyChecking=no $USER@$client "cd $ETH_HOME && sudo npm install ethers && sudo npm install @ethersproject/experimental && sudo npm install exceljs && node polyKvStore.js ${wallets[j]} http://${array[j]}:8051 $4 500 $out $j $1" > "${client}"_kv.txt &
+          nohup ssh -oStrictHostKeyChecking=no $USER@$client "cd $ETH_HOME && sudo npm install ethers && sudo npm install @ethersproject/experimental && sudo npm install exceljs && node ethKvStore.js ${wallets[j]} http://${array[j]}:8051 $4 500 ${contracts[0]} $j $1" > "${client}"_kv.txt &
           echo host: "${array[j]}" contract: $out
         fi
       fi
       if [[ "$BENCHMARK" = "smallbank" ]]; then
         if [[ $z -eq 1 ]]; then
-          nohup ssh -oStrictHostKeyChecking=no $USER@$client "cd $ETH_HOME && node polyKvStore.js 0x7726827caac94a7f9e1b160f7ea819f172f7b6f9d2a97f992c38edeab82d4110 http://${array[j]} 10 100 $out" > "${client}"_sb.txt
+          nohup ssh -oStrictHostKeyChecking=no $USER@$client "cd $ETH_HOME && sudo npm install ethers && sudo npm install @ethersproject/experimental && sudo npm install exceljs && node ethSmallBank.js ${wallets[j]} http://${array[j]}:8051 $4 500 ${contracts[0]} ${addresses[j]}" > "${client}"_sb.txt &
           echo host: "${array[j]}" contract: $out
         fi
       fi  
@@ -43,8 +43,6 @@ for client in `cat $CLIENTS`; do
           echo dritter: $out
         fi
       fi  
-      let z=$z+1
-    done
   fi
   let j=$j+1
 done

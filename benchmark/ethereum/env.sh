@@ -6,6 +6,7 @@ ETH_HOME_LOCAL=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/ether
 HOSTS=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/ethereum/hosts
 HOSTS_PRIV=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/ethereum/hosts_priv
 RICH_WALLETS=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/ethereum/rich_wallets
+ADDRESSES=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/ethereum/addresses
 # where is your hostfile on your client vm?
 HOSTS_ON_CLIENT=/home/ubuntu/blockbench/benchmark/ethereum/hosts_priv
 RPC_PORT=8051
@@ -20,7 +21,7 @@ EXE_HOME=/home/ubuntu/blockbench/src/macro/smallbank
 # name/type of the benchmark
 #BENCHMARK=ycsb
 #BENCHMARK=nft
-BENCHMARK=ycsb
+BENCHMARK=smallbank
 # SSH user (with public key auth) to use to run the scripts on all machines
 USER=ubuntu
 # RPCport used by clients and ethereum nodes

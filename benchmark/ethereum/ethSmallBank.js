@@ -253,7 +253,9 @@ const doTxs = async (txCount, run) => {
 };
 const doTransactions = async () => {
   let run = 0;
-  await myContract_write.updateBalance(signer.address, 1000);
+  await myContract_write.updateBalance(signer.address, 1000, {
+    gasLimit: 5000000,
+  });
   while (run * parseInt(process.argv[4]) < parseInt(process.argv[5])) {
     await doTxs(
       parseInt(process.argv[4]) < txs.length

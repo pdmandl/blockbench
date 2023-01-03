@@ -15,7 +15,7 @@ for host in `cat $HOSTS`; do
     echo done node $host
   fi
   if [[ $i -lt 1 ]]; then
-    ssh -oStrictHostKeyChecking=no $USER@$host $ETH_HOME/startZk.sh
+    ssh -oStrictHostKeyChecking=no $USER@$host $ETH_HOME/startZk.sh > log.txt
     echo done node $host
   fi
   let i=$i+1

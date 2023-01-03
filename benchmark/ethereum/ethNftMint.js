@@ -559,10 +559,11 @@ const myContract_write = new ethers.Contract(address, abi, managedSigner); // Wr
 const myContract_read = new ethers.Contract(address, abi, provider); // Read only
 
 const mintNft = async (numberOfItems, id) => {
-  console.log("minted: " + numberOfItems, "tokens.");
+  console.log("mint of " + numberOfItems, "tokens started.");
   const start = Date.now();
   try {
     const res = await myContract_write.mint(numberOfItems, {
+      value: 0.01 * numberOfItems,
       gasLimit: 5000000,
     });
     const receipt = await res.wait();
@@ -572,7 +573,7 @@ const mintNft = async (numberOfItems, id) => {
     console.error(e);
   }
   const end = Date.now();
-  console.log("done minted: " + numberOfItems, "tokens.");
+  console.log("minted: " + numberOfItems, "tokens.");
   txs = txs.filter((resp) => resp.id !== id);
   return end - start;
 };

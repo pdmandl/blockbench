@@ -2,35 +2,19 @@
 
 pragma solidity ^0.8.0;
 
-import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
-import "@openzeppelin/contracts/access/Ownable.sol";
-import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
+import "@openzeppelin/contracts@4.3.0/token/ERC721/ERC721.sol";
+import "@openzeppelin/contracts@4.3.0/access/Ownable.sol";
+import "@openzeppelin/contracts@4.3.0/token/ERC721/extensions/ERC721Enumerable.sol";
 
 contract NftMint is ERC721, ERC721Enumerable, Ownable {
-    string public PROVENANCE;
     bool public saleIsActive = true;
     string private _baseURIextended;
 
     uint256 public constant MAX_SUPPLY = 10000;
     uint256 public constant MAX_PUBLIC_MINT = 5;
-    uint256 public constant PRICE_PER_TOKEN = 0.123 ether;
-
-    mapping(address => uint8) private _allowList;
+    uint256 public constant PRICE_PER_TOKEN = 0.01 ether;
 
     constructor() ERC721("NftMint", "MINTER") {}
-
-    function setAllowList(address[] calldata addresses, uint8 numAllowedToMint)
-        external
-        onlyOwner
-    {
-        for (uint256 i = 0; i < addresses.length; i++) {
-            _allowList[addresses[i]] = numAllowedToMint;
-        }
-    }
-
-    function numAvailableToMint(address addr) external view returns (uint8) {
-        return _allowList[addr];
-    }
 
     function supportsInterface(bytes4 interfaceId)
         public
@@ -50,14 +34,6 @@ contract NftMint is ERC721, ERC721Enumerable, Ownable {
         return _baseURIextended;
     }
 
-    function setProvenance(string memory provenance) public onlyOwner {
-        PROVENANCE = provenance;
-    }
-
-    function setSaleState(bool newState) public onlyOwner {
-        saleIsActive = newState;
-    }
-
     function mint(uint256 numberOfTokens) public payable {
         uint256 ts = totalSupply();
         require(saleIsActive, "Sale must be active to mint tokens");
@@ -73,7 +49,6 @@ contract NftMint is ERC721, ERC721Enumerable, Ownable {
             PRICE_PER_TOKEN * numberOfTokens <= msg.value,
             "Ether value sent is not correct"
         );
-
         for (uint256 i = 0; i < numberOfTokens; i++) {
             _safeMint(msg.sender, ts + i);
         }
@@ -85,10 +60,5 @@ contract NftMint is ERC721, ERC721Enumerable, Ownable {
         uint256 tokenId
     ) internal virtual override(ERC721, ERC721Enumerable) {
         super._beforeTokenTransfer(from, to, tokenId);
-    }
-
-    function withdraw() public onlyOwner {
-        uint256 balance = address(this).balance;
-        payable(msg.sender).transfer(balance);
     }
 }

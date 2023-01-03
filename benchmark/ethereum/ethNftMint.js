@@ -172,19 +172,6 @@ var abi = [
     type: "function",
   },
   {
-    inputs: [],
-    name: "PROVENANCE",
-    outputs: [
-      {
-        internalType: "string",
-        name: "",
-        type: "string",
-      },
-    ],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
     inputs: [
       {
         internalType: "address",
@@ -285,25 +272,6 @@ var abi = [
         internalType: "string",
         name: "",
         type: "string",
-      },
-    ],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [
-      {
-        internalType: "address",
-        name: "addr",
-        type: "address",
-      },
-    ],
-    name: "numAvailableToMint",
-    outputs: [
-      {
-        internalType: "uint8",
-        name: "",
-        type: "uint8",
       },
     ],
     stateMutability: "view",
@@ -415,24 +383,6 @@ var abi = [
   {
     inputs: [
       {
-        internalType: "address[]",
-        name: "addresses",
-        type: "address[]",
-      },
-      {
-        internalType: "uint8",
-        name: "numAllowedToMint",
-        type: "uint8",
-      },
-    ],
-    name: "setAllowList",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function",
-  },
-  {
-    inputs: [
-      {
         internalType: "address",
         name: "operator",
         type: "address",
@@ -457,32 +407,6 @@ var abi = [
       },
     ],
     name: "setBaseURI",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function",
-  },
-  {
-    inputs: [
-      {
-        internalType: "string",
-        name: "provenance",
-        type: "string",
-      },
-    ],
-    name: "setProvenance",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function",
-  },
-  {
-    inputs: [
-      {
-        internalType: "bool",
-        name: "newState",
-        type: "bool",
-      },
-    ],
-    name: "setSaleState",
     outputs: [],
     stateMutability: "nonpayable",
     type: "function",
@@ -626,13 +550,6 @@ var abi = [
       },
     ],
     name: "transferOwnership",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "withdraw",
     outputs: [],
     stateMutability: "nonpayable",
     type: "function",

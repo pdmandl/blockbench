@@ -5,6 +5,7 @@
 #sudo add-apt-repository -y ppa:ethereum/ethereum-dev
 #sudo apt-get install -y apt-transport-https ca-certificates
 #sudo apt install docker-compose
+sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 sudo mkdir -p /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg

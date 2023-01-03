@@ -5,10 +5,8 @@
 #sudo add-apt-repository -y ppa:ethereum/ethereum-dev
 #sudo apt-get install -y apt-transport-https ca-certificates
 #sudo apt install docker-compose
-sudo apt-get update
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
-sudo mkdir -p /etc/apt/keyrings
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+curl -fsSL https://get.docker.com -o get-docker.sh
+DRY_RUN=1 sudo sh ./get-docker.sh
 #DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}
 #mkdir -p $DOCKER_CONFIG/cli-plugins
 #curl -SL https://github.com/docker/compose/releases/download/v2.14.2/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose

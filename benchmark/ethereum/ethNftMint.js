@@ -563,7 +563,7 @@ const mintNft = async (numberOfItems, id) => {
   const start = Date.now();
   try {
     const res = await myContract_write.mint(numberOfItems, {
-      value: ethers.utils.formatEther(0.2 * numberOfItems),
+      value: ethers.utils.formatEther(20000 * numberOfItems),
       gasLimit: 5000000,
     });
     const receipt = await res.wait();

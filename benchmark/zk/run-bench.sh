@@ -5,7 +5,7 @@ cd `dirname ${BASH_SOURCE-$0}`
 
 echo Test startet at $(date -u)
 
-#./stop-all.sh $1 
+./stop-all.sh $1 
 
 #enable if you want installation in runtime
 #./install-all $1

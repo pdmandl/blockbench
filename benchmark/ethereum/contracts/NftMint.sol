@@ -2,9 +2,9 @@
 
 pragma solidity ^0.8.0;
 
-import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
-import "@openzeppelin/contracts/access/Ownable.sol";
-import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
+import "@openzeppelin/contracts@4.3.0/token/ERC721/ERC721.sol";
+import "@openzeppelin/contracts@4.3.0/access/Ownable.sol";
+import "@openzeppelin/contracts@4.3.0/token/ERC721/extensions/ERC721Enumerable.sol";
 
 contract NftMint is ERC721, ERC721Enumerable, Ownable {
     string public PROVENANCE;
@@ -30,14 +30,6 @@ contract NftMint is ERC721, ERC721Enumerable, Ownable {
 
     function numAvailableToMint(address addr) external view returns (uint8) {
         return _allowList[addr];
-    }
-
-    function _beforeTokenTransfer(
-        address from,
-        address to,
-        uint256 tokenId
-    ) internal override(ERC721, ERC721Enumerable) {
-        super._beforeTokenTransfer(from, to, tokenId, 1);
     }
 
     function supportsInterface(bytes4 interfaceId)
@@ -85,6 +77,14 @@ contract NftMint is ERC721, ERC721Enumerable, Ownable {
         for (uint256 i = 0; i < numberOfTokens; i++) {
             _safeMint(msg.sender, ts + i);
         }
+    }
+
+    function _beforeTokenTransfer(
+        address from,
+        address to,
+        uint256 tokenId
+    ) internal virtual override(ERC721, ERC721Enumerable) {
+        super._beforeTokenTransfer(from, to, tokenId);
     }
 
     function withdraw() public onlyOwner {

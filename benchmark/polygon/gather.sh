@@ -3,7 +3,7 @@
 cd `dirname ${BASH_SOURCE-$0}`
 . env.sh
 
-command="polygon-edge genesis --pos true --consensus ibft --premine 0x4873a45c059E564a7E091A4D4f558c63F49F1136:100000000000000000000000"
+command="polygon-edge genesis --pos true --consensus ibft --premine 0xA13c10C0D5bd6f79041B9835c63f91de35A15883:100000000000000000000000 --premine 0x36615Cf349d7F6344891B1e7CA7C72883F5dc049:100000000000000000000000 --premine 0xa61464658AfeAf65CccaaFD3a512b69A83B77618:100000000000000000000000 --premine 0x0D43eB5B8a47bA8900d84AA36656c92024e9772e:100000000000000000000000"
 for row in `cat $MULTI`; do
   command="${command} --ibft-validator ${row}"
 done

@@ -12,7 +12,7 @@ contract NftMint is ERC721, ERC721Enumerable, Ownable {
 
     uint256 public constant MAX_SUPPLY = 10000;
     uint256 public constant MAX_PUBLIC_MINT = 5;
-    uint256 public constant PRICE_PER_TOKEN = 0.01 ether;
+    uint256 public constant PRICE_PER_TOKEN = 0.2 ether;
 
     constructor() ERC721("NftMint", "MINTER") {}
 

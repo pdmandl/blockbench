@@ -1,17 +1,17 @@
 # folder that contains all benchmark scripts (this could be on a network share)
-ETH_HOME=/home/ubuntu/blockbench/benchmark/ethereum
+ETH_HOME=/home/ubuntu/blockbench/benchmark/zk
 # folder that contains all benchmark scripts (this could be on a network share)
-ETH_HOME_LOCAL=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/ethereum
+ETH_HOME_LOCAL=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/zk
 # file that contains ip addresses of servers that should be used for setting up the ethereum network
-HOSTS=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/ethereum/hosts
-HOSTS_PRIV=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/ethereum/hosts_priv
-RICH_WALLETS=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/ethereum/rich_wallets
-ADDRESSES=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/ethereum/addresses
+HOSTS=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/zk/hosts
+HOSTS_PRIV=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/zk/hosts_priv
+RICH_WALLETS=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/zk/rich_wallets
+ADDRESSES=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/zk/addresses
 # where is your hostfile on your client vm?
-HOSTS_ON_CLIENT=/home/ubuntu/blockbench/benchmark/ethereum/hosts_priv
+HOSTS_ON_CLIENT=/home/ubuntu/blockbench/benchmark/zk/hosts_priv
 RPC_PORT=8051
 # file that contains ip addresses of servers that should be used for running the benchmark clients
-CLIENTS=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/ethereum/clients
+CLIENTS=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/zk/clients
 # folder in which ethereum nodes should store the ethereum data
 ETH_DATA=/home/ubuntu/node1
 # folder in which benchmark clients should store their log files

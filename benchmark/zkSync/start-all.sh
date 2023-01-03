@@ -10,8 +10,11 @@ i=0
 for host in `cat $HOSTS`; do
   if [[ $i -lt $1 ]]; then
     echo start mining on node $host
-    ssh -oStrictHostKeyChecking=no $USER@$host chmod 755 $ETH_HOME/startZk.sh
-    #ssh -oStrictHostKeyChecking=no $USER@$host $ETH_HOME/start-mining.sh
+    ssh -oStrictHostKeyChecking=no $USER@$host $ETH_HOME/start-mining.sh
+    sleep 5
+    echo done node $host
+  fi
+  if [[ $i -lt 1 ]]; then
     ssh -oStrictHostKeyChecking=no $USER@$host $ETH_HOME/startZk.sh
     echo done node $host
   fi

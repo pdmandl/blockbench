@@ -573,7 +573,6 @@ const mintNft = async (numberOfItems, id) => {
     console.error(e);
   }
   const end = Date.now();
-  console.log("minted: " + numberOfItems, "tokens.");
   txs = txs.filter((resp) => resp.id !== id);
   return end - start;
 };

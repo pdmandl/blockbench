@@ -21,7 +21,7 @@ SECRETS=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/polygon/secr
 MULTI=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/polygon/multi.txt
 # name/type of the benchmark
 #BENCHMARK=ycsb
-BENCHMARK=ycsb
+BENCHMARK=nft
 # SSH user (with public key auth) to use to run the scripts on all machines
 USER=ubuntu
 # RPCport used by clients and ethereum nodes

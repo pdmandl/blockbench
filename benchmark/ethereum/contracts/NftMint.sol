@@ -17,10 +17,6 @@ contract NftMint is ERC721, ERC721Enumerable, Ownable {
 
     constructor() ERC721("NftMint", "MINTER") {}
 
-    function setIsAllowListActive(bool _isAllowListActive) external onlyOwner {
-        isAllowListActive = _isAllowListActive;
-    }
-
     function setAllowList(address[] calldata addresses, uint8 numAllowedToMint)
         external
         onlyOwner

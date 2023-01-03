@@ -4,13 +4,9 @@ require("@nomiclabs/hardhat-etherscan");
 module.exports = {
   networks: {
     private: {
-      url: "http://localhost:8545", // URL of the Ethereum provider (e.g., Ganache)
+      url: "https://mainnet.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161", // URL of the Ethereum provider (e.g., Ganache)
       accounts: [
-        {
-          privateKey:
-            "0x1234567890123456789012345678901234567890123456789012345678901234", // Private key of an Ethereum account
-          balance: "100000000000000000000", // Initial balance of the Ethereum account (in wei)
-        },
+        "0x1234567890123456789012345678901234567890123456789012345678901234", // Private key of an Ethereum account
       ],
     },
   },

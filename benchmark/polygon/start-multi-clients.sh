@@ -23,7 +23,8 @@ for client in `cat $CLIENTS`; do
         echo host: "${array[j]}" contract: 0x0000000000000000000000000000000000001110
     fi  
     if [[ "$BENCHMARK" = "nft" ]]; then
-        echo dritter: $out
+        nohup ssh -oStrictHostKeyChecking=no $USER@$client "cd $ETH_HOME && sudo npm install ethers && sudo npm install @ethersproject/experimental && sudo npm install exceljs && node polyNftMint.js ${wallets[j]} http://${array[j]}:8545 $4 500 0x0000000000000000000000000000000000001112 ${addresses[j]}" > "${client}"_nft.txt &
+        echo host: "${array[j]}" contract: 0x0000000000000000000000000000000000001112
     fi  
   fi
   let j=$j+1

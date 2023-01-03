@@ -5,6 +5,8 @@
 #sudo add-apt-repository -y ppa:ethereum/ethereum-dev
 #sudo apt-get install -y apt-transport-https ca-certificates
 #sudo apt install docker-compose
+sudo snap remove docker
+sudo apt uninstall docker
 curl -fsSL https://get.docker.com -o get-docker.sh
 DRY_RUN=1 sudo sh ./get-docker.sh
 #DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}

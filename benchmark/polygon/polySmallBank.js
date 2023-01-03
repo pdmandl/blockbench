@@ -160,9 +160,7 @@ const sendPayment = async (from, to, value, id) => {
   console.log("from: " + from, "to: " + to, "value: " + value);
   const start = Date.now();
   try {
-    const res = await myContract_write.sendPayment(from, to, value, {
-      gasLimit: 5000000,
-    });
+    const res = await myContract_write.sendPayment(from, to, value);
     const receipt = await res.wait();
     success += 1;
   } catch (e) {

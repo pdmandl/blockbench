@@ -1,27 +1,27 @@
 # folder that contains all benchmark scripts (this could be on a network share)
-ETH_HOME=/home/ubuntu/blockbench/benchmark/polygon
-ETH_HOME_LOCAL=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/polygon
+ETH_HOME=/home/ubuntu/blockbench/benchmark/ethereum
+# folder that contains all benchmark scripts (this could be on a network share)
+ETH_HOME_LOCAL=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/ethereum
 # file that contains ip addresses of servers that should be used for setting up the ethereum network
-HOSTS=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/polygon/hosts
-HOSTS_PRIV=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/polygon/hosts_priv
-RICH_WALLETS=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/polygon/rich_wallets
-ADDRESSES=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/polygon/addresses
+HOSTS=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/ethereum/hosts
+HOSTS_PRIV=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/ethereum/hosts_priv
+RICH_WALLETS=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/ethereum/rich_wallets
+ADDRESSES=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/ethereum/addresses
 # where is your hostfile on your client vm?
-HOSTS_ON_CLIENT=/home/ubuntu/blockbench/benchmark/polygon/hosts_priv
+HOSTS_ON_CLIENT=/home/ubuntu/blockbench/benchmark/ethereum/hosts_priv
 RPC_PORT=8051
 # file that contains ip addresses of servers that should be used for running the benchmark clients
-CLIENTS=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/polygon/clients
+CLIENTS=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/ethereum/clients
 # folder in which ethereum nodes should store the ethereum data
 ETH_DATA=/home/ubuntu/node1
 # folder in which benchmark clients should store their log files
 LOG_DIR=/home/ubuntu/smallbank
 # folder that contains the benchmark (client) executable (make sure that you have build the client) (this could be on a network share)
 EXE_HOME=/home/ubuntu/blockbench/src/macro/smallbank
-SECRETS=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/polygon/secrets.txt
-MULTI=/Users/paulmandl/Downloads/blockbench-master-mehd/benchmark/polygon/multi.txt
 # name/type of the benchmark
 #BENCHMARK=ycsb
-BENCHMARK=ycsb
+#BENCHMARK=nft
+BENCHMARK=smallbank
 # SSH user (with public key auth) to use to run the scripts on all machines
 USER=ubuntu
 # RPCport used by clients and ethereum nodes
@@ -32,6 +32,8 @@ PRIVATEKEY=$ETH_HOME/keys
 PWD="r2d2c3po"
 
 GIT_REPO=https://github.com/pdmandl/blockbench.git
+GIT_USER_MAIL=p.d.mandl@gmail.com
+GIT_USER=pdmandl
 ##comment these out for smallbank
 #EXE_HOME=$ETH_HOME/../../src/smallbank/ethereum/ycsb
 

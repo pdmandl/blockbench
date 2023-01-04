@@ -12,14 +12,14 @@ console.log("NR_REQUESTS_PER_SECOND" + process.argv[4]);
 console.log("TOTAL_NR_REQUESTS" + process.argv[5]);
 console.log("CONTRACT ADDRESS" + process.argv[6]);
 console.log("TO_ADDRESS" + process.argv[7]);
-
+console.log("HOSTS" + process.argv[8]);
 const ethers = require("ethers");
 const { NonceManager } = require("@ethersproject/experimental");
 const toAddress = process.argv[7];
 const Excel = require("exceljs");
 let workbook = new Excel.Workbook();
 let worksheet = workbook.addWorksheet(
-  `Transactions_${process.argv[4]}tps_${process.argv[5]}tts`
+  `Transactions_${process.argv[4]}tps_${process.argv[5]}tts_${process.argv[8]}`
 );
 let worksheet2 = workbook.addWorksheet(`General`);
 let allTxs = [];

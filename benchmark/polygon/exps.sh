@@ -1,6 +1,6 @@
 # running experiments
 RATES=(50 50 50 50)
-NNODES=(8 8 8 8)
+NNODES=(4 8 12 16)
 NCLIENTS=(4 4 4 4)
 
 i=0

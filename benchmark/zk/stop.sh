@@ -4,8 +4,8 @@ cd `dirname ${BASH_SOURCE-$0}`
 
 killall -KILL geth
 killall -KILL polygon-edge
-docker stop postgres
-docker stop matterlabs/local-node
-docker stop matterlabs/geth
+sudo docker stop postgres
+sudo docker stop matterlabs/local-node
+sudo docker stop matterlabs/geth
 rm -rf $ETH_DATA
 rm -rf ~/.eth*

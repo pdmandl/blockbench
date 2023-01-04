@@ -1,4 +1,3 @@
-require("@nomicfoundation/hardhat-toolbox");
 require("@matterlabs/hardhat-zksync-deploy");
 require("@matterlabs/hardhat-zksync-solc");
 

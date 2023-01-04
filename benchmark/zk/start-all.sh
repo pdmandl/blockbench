@@ -19,6 +19,7 @@ for host in `cat $HOSTS`; do
       scp -oStrictHostKeyChecking=no $ETH_HOME_LOCAL/bootnode.txt $USER@$host:$ETH_HOME
       scp -oStrictHostKeyChecking=no $ETH_HOME_LOCAL/static-nodes.json $USER@$host:$ETH_HOME/volumes/geth
       ssh -oStrictHostKeyChecking=no $USER@$host chmod 755 $ETH_HOME/bootnode.txt
+      ssh -oStrictHostKeyChecking=no $USER@$host sudo docker-compose rm
       ssh -oStrictHostKeyChecking=no $USER@$host "cd $ETH_HOME && sudo docker-compose up"
       echo done node $host
     else 

@@ -10,7 +10,12 @@ for host in `cat $HOSTS`; do
   if [[ $i -lt 1 ]]; then
     echo deploying contracts on chain
     ssh -oStrictHostKeyChecking=no $USER@$host "cd $ETH_HOME && rm Output.txt"
-    ssh -oStrictHostKeyChecking=no $USER@$host "cd $ETH_HOME && npm install && npx hardhat compile && npx hardhat run scripts/deploy.js"
+    ssh -oStrictHostKeyChecking=no $USER@$host "cd $ETH_HOME && npm install" 
+    echo installations done
+    ssh -oStrictHostKeyChecking=no $USER@$host "cd $ETH_HOME && npx hardhat compile"
+    echo compilation done
+    ssh -oStrictHostKeyChecking=no $USER@$host "cd $ETH_HOME && npx hardhat run scripts/deploy.js"
+    echo deployment done
     scp -oStrictHostKeyChecking=no $USER@$host:$ETH_HOME/Output.txt $ETH_HOME_LOCAL/Output.txt 
   fi
   let i=$i+1

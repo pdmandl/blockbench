@@ -67,7 +67,7 @@ else
   sleep $M
   for client in `cat $CLIENTS`; do
     echo killing client $client
-    scp -oStrictHostKeyChecking=no $USER@$client:$ETH_HOME/Transactions_$4tps_500tts.xlsx $ETH_HOME_LOCAL/Transactions_$4tps_500tts_$client.xlsx
+    scp -oStrictHostKeyChecking=no $USER@$client:$ETH_HOME/Transactions_$4tps_500tts.xlsx $ETH_HOME_LOCAL/Transactions_$2_$4tps_500tts_$client.xlsx
     ssh -oStrictHostKeyChecking=no $USER@$client 'killall -KILL driver' 
     let i=$i+1
   done

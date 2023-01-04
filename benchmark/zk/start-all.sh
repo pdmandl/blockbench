@@ -31,8 +31,6 @@ for host in `cat $HOSTS`; do
       ssh -oStrictHostKeyChecking=no $USER@$host chmod 755 $ETH_HOME/start-mining.sh
       ssh -oStrictHostKeyChecking=no $USER@$host $ETH_HOME/start-mining.sh
     fi
-   
-    sleep 5
     echo done node $host
   fi
   # if [[ $i -lt 1 ]]; then

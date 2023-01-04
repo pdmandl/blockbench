@@ -13,7 +13,8 @@ const { Deployer } = require("@matterlabs/hardhat-zksync-deploy");
 async function main(deployer) {
   const artifact = await deployer.loadArtifact("Smallbank");
   const res = await deployer.deploy(artifact);
-  console.log(res);
+  const resp = await res.wait();
+  console.log(resp);
 }
 const provider = Provider.getDefaultProvider();
 const wallet = new Wallet(RICH_WALLET_PK, provider);

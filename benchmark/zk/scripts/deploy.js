@@ -4,6 +4,7 @@
 // You can also run a script with `npx hardhat run <script>`. If you do that, Hardhat
 // will compile your contracts, add the Hardhat Runtime Environment's members to the
 // global scope, and execute the script.
+console.log(process.argv[5]);
 const hre = require("hardhat");
 const { Wallet, Provider, Contract } = require("zksync-web3");
 const { Deployer } = require("@matterlabs/hardhat-zksync-deploy");

@@ -22,10 +22,10 @@ for host in `cat $HOSTS`; do
     sleep 5
     echo done node $host
   fi
-  if [[ $i -lt 1 ]]; then
-    ssh $USER@$host chmod 755 $ETH_HOME/startZk.sh
-    ssh -oStrictHostKeyChecking=no $USER@$host sudo $ETH_HOME/startZk.sh
-    echo done node $host
-  fi
+  # if [[ $i -lt 1 ]]; then
+  #   ssh $USER@$host chmod 755 $ETH_HOME/startZk.sh
+  #   ssh -oStrictHostKeyChecking=no $USER@$host sudo $ETH_HOME/startZk.sh
+  #   echo done node $host
+  # fi
   let i=$i+1
 done

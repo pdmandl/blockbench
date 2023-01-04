@@ -22,3 +22,10 @@ Creating zk_zksync_1   ... done
 zk_geth_1 is up-to-date
 zk_postgres_1 is up-to-date
 zk_zksync_1 is up-to-date
+/snap/docker/2285/lib/python3.6/site-packages/paramiko/transport.py:33: CryptographyDeprecationWarning: Python 3.6 is no longer supported by the Python core team. Therefore, support for it is deprecated in cryptography and will be removed in a future release.
+  from cryptography.hazmat.backends import default_backend
+zk_geth_1 is up-to-date
+Creating zk_postgres_1 ... 
+Creating zk_postgres_1 ... done
+Creating zk_zksync_1   ... 
+Creating zk_zksync_1   ... done

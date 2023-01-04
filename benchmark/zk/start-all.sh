@@ -17,9 +17,9 @@ for host in `cat $HOSTS`; do
       ssh $USER@$host chmod 755 $ETH_HOME/startZk.sh
       ssh -oStrictHostKeyChecking=no $USER@$host sudo $ETH_HOME/startZk.sh
       scp -oStrictHostKeyChecking=no $ETH_HOME_LOCAL/bootnode.txt $USER@$host:$ETH_HOME
-      scp -oStrictHostKeyChecking=no $ETH_HOME_LOCAL/static-nodes.json $USER@$host:$ETH_DATA/volumes/geth
+      scp -oStrictHostKeyChecking=no $ETH_HOME_LOCAL/static-nodes.json $USER@$host:$ETH_HOME/volumes/geth
       ssh -oStrictHostKeyChecking=no $USER@$host chmod 755 $ETH_HOME/bootnode.txt
-      ssh -oStrictHostKeyChecking=no $USER@$host sudo docker-compose up
+      ssh -oStrictHostKeyChecking=no $USER@$host "cd $ETH_HOME && sudo docker-compose up"
       echo done node $host
     else 
       scp -oStrictHostKeyChecking=no $ETH_HOME_LOCAL/bootnode.txt $USER@$host:$ETH_HOME

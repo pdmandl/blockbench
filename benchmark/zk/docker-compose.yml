@@ -44,4 +44,4 @@ services:
         target: /var/lib/zksync/data
     environment:
       - DATABASE_URL=postgres://postgres@postgres/zksync_local
-      - ETH_CLIENT_WEB3_URL=http://192.168.4.116:8501
+      - ETH_CLIENT_WEB3_URL=http://geth:8545

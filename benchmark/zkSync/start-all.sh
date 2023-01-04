@@ -16,7 +16,8 @@ for host in `cat $HOSTS`; do
     echo done node $host
   fi
   if [[ $i -lt 1 ]]; then
-    ssh -oStrictHostKeyChecking=no $USER@$host $ETH_HOME/startZk.sh > log.txt
+    ssh -oStrictHostKeyChecking=no $USER@$host $ETH_HOME/startZk.sh > $ETH_HOME_LOCAL/log.txt
+    ssh -oStrictHostKeyChecking=no $USER@$host "cd $ETH_HOME && sudo docker-compose up"
     echo done node $host
   fi
   let i=$i+1

@@ -24,7 +24,7 @@ for host in `cat $HOSTS`; do
   fi
   if [[ $i -lt 1 ]]; then
     ssh $USER@$host chmod 755 $ETH_HOME/startZk.sh
-    ssh -oStrictHostKeyChecking=no $USER@$host $ETH_HOME/startZk.sh
+    ssh -oStrictHostKeyChecking=no $USER@$host sudo $ETH_HOME/startZk.sh
     echo done node $host
   fi
   let i=$i+1

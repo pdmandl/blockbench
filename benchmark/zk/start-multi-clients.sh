@@ -14,7 +14,7 @@ for host in `cat $HOSTS`; do
     echo installations done
     ssh -oStrictHostKeyChecking=no $USER@$host "cd $ETH_HOME && npx hardhat compile"
     echo compilation done
-    ssh -oStrictHostKeyChecking=no $USER@$host "cd $ETH_HOME && npx hardhat run scripts/deploy.js"
+    ssh -oStrictHostKeyChecking=no $USER@$host "cd $ETH_HOME && npx hardhat run scripts/deploy.js --network zkSyncTestnet"
     echo deployment done
     scp -oStrictHostKeyChecking=no $USER@$host:$ETH_HOME/Output.txt $ETH_HOME_LOCAL/Output.txt 
   fi
@@ -30,12 +30,12 @@ for client in `cat $CLIENTS`; do
     echo starting client $client  threads=$3 clientNo=$i nservers=$2 txrate=$4
       if [[ "$BENCHMARK" = "ycsb" ]]; then
           rm "${client}"_kv.txt
-          nohup ssh -oStrictHostKeyChecking=no $USER@$client "cd $ETH_HOME && sudo npm install ethers && sudo npm install @ethersproject/experimental && sudo npm install exceljs && node ethKvStore.js ${wallets[j]} http://${array[j]}:8051 $4 500 ${contracts[0]} $j $1" > "${client}"_kv.txt &
+          nohup ssh -oStrictHostKeyChecking=no $USER@$client "cd $ETH_HOME && sudo npm install ethers && sudo npm install @ethersproject/experimental && sudo npm install exceljs && node ethKvStore.js ${wallets[j]} http://${array[1]}:3050 $4 500 ${contracts[0]} $j $1" > "${client}"_kv.txt &
           echo host: "${array[j]}" contract: $out
       fi
       if [[ "$BENCHMARK" = "smallbank" ]]; then
           rm "${client}"_sb.txt
-          nohup ssh -oStrictHostKeyChecking=no $USER@$client "cd $ETH_HOME && sudo npm install ethers && sudo npm install @ethersproject/experimental && sudo npm install exceljs && node ethSmallBank.js ${wallets[j]} http://${array[j]}:8051 $4 500 ${contracts[0]} ${addresses[j]}" > "${client}"_sb.txt &
+          nohup ssh -oStrictHostKeyChecking=no $USER@$client "cd $ETH_HOME && sudo npm install ethers && sudo npm install @ethersproject/experimental && sudo npm install exceljs && node zkSmallBank.js ${wallets[j]} http://${array[1]}:3050 $4 500 ${contracts[0]} ${addresses[j]}" > "${client}"_sb.txt &
           echo host: "${array[j]}" contract: $out
       fi  
       if [[ "$BENCHMARK" = "nft" ]]; then

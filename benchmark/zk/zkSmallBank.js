@@ -14,6 +14,7 @@ console.log("CONTRACT ADDRESS" + process.argv[6]);
 console.log("TO_ADDRESS" + process.argv[7]);
 
 const ethers = require("ethers");
+const zksync = require("zksync");
 const { NonceManager } = require("@ethersproject/experimental");
 const toAddress = process.argv[7];
 const Excel = require("exceljs");
@@ -28,8 +29,8 @@ let url = process.argv[3];
 let total = [];
 let success = 0;
 let fail = 0;
-let provider = new ethers.providers.JsonRpcProvider(url);
-var signer = new ethers.Wallet(process.argv[2], provider);
+let provider = zksync.Provider.newHttpProvider(url);
+var signer = new zksync.Wallet(process.argv[2], provider);
 var managedSigner = new NonceManager(signer);
 var address = process.argv[6];
 var abi = [

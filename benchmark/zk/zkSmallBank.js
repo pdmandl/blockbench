@@ -154,8 +154,8 @@ var abi = [
     type: "function",
   },
 ];
-const myContract_write = new ethers.Contract(address, abi, managedSigner); // Write only
-const myContract_read = new ethers.Contract(address, abi, provider); // Read only
+const myContract_write = new zksync.Contract(address, abi, managedSigner); // Write only
+const myContract_read = new zksync.Contract(address, abi, provider); // Read only
 
 const sendPayment = async (from, to, value, id) => {
   console.log("from: " + from, "to: " + to, "value: " + value);

@@ -4,6 +4,8 @@ cd `dirname ${BASH_SOURCE-$0}`
 . env.sh
 
 rm -rf addPeer.txt
+rm -rf static-nodes.json
+rm -rf bootnode.txt
 ./gatherStatic.sh $1
 sleep 3
 i=0

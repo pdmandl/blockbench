@@ -15,7 +15,6 @@ console.log("TO_ADDRESS" + process.argv[7]);
 
 const ethers = require("ethers");
 const zksync = require("zksync-web3");
-const { NonceManager } = require("@ethersproject/experimental");
 const toAddress = process.argv[7];
 const Excel = require("exceljs");
 let workbook = new Excel.Workbook();
@@ -156,9 +155,11 @@ var abi = [
 ];
 const myContract_write = new zksync.Contract(address, abi, signer); // Write only
 const myContract_read = new zksync.Contract(address, abi, provider); // Read only
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-const sendPayment = async (from, to, value, id) => {
+const sendPayment = async (from, to, value, id, sleepTime) => {
   console.log("from: " + from, "to: " + to, "value: " + value);
+  await sleep(sleepTime - 20);
   const start = Date.now();
   try {
     const res = await myContract_write.sendPayment(from, to, value, {
@@ -182,7 +183,9 @@ const doWTransactions = async (numberOfTxsPerRun, run) => {
     numberOfTxsPerRun + run * numberOfTxsPerRun
   );
   try {
-    const doneTxs = await Promise.all(txsForRun.map((res) => res.tx()));
+    const doneTxs = await Promise.all(
+      txsForRun.map((res, index) => res.tx((1000 / txsForRun.length) * index))
+    );
     for (let tx of doneTxs) {
       result = [...result, tx];
       total = [...total, tx];
@@ -192,7 +195,6 @@ const doWTransactions = async (numberOfTxsPerRun, run) => {
   }
   //doRTransactions();
 };
-const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const printer = async () => {
   while (txs.length > 0) {
     try {
@@ -268,7 +270,10 @@ const doTransactions = async () => {
   }
 };
 for (let i = 0; i < parseInt(process.argv[5]); i++) {
-  txs[i] = { tx: () => sendPayment(signer.address, toAddress, 1, i), id: i };
+  txs[i] = {
+    tx: (sleep) => sendPayment(signer.address, toAddress, 1, i, sleep),
+    id: i,
+  };
 }
 allTxs = txs;
 measureTime();

@@ -17,6 +17,8 @@ console.log("NR_OF_CLIENTS" + process.argv[8]);
 const ethers = require("ethers");
 const zksync = require("zksync-web3");
 const Excel = require("exceljs");
+const { NonceManager } = require("@ethersproject/experimental");
+
 let workbook = new Excel.Workbook();
 let worksheet = workbook.addWorksheet(
   `Transactions_${process.argv[4]}tps_${process.argv[5]}tts`
@@ -31,6 +33,7 @@ let fail = 0;
 let provider = new zksync.Provider(url + ":3050");
 const ethereumProvider = new ethers.providers.JsonRpcProvider(url + ":8545");
 var signer = new zksync.Wallet(process.argv[2], provider, ethereumProvider);
+var managedSigner = new NonceManager(signer);
 var address = process.argv[6];
 var abi = [
   {
@@ -135,7 +138,6 @@ const measureTime = async () => {
     await sleep(1);
   }
   const end = Date.now();
-  console.log(end);
   console.log("the test ended at " + end);
   console.log("the test took " + (end - start) / 1000 + "s to finish.");
   let ttl = 0;
@@ -158,6 +160,7 @@ const measureTime = async () => {
       ...{ id: index, value: e },
     });
   });
+  console.log(end - start);
   worksheet2.addRow({
     success: success,
     fail: fail,

@@ -5,7 +5,7 @@ cd `dirname ${BASH_SOURCE-$0}`
 
 i=0
 for host in `cat $CLIENTS`; do
-    ssh -oStrictHostKeyChecking=no $USER@$host  killall -KILL driver 
+    ssh -oStrictHostKeyChecking=no $USER@$host  killall -KILL node 
     echo done node $host
 done
 

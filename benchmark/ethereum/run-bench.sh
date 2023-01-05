@@ -3,8 +3,6 @@
 cd `dirname ${BASH_SOURCE-$0}`
 . env.sh
 
-echo Test startet at $(date -u)
-
 ./stop-all.sh $1 
 
 #enable if you want installation in runtime
@@ -16,15 +14,9 @@ echo Test startet at $(date -u)
 let M=40
 echo "Sleeping $M seconds to allow network to bootstrap"
 sleep $M
-./start-multi-clients.sh $3 $1 $2 $4 $5 
-#BACK=$!
-#sleep 100
-#python partition.py $1
-#wait $BACK
-#./start-multi-clients.sh clients_$1 $1 $2
-#./start-multi-clients.sh clients_8 $1 $2
+./start-multi-clients.sh $3 $1 $2 $4
+
 ./stop-all.sh $1
 
 sleep 5
-echo Test finished at $(date -u)
 

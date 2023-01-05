@@ -4,12 +4,10 @@ cd `dirname ${BASH_SOURCE-$0}`
 . env.sh
 
 let i=0
-let IDX=$1 #$1 is #clients, we take only half of them 
 echo starting clients
 for host in `cat $HOSTS`; do
   if [[ $i -lt 1 ]]; then
-    echo deploying contracts on chain
-    #sed -i ".bak" sed -i "4s/.*/const rpc = $host;/" truffle-config.js 
+    echo deploying contracts on the first block
     ssh -oStrictHostKeyChecking=no $USER@$host "cd $ETH_HOME && rm Output.txt"
     ssh -oStrictHostKeyChecking=no $USER@$host "cd $ETH_HOME && npm install @openzeppelin/contracts@4.3.0 && npm install @truffle/hdwallet-provider && truffle compile && truffle migrate --reset --network=private"
     scp -oStrictHostKeyChecking=no $USER@$host:$ETH_HOME/Output.txt $ETH_HOME_LOCAL/Output.txt 
@@ -43,33 +41,13 @@ for client in `cat $CLIENTS`; do
   let j=$j+1
 done
 
-if [[ $5 == "-drop" ]]; then
-  let M=$2*10+240
-  let SR=$M-150
-  sleep 250 
-  let idx=$2-4
-  let i=0
-  for server in `cat $HOSTS`; do
-    if [[ $i -ge $idx ]]; then
-      ssh -oStrictHostKeyChecking=no $USER@$server killall -KILL geth peer java 
-      echo "Dropped "$server
-    fi
-    let i=$i+1
-  done
-  sleep $SR
-  for client in `cat $CLIENTS`; do
-    echo $client index $i
-    ssh -oStrictHostKeyChecking=no $USER@$client 'killall -KILL driver' 
-    let i=$i+1
-  done
-else
-  let M=220+$2*20
-  echo "sleeping $M seconds before killing drivers (clients) and retrieving xls files"
-  sleep $M
-  for client in `cat $CLIENTS`; do
-    echo killing client $client
-    scp -oStrictHostKeyChecking=no $USER@$client:$ETH_HOME/Transactions_$4tps_500tts.xlsx $ETH_HOME_LOCAL/Transactions_$2_$4tps_500tts_$client.xlsx
-    ssh -oStrictHostKeyChecking=no $USER@$client 'killall -KILL driver' 
-    let i=$i+1
-  done
-fi
+let M=220+$2*20
+echo "sleeping $M seconds before killing drivers (clients) and retrieving xls files"
+sleep $M
+for client in `cat $CLIENTS`; do
+  echo killing client $client
+  scp -oStrictHostKeyChecking=no $USER@$client:$ETH_HOME/Transactions_$4tps_500tts.xlsx $ETH_HOME_LOCAL/Transactions_$2_$4tps_500tts_$client.xlsx
+  ssh -oStrictHostKeyChecking=no $USER@$client 'killall -KILL driver' 
+  let i=$i+1
+done
+

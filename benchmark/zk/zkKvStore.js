@@ -80,7 +80,7 @@ var abi = [
   },
 ];
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
-const myContract_write = new ethers.Contract(address, abi, signer); // Write only
+const myContract_write = new ethers.Contract(address, abi, managedSigner); // Write only
 const myContract_read = new ethers.Contract(address, abi, provider); // Read only
 
 const savePacket = async (id, value, sleepTime) => {

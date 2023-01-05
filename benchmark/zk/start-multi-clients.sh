@@ -39,6 +39,7 @@ for client in `cat $CLIENTS`; do
           echo host: "${array[j]}" contract: $out
       fi  
       if [[ "$BENCHMARK" = "nft" ]]; then
+          rm "${client}"_nft.txt
           nohup ssh -oStrictHostKeyChecking=no $USER@$client "cd $ETH_HOME && sudo npm install @ethersproject/experimental ethers exceljs zksync-web3 && node zkNftMint.js ${wallets[j]} http://${array[0]} $4 500 ${contracts[0]} ${addresses[j]}" > "${client}"_sb.txt &
           echo dritter: $out
       fi  
@@ -71,8 +72,8 @@ else
   sleep $M
   for client in `cat $CLIENTS`; do
     echo killing client $client
-    scp -oStrictHostKeyChecking=no $USER@$client:$ETH_HOME/Transactions_$4tps_500tts.xlsx $ETH_HOME_LOCAL/Transactions_$4tps_500tts_$client.xlsx
-    ssh -oStrictHostKeyChecking=no $USER@$client 'killall -KILL driver' 
+    scp -oStrictHostKeyChecking=no $USER@$client:$ETH_HOME/Transactions_$4tps_500tts.xlsx $ETH_HOME_LOCAL/Transactions_$2_$4tps_500tts_$client.xlsx
+    ssh -oStrictHostKeyChecking=no $USER@$client 'killall -KILL node' 
     let i=$i+1
   done
 fi

@@ -4,6 +4,9 @@ cd `dirname ${BASH_SOURCE-$0}`
 . env.sh
 
 sudo rm -rf ./volumes
+sudo docker kill $(sudo docker ps -q)
+sudo docker rm $(sudo docker ps -a -q)
+sudo docker rmi $(sudo docker images -q)
 mkdir -p ./volumes
 mkdir -p ./volumes/postgres ./volumes/geth ./volumes/zksync/env/dev ./volumes/zksync/data
 sudo chmod 755 ./volumes ./volumes/postgres ./volumes/geth ./volumes/zksync/env/dev ./volumes/zksync/data

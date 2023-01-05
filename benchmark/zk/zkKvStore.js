@@ -76,10 +76,12 @@ var abi = [
     type: "function",
   },
 ];
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const myContract_write = new ethers.Contract(address, abi, signer); // Write only
 const myContract_read = new ethers.Contract(address, abi, provider); // Read only
 
-const savePacket = async (id, value) => {
+const savePacket = async (id, value, sleepTime) => {
+  await sleep(sleepTime);
   console.log("id: " + id, "value: " + value);
   const start = Date.now();
   try {
@@ -104,7 +106,9 @@ const doWTransactions = async (numberOfTxsPerRun, run) => {
     numberOfTxsPerRun + run * numberOfTxsPerRun
   );
   try {
-    const doneTxs = await Promise.all(txsForRun.map((res) => res.tx()));
+    const doneTxs = await Promise.all(
+      txsForRun.map((res, index) => res.tx((1000 / txsForRun.length) * index))
+    );
     for (let tx of doneTxs) {
       result = [...result, tx];
       total = [...total, tx];
@@ -114,7 +118,6 @@ const doWTransactions = async (numberOfTxsPerRun, run) => {
   }
   //doRTransactions();
 };
-const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const printer = async () => {
   while (txs.length > 0) {
     try {
@@ -188,7 +191,10 @@ const doTransactions = async () => {
 };
 for (let i = 0; i < parseInt(process.argv[5]); i++) {
   const saveIndex = parseInt(process.argv[7]) * parseInt(process.argv[5]) + i;
-  txs[i] = { tx: () => savePacket(saveIndex, "TEST" + i), id: saveIndex };
+  txs[i] = {
+    tx: (sleep) => savePacket(saveIndex, "TEST" + i, sleep),
+    id: saveIndex,
+  };
 }
 allTxs = txs;
 measureTime();

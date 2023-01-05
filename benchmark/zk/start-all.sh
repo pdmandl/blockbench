@@ -19,10 +19,9 @@ for host in `cat $HOSTS`; do
       scp -oStrictHostKeyChecking=no $ETH_HOME_LOCAL/bootnode.txt $USER@$host:$ETH_HOME
       scp -oStrictHostKeyChecking=no $ETH_HOME_LOCAL/static-nodes.json $USER@$host:$ETH_HOME/volumes/geth
       ssh -oStrictHostKeyChecking=no $USER@$host chmod 755 $ETH_HOME/bootnode.txt
-      ssh -oStrictHostKeyChecking=no $USER@$host "cd $ETH_HOME && sudo docker system prune --volumes --force"
       nohup ssh -oStrictHostKeyChecking=no $USER@$host "cd $ETH_HOME && sudo docker-compose up > $ETH_HOME/volumes/eth_log" &
       echo done node $host
-    else 
+    else
       scp -oStrictHostKeyChecking=no $ETH_HOME_LOCAL/bootnode.txt $USER@$host:$ETH_HOME
       scp -oStrictHostKeyChecking=no $ETH_HOME_LOCAL/static-nodes.json $USER@$host:$ETH_DATA/geth
       ssh -oStrictHostKeyChecking=no $USER@$host chmod 755 $ETH_HOME/bootnode.txt

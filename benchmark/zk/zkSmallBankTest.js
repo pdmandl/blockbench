@@ -11,11 +11,11 @@ console.log("RPC_URL" + process.argv[3]);
 console.log("NR_REQUESTS_PER_SECOND" + process.argv[4]);
 console.log("TOTAL_NR_REQUESTS" + process.argv[5]);
 console.log("CONTRACT ADDRESS" + process.argv[6]);
-console.log("INDEX" + process.argv[7]);
-console.log("NR_OF_CLIENTS" + process.argv[8]);
+console.log("TO_ADDRESS" + process.argv[7]);
 
 const ethers = require("ethers");
-const { NonceManager } = require("@ethersproject/experimental");
+const zksync = require("zksync-web3");
+const toAddress = process.argv[7];
 const Excel = require("exceljs");
 let workbook = new Excel.Workbook();
 let worksheet = workbook.addWorksheet(
@@ -28,9 +28,9 @@ let url = process.argv[3];
 let total = [];
 let success = 0;
 let fail = 0;
-let provider = new ethers.providers.JsonRpcProvider(url);
-var signer = new ethers.Wallet(process.argv[2], provider);
-var managedSigner = new NonceManager(signer);
+let provider = new zksync.Provider(url + ":3050");
+const ethereumProvider = new ethers.providers.JsonRpcProvider(url + ":8545");
+var signer = new zksync.Wallet(process.argv[2], provider, ethereumProvider);
 var address = process.argv[6];
 var abi = [
   {
@@ -42,16 +42,34 @@ var abi = [
     inputs: [
       {
         internalType: "string",
-        name: "key",
+        name: "arg0",
+        type: "string",
+      },
+      {
+        internalType: "string",
+        name: "arg1",
         type: "string",
       },
     ],
-    name: "get",
-    outputs: [
+    name: "almagate",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
       {
         internalType: "string",
-        name: "",
+        name: "arg0",
         type: "string",
+      },
+    ],
+    name: "getBalance",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "balance",
+        type: "uint256",
       },
     ],
     stateMutability: "view",
@@ -61,29 +79,90 @@ var abi = [
     inputs: [
       {
         internalType: "string",
-        name: "key",
+        name: "arg0",
         type: "string",
       },
       {
         internalType: "string",
-        name: "value",
+        name: "arg1",
         type: "string",
       },
+      {
+        internalType: "uint256",
+        name: "arg2",
+        type: "uint256",
+      },
     ],
-    name: "set",
+    name: "sendPayment",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "string",
+        name: "arg0",
+        type: "string",
+      },
+      {
+        internalType: "uint256",
+        name: "arg1",
+        type: "uint256",
+      },
+    ],
+    name: "updateBalance",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "string",
+        name: "arg0",
+        type: "string",
+      },
+      {
+        internalType: "uint256",
+        name: "arg1",
+        type: "uint256",
+      },
+    ],
+    name: "updateSaving",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "string",
+        name: "arg0",
+        type: "string",
+      },
+      {
+        internalType: "uint256",
+        name: "arg1",
+        type: "uint256",
+      },
+    ],
+    name: "writeCheck",
     outputs: [],
     stateMutability: "nonpayable",
     type: "function",
   },
 ];
-const myContract_write = new ethers.Contract(address, abi, managedSigner); // Write only
-const myContract_read = new ethers.Contract(address, abi, provider); // Read only
+const myContract_write = new zksync.Contract(address, abi, signer); // Write only
+const myContract_read = new zksync.Contract(address, abi, provider); // Read only
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-const savePacket = async (id, value) => {
-  console.log("id: " + id, "value: " + value);
+const sendPayment = async (from, to, value, id, sleepTime) => {
+  console.log("from: " + from, "to: " + to, "value: " + value);
+  await sleep(sleepTime - 20);
   const start = Date.now();
   try {
-    const res = await myContract_write.set(id, value, {
+    const res = await myContract_write.sendPayment(from, to, value, {
       gasLimit: 5000000,
     });
     const receipt = await res.wait();
@@ -93,8 +172,8 @@ const savePacket = async (id, value) => {
     console.error(e);
   }
   const end = Date.now();
-  console.log("done id: " + id, "value: " + value);
-  txs = txs.filter((res) => res.id !== id);
+  console.log("done from: " + from, "to: " + to, "value: " + value);
+  txs = txs.filter((resp) => resp.id !== id);
   return end - start;
 };
 const doWTransactions = async (numberOfTxsPerRun, run) => {
@@ -104,7 +183,9 @@ const doWTransactions = async (numberOfTxsPerRun, run) => {
     numberOfTxsPerRun + run * numberOfTxsPerRun
   );
   try {
-    const doneTxs = await Promise.all(txsForRun.map((res) => res.tx()));
+    const doneTxs = await Promise.all(
+      txsForRun.map((res, index) => res.tx((1000 / txsForRun.length) * index))
+    );
     for (let tx of doneTxs) {
       result = [...result, tx];
       total = [...total, tx];
@@ -114,7 +195,6 @@ const doWTransactions = async (numberOfTxsPerRun, run) => {
   }
   //doRTransactions();
 };
-const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const printer = async () => {
   while (txs.length > 0) {
     try {
@@ -176,6 +256,9 @@ const doTxs = async (txCount, run) => {
 };
 const doTransactions = async () => {
   let run = 0;
+  await myContract_write.updateBalance(signer.address, 1000, {
+    gasLimit: 5000000,
+  });
   while (run * parseInt(process.argv[4]) < parseInt(process.argv[5])) {
     await doTxs(
       parseInt(process.argv[4]) < txs.length
@@ -187,8 +270,10 @@ const doTransactions = async () => {
   }
 };
 for (let i = 0; i < parseInt(process.argv[5]); i++) {
-  const saveIndex = parseInt(process.argv[7]) * parseInt(process.argv[5]) + i;
-  txs[i] = { tx: () => savePacket(saveIndex, "TEST" + i), id: saveIndex };
+  txs[i] = {
+    tx: (sleep) => sendPayment(signer.address, toAddress, 1, i, sleep),
+    id: i,
+  };
 }
 allTxs = txs;
 measureTime();

@@ -30,12 +30,12 @@ for client in `cat $CLIENTS`; do
     echo starting client $client  threads=$3 clientNo=$i nservers=$2 txrate=$4
       if [[ "$BENCHMARK" = "ycsb" ]]; then
           rm "${client}"_kv.txt
-          nohup ssh -oStrictHostKeyChecking=no $USER@$client "cd $ETH_HOME && sudo npm install @ethersproject/experimental ethers exceljs zksync && node ethKvStore.js ${wallets[j]} http://${array[0]}:3050 $4 500 ${contracts[0]} $j $1" > "${client}"_kv.txt &
+          nohup ssh -oStrictHostKeyChecking=no $USER@$client "cd $ETH_HOME && sudo npm install @ethersproject/experimental ethers exceljs zksync-web3 && node ethKvStore.js ${wallets[j]} http://${array[0]} $4 500 ${contracts[0]} $j $1" > "${client}"_kv.txt &
           echo host: "${array[j]}" contract: $out
       fi
       if [[ "$BENCHMARK" = "smallbank" ]]; then
           rm "${client}"_sb.txt
-          nohup ssh -oStrictHostKeyChecking=no $USER@$client "cd $ETH_HOME && sudo npm install @ethersproject/experimental ethers exceljs zksync && node zkSmallBank.js ${wallets[j]} http://${array[0]}:3050 $4 500 ${contracts[0]} ${addresses[j]}" > "${client}"_sb.txt &
+          nohup ssh -oStrictHostKeyChecking=no $USER@$client "cd $ETH_HOME && sudo npm install @ethersproject/experimental ethers exceljs zksync-web3 && node zkSmallBank.js ${wallets[j]} http://${array[0]} $4 500 ${contracts[0]} ${addresses[j]}" > "${client}"_sb.txt &
           echo host: "${array[j]}" contract: $out
       fi  
       if [[ "$BENCHMARK" = "nft" ]]; then
@@ -65,7 +65,7 @@ if [[ $5 == "-drop" ]]; then
     let i=$i+1
   done
 else
-  let M=$2*120
+  let M=$2*40
   echo "sleeping $M seconds before killing drivers (clients) and retrieving xls files"
   sleep $M
   for client in `cat $CLIENTS`; do

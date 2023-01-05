@@ -15,7 +15,9 @@ fs.writeFile("Output.txt", "", function () {
 });
 
 async function main(deployer) {
-  const artifact = await deployer.loadArtifact("Smallbank");
+  // const artifact = await deployer.loadArtifact("Smallbank");
+  // const artifact = await deployer.loadArtifact("NftMint");
+  const artifact = await deployer.loadArtifact("Kvstore");
   const res = await deployer.deploy(artifact);
   const resp = await res.deployTransaction.wait();
   fs.appendFile("Output.txt", `\n${resp.contractAddress}`, function (err) {

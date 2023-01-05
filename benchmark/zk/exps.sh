@@ -1,8 +1,8 @@
 # running experiments
-RATES=(25 25 50 50 75 75 100 100)
-NNODES=(4 4 4 4 4 4 4 4)
-NCLIENTS=(4 4 4 4 4 4 4 4)
-SLEEPS=(180 0 180 0 180 0 180 0)
+RATES=(25 50 75 100)
+NNODES=(4 4 4 4)
+NCLIENTS=(4 4 4 4 )
+SLEEPS=(350 350 350 350)
 
 i=0
 chmod 755 run-bench.sh

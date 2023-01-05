@@ -9,12 +9,22 @@ const RICH_WALLET_PK =
 const hre = require("hardhat");
 const { Wallet, Provider, Contract } = require("zksync-web3");
 const { Deployer } = require("@matterlabs/hardhat-zksync-deploy");
+const fs = require("fs");
+fs.writeFile("Output.txt", "", function () {
+  console.log("done");
+});
 
 async function main(deployer) {
   const artifact = await deployer.loadArtifact("Smallbank");
   const res = await deployer.deploy(artifact);
   const resp = await res.deployTransaction.wait();
-  console.log(resp);
+  fs.appendFile("Output.txt", `\n${resp.contractAddress}`, function (err) {
+    if (err) {
+      // append failed
+    } else {
+      // done
+    }
+  });
 }
 const provider = Provider.getDefaultProvider();
 const wallet = new Wallet(RICH_WALLET_PK, provider);

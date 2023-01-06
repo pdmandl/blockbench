@@ -121,6 +121,7 @@ const doWTransactions = async (numberOfTxsPerRun, run) => {
       txsForRun.map((res, index) => res.tx((1000 / txsForRun.length) * index))
     );
     for (let tx of doneTxs) {
+      console.log(tx);
       result = [...result, tx];
       total = [...total, tx];
     }

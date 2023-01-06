@@ -13,11 +13,12 @@ console.log("TOTAL_NR_REQUESTS" + process.argv[5]);
 console.log("CONTRACT ADDRESS" + process.argv[6]);
 console.log("INDEX" + process.argv[7]);
 console.log("NR_OF_CLIENTS" + process.argv[8]);
+console.log("MAX_TIME" + process.argv[9]);
 
 const ethers = require("ethers");
 const zksync = require("zksync-web3");
 const Excel = require("exceljs");
-
+const MAX_TIME = parseInt(process.argv[9]);
 let workbook = new Excel.Workbook();
 let worksheet = workbook.addWorksheet(
   `Transactions_${process.argv[4]}tps_${process.argv[5]}tts`
@@ -141,7 +142,7 @@ const printer = async () => {
 const measureTime = async () => {
   const start = Date.now();
   console.log("the test started at " + start);
-  while (txs.length > 0) {
+  while (txs.length > 0 && Date.now() - start < MAX_TIME) {
     await sleep(1);
   }
   const end = Date.now();

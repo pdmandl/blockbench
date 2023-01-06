@@ -29,6 +29,7 @@ let txs = [];
 let url = process.argv[3];
 let total = [];
 let success = 0;
+let processed = 0;
 let fail = 0;
 let provider = new zksync.Provider(url + ":3050");
 const ethereumProvider = new ethers.providers.JsonRpcProvider(url + ":8545");
@@ -99,14 +100,15 @@ const savePacket = async (id, value, sleepTime, nonce) => {
       nonce,
     });
     const receipt = await res.wait();
+    success += 1;
   } catch (e) {
+    fail += 1;
     console.error(e);
   }
   const end = Date.now();
   total.push(end - start);
-
-  processed += 1;
   txs = txs.filter((res) => res.id !== id);
+  processed += 1;
   return end - start;
 };
 const doWTransactions = async (numberOfTxsPerRun, run) => {
@@ -160,6 +162,7 @@ const measureTime = async (start) => {
     { header: "Durschn. Latenz:", key: "latency" },
     { header: "Dursatz:", key: "throughput" },
     { header: "Total Time", key: "time" },
+    { header: "Nicht verarbeitet", key: "notExecuted" },
   ];
   total.forEach((e, index) => {
     worksheet.addRow({
@@ -168,17 +171,18 @@ const measureTime = async (start) => {
   });
   console.log(end - start);
   worksheet2.addRow({
-    success: processed,
-    fail: notExecuted,
+    success: success,
+    fail: fail,
     latency: ttl / total.length + " ms",
     throughput: total.length / ((end - testStart) / 1000) + " tx/s",
     time: (end - testStart) / 1000,
+    notExecuted: notExecuted,
   });
   workbook.xlsx.writeFile(
     `Transactions_${process.argv[4]}tps_${process.argv[5]}tts.xlsx`
   );
-  console.log("Successful Txs:" + success);
-  console.log("Failed Txs:" + notExecuted);
+  console.log("Successful Txs:" + processed);
+  console.log("Not executed Txs:" + notExecuted);
   console.log("Durschn. Latenz: " + ttl / total.length + " ms");
   console.log(
     "Durchsatz: " + total.length / ((end - testStart) / 1000) + " tx/s"

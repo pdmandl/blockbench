@@ -561,12 +561,20 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 const mintNft = async (numberOfItems, id, sleepTime) => {
   await sleep(sleepTime);
-  console.log("mint of " + numberOfItems, "tokens started.");
+  try {
+    const txCount = await provider.getTransactionCount(signer.address);
+    if (nonce - 50 > txCount) nonce = txCount + 49;
+    if (nonce < txCount) nonce = txCount + 1;
+  } catch (e) {
+    console.log(e);
+  }
+  console.log("id: " + id, "value: " + value);
   const start = Date.now();
   try {
     const res = await myContract_write.mint(numberOfItems, {
       value: ethers.utils.parseUnits((0.2 * numberOfItems).toString, "ether"),
       gasLimit: 5000000,
+      nonce,
     });
     const receipt = await res.wait();
     success += 1;
@@ -575,6 +583,7 @@ const mintNft = async (numberOfItems, id, sleepTime) => {
     console.error(e);
   }
   const end = Date.now();
+  total.push(end - start);
   console.log("minted: " + numberOfItems, "tokens.");
   txs = txs.filter((resp) => resp.id !== id);
   return end - start;
@@ -591,7 +600,6 @@ const doWTransactions = async (numberOfTxsPerRun, run) => {
     );
     for (let tx of doneTxs) {
       result = [...result, tx];
-      total = [...total, tx];
     }
   } catch (e) {
     console.error(e);
@@ -672,7 +680,26 @@ const doTransactions = async () => {
 for (let i = 0; i < parseInt(process.argv[5]); i++) {
   txs[i] = { tx: (sleep) => mintNft(5, i, sleep), id: i };
 }
-allTxs = txs;
-measureTime();
-printer();
-doTransactions();
+const main = async () => {
+  const start = Date.now();
+  const nonce = await provider.getTransactionCount(signer.address);
+  for (let i = 0; i < parseInt(process.argv[5]); i++) {
+    const saveIndex = parseInt(process.argv[7]) * parseInt(process.argv[5]) + i;
+    txs[i] = {
+      tx: (sleep) => mintNft(5, i, sleep, nonce + i),
+      id: saveIndex,
+    };
+  }
+  allTxs = txs;
+  measureTime(start);
+  printer(start);
+  doTransactions();
+};
+main()
+  .then(() => {
+    process.exitCode = 0;
+  })
+  .catch((error) => {
+    console.error(error);
+    process.exitCode = 1;
+  });

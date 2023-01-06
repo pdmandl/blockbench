@@ -1,16 +1,11 @@
 # BlockBench Deployment Scripts
 
 ## Setup
-Run the `install.sh` script inside `ethereum` , `hyperledger` and `quorum` directory to install `geth` and
-hyperledger-fabric respectively. Both need `sudo` privilege.
-More details in [ethereum](ethereum/README.md), [hyperledger](hyperledger/README.md) , [parity](pairty/README.md) , [quorum_raft](quorum_raft/README.md) and [quorum_vote](quorum_vote/README.md) directories
+Run the `install.sh` script inside `ethereum` , `polygon` and `zkSync` directory to install `geth` and
+polygon-edge respectively. Both need `sudo` privilege.
 
 ## Source structure
-+ Smart contract sources are in `contracts` directory
-+ Instructions and scripts to run benchmarks for Ethereum, Hyperledger , Parity and Quorum are in [ethereum](ethereum),
-[hyperledger](hyperledger) , [parity](pairty) , [quorum_raft](quorum_raft) and [quorum_vote](quorum_vote) directories respectively
-
-## Others
-+ Notes on implementation and deployment:
-    + [Smart contracts in Ethereum & Parity & quorum](ethereum/contracts.md)
-    + [Chaincode in Hyperledger](hyperledger/contracts.md)
++ Smart contract sources are in [benchmark/contracts](benchmark/contracts) directory.
++ Instructions and scripts to run benchmarks for Ethereum, Polygon and zkSync are in [ethereum](benchmark/ethereum),
+[polygon](benchmark/polygon) , [zkSync](benchmark/zk) directories respectively.
++ Drivers for benchmark workloads are in the directories as well.

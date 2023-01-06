@@ -1,6 +1,6 @@
 # running experiments
 RATES=(25 50 75 100)
-NNODES=(4 4 4 4)
+NNODES=(4 8 12 16)
 NCLIENTS=(4 4 4 4 )
 SLEEPS=(250 250 250 250)
 

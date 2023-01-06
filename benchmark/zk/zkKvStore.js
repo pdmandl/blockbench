@@ -88,7 +88,7 @@ const savePacket = async (id, value, sleepTime, nonce) => {
   try {
     const txCount = await provider.getTransactionCount(signer.address);
     if (nonce - 50 > txCount) nonce = txCount + 49;
-    if (nonce < txCount) nonce = txCount;
+    if (nonce < txCount) nonce = txCount + 1;
   } catch (e) {
     console.log(e);
   }
@@ -158,7 +158,7 @@ const measureTime = async (start) => {
   ];
   worksheet2.columns = [
     { header: "Processed", key: "success" },
-    { header: "Unrpocessed", key: "fail" },
+    { header: "Failed", key: "fail" },
     { header: "Durschn. Latenz:", key: "latency" },
     { header: "Dursatz:", key: "throughput" },
     { header: "Total Time", key: "time" },
@@ -189,7 +189,7 @@ const measureTime = async (start) => {
   );
 };
 const doTxs = async (txCount, run) => {
-  await sleep(1000);
+  await sleep(2000);
   doWTransactions(txCount, run);
 };
 const doTransactions = async () => {

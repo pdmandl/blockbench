@@ -93,21 +93,22 @@ const savePacket = async (id, value, sleepTime, nonce) => {
   }
   console.log("id: " + id, "value: " + value);
   const start = Date.now();
+  let end;
   try {
     const res = await myContract_write.set(id, value, {
       gasLimit: 5000000,
       nonce,
     });
-    console.log(id, value, nonce);
     const receipt = await res.wait();
+    end = Date.now();
+    total.push(end - start);
+    txs = txs.filter((res) => res.id !== id);
     success += 1;
   } catch (e) {
     fail += 1;
+    end = Date.now();
     console.error(e);
   }
-  const end = Date.now();
-  console.log("done id: " + id, "value: " + value);
-  txs = txs.filter((res) => res.id !== id);
   return end - start;
 };
 const doWTransactions = async (numberOfTxsPerRun, run) => {
@@ -123,15 +124,14 @@ const doWTransactions = async (numberOfTxsPerRun, run) => {
     for (let tx of doneTxs) {
       console.log(tx);
       result = [...result, tx];
-      total = [...total, tx];
     }
   } catch (e) {
     console.error(e);
   }
   //doRTransactions();
 };
-const printer = async () => {
-  while (txs.length > 0) {
+const printer = async (start) => {
+  while (txs.length > 0 && Date.now() - start < MAX_TIME) {
     try {
       await sleep(1000);
     } catch (e) {}
@@ -140,16 +140,15 @@ const printer = async () => {
     );
   }
 };
-const measureTime = async () => {
-  const start = Date.now();
-  console.log("the test started at " + start);
+const measureTime = async (start) => {
+  const testStart = Date.now();
   while (txs.length > 0 && Date.now() - start < MAX_TIME) {
     await sleep(1);
   }
   const end = Date.now();
   if (txs.length > 0) fail = fail + txs.length;
   console.log("the test ended at " + end);
-  console.log("the test took " + (end - start) / 1000 + "s to finish.");
+  console.log("the test took " + (end - testStart) / 1000 + "s to finish.");
   let ttl = 0;
   for (let t of total) {
     ttl = ttl + t;
@@ -175,8 +174,8 @@ const measureTime = async () => {
     success: success,
     fail: fail,
     latency: ttl / total.length + " ms",
-    throughput: total.length / ((end - start) / 1000) + " tx/s",
-    time: (end - start) / 1000,
+    throughput: total.length / ((end - testStart) / 1000) + " tx/s",
+    time: (end - testStart) / 1000,
   });
   workbook.xlsx.writeFile(
     `Transactions_${process.argv[4]}tps_${process.argv[5]}tts.xlsx`
@@ -184,25 +183,28 @@ const measureTime = async () => {
   console.log("Successful Txs:" + success);
   console.log("Failed Txs:" + fail);
   console.log("Durschn. Latenz: " + ttl / total.length + " ms");
-  console.log("Durchsatz: " + total.length / ((end - start) / 1000) + " tx/s");
+  console.log(
+    "Durchsatz: " + total.length / ((end - testStart) / 1000) + " tx/s"
+  );
 };
 const doTxs = async (txCount, run) => {
-  await sleep(2000);
+  await sleep(1000);
   doWTransactions(txCount, run);
 };
 const doTransactions = async () => {
   let run = 0;
   while (run * parseInt(process.argv[4]) < parseInt(process.argv[5])) {
     await doTxs(
-      parseInt(process.argv[4]) * 2 < txs.length
-        ? parseInt(process.argv[4]) * 2
+      parseInt(process.argv[4]) < txs.length
+        ? parseInt(process.argv[4])
         : txs.length,
       run
     );
-    run += 2;
+    run += 1;
   }
 };
 const main = async () => {
+  const start = Date.now();
   const nonce = await provider.getTransactionCount(signer.address);
   for (let i = 0; i < parseInt(process.argv[5]); i++) {
     const saveIndex = parseInt(process.argv[7]) * parseInt(process.argv[5]) + i;
@@ -212,11 +214,15 @@ const main = async () => {
     };
   }
   allTxs = txs;
-  measureTime();
-  printer();
+  measureTime(start);
+  printer(start);
   doTransactions();
 };
-main().catch((error) => {
-  console.error(error);
-  process.exitCode = 1;
-});
+main()
+  .then(() => {
+    process.exitCode = 0;
+  })
+  .catch((error) => {
+    console.error(error);
+    process.exitCode = 1;
+  });

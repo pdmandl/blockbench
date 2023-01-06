@@ -102,13 +102,13 @@ const savePacket = async (id, value, sleepTime, nonce) => {
     const receipt = await res.wait();
     end = Date.now();
     total.push(end - start);
-    txs = txs.filter((res) => res.id !== id);
     success += 1;
   } catch (e) {
     fail += 1;
     end = Date.now();
     console.error(e);
   }
+  txs = txs.filter((res) => res.id !== id);
   return end - start;
 };
 const doWTransactions = async (numberOfTxsPerRun, run) => {
@@ -122,7 +122,6 @@ const doWTransactions = async (numberOfTxsPerRun, run) => {
       txsForRun.map((res, index) => res.tx((1000 / txsForRun.length) * index))
     );
     for (let tx of doneTxs) {
-      console.log(tx);
       result = [...result, tx];
     }
   } catch (e) {

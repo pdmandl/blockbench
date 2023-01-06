@@ -93,21 +93,19 @@ const savePacket = async (id, value, sleepTime, nonce) => {
   }
   console.log("id: " + id, "value: " + value);
   const start = Date.now();
-  let end;
   try {
     const res = await myContract_write.set(id, value, {
       gasLimit: 5000000,
       nonce,
     });
     const receipt = await res.wait();
-    end = Date.now();
-    total.push(end - start);
-    success += 1;
   } catch (e) {
-    fail += 1;
-    end = Date.now();
     console.error(e);
   }
+  const end = Date.now();
+  total.push(end - start);
+
+  processed += 1;
   txs = txs.filter((res) => res.id !== id);
   return end - start;
 };
@@ -145,7 +143,7 @@ const measureTime = async (start) => {
     await sleep(1);
   }
   const end = Date.now();
-  if (txs.length > 0) fail = fail + txs.length;
+  const notExecuted = txs.length;
   console.log("the test ended at " + end);
   console.log("the test took " + (end - testStart) / 1000 + "s to finish.");
   let ttl = 0;
@@ -157,8 +155,8 @@ const measureTime = async (start) => {
     { header: "Latency", key: "value" },
   ];
   worksheet2.columns = [
-    { header: "Successful", key: "success" },
-    { header: "Failed", key: "fail" },
+    { header: "Processed", key: "success" },
+    { header: "Unrpocessed", key: "fail" },
     { header: "Durschn. Latenz:", key: "latency" },
     { header: "Dursatz:", key: "throughput" },
     { header: "Total Time", key: "time" },
@@ -170,8 +168,8 @@ const measureTime = async (start) => {
   });
   console.log(end - start);
   worksheet2.addRow({
-    success: success,
-    fail: fail,
+    success: processed,
+    fail: notExecuted,
     latency: ttl / total.length + " ms",
     throughput: total.length / ((end - testStart) / 1000) + " tx/s",
     time: (end - testStart) / 1000,
@@ -180,7 +178,7 @@ const measureTime = async (start) => {
     `Transactions_${process.argv[4]}tps_${process.argv[5]}tts.xlsx`
   );
   console.log("Successful Txs:" + success);
-  console.log("Failed Txs:" + fail);
+  console.log("Failed Txs:" + notExecuted);
   console.log("Durschn. Latenz: " + ttl / total.length + " ms");
   console.log(
     "Durchsatz: " + total.length / ((end - testStart) / 1000) + " tx/s"

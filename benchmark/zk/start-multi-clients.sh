@@ -25,10 +25,10 @@ array=($(cat $HOSTS_PRIV))
 wallets=($(cat $RICH_WALLETS))
 addresses=($(cat $ADDRESSES))
 contracts=($(cat $ETH_HOME_LOCAL/Output.txt))
+let t=$2*60*1000
 for client in `cat $CLIENTS`; do
   if [[ $j -lt $1 ]]; then
     echo starting client $client  threads=$3 clientNo=$j nservers=$2 txrate=$4
-    let t=$2*60*1000-1000
       if [[ "$BENCHMARK" = "ycsb" ]]; then
           rm "${client}"_kv.txt
           nohup ssh -oStrictHostKeyChecking=no $USER@$client "cd $ETH_HOME && sudo npm install @ethersproject/experimental ethers exceljs zksync-web3 && node zkKvStore.js ${wallets[j]} http://${array[0]} $4 500 ${contracts[0]} $j $1 $t" > "${client}"_kv.txt &
@@ -68,7 +68,7 @@ if [[ $5 == "-drop" ]]; then
     let i=$i+1
   done
 else
-  let M=$2*60
+  let M=$2*60 + 60
   echo "sleeping $M seconds before killing drivers (clients) and retrieving xls files"
   sleep $M
   for client in `cat $CLIENTS`; do

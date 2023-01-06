@@ -1,3 +1,4 @@
+const { fail } = require("assert");
 const ExcelJS = require("exceljs");
 var fs = require("fs");
 
@@ -59,6 +60,21 @@ async function createThroughput(throughput, fileName) {
   worksheet.addRow(throughput);
   await workbook.xlsx.writeFile(tmps.join("_") + "_throughput" + ".xlsx");
 }
+async function createSuccess(success, fileName) {
+  const splt = fileName.split("/");
+  const tmp = splt[splt.length - 1];
+  const tmps = tmp.split("_");
+  tmps.pop();
+  const workbook = new ExcelJS.Workbook();
+  const worksheet = workbook.addWorksheet("Test");
+  worksheet.columns = [
+    { header: "SUCCESS", key: "success", width: 15 },
+    { header: "FAIL", key: "fail", width: 15 },
+    { header: "NO ANSWER", key: "notExecuted", width: 15 },
+  ];
+  worksheet.addRow(success);
+  await workbook.xlsx.writeFile(tmps.join("_") + "_rate" + ".xlsx");
+}
 async function createTransactions(transactions, fileName) {
   const splt = fileName.split("/");
   const tmp = splt[splt.length - 1];
@@ -75,10 +91,10 @@ async function createTransactions(transactions, fileName) {
   ];
   for (let i = 0; i < 6000; i++) {
     worksheet.addRow({
-      tps_25: transactions.tps_25[i],
-      tps_50: transactions.tps_50[i],
-      tps_75: transactions.tps_75[i],
-      tps_100: transactions.tps_100[i],
+      tps_25: transactions.tps_25[i] ? transactions.tps_25[i] : "",
+      tps_50: transactions.tps_50[i] ? transactions.tps_50[i] : "",
+      tps_75: transactions.tps_75[i] ? transactions.tps_75[i] : "",
+      tps_100: transactions.tps_100[i] ? transactions.tps_100[i] : "",
     });
   }
   await workbook.xlsx.writeFile(tmps.join("_") + "_latency" + ".xlsx");
@@ -91,6 +107,7 @@ async function readFile(fileName) {
   const c2 = ws.getColumn(2);
   const c3 = ws.getColumn(3);
   const c5 = ws.getColumn(5);
+  const c6 = ws.getColumn(6);
   const splt = fileName.split("/");
   const tmp = splt[splt.length - 1];
   const tmps = tmp.split("_");
@@ -107,11 +124,12 @@ async function readFile(fileName) {
     success: c1.values[2],
     fail: c2.values[2],
     latency: c3.values[2],
+    notExecuted: c6.values[2] ? c6.values[2] : 0,
     transactions: values,
   };
 }
 async function start() {
-  const runs = gather(
+  /*   const runs = gather(
     "/Users/paulmandl/Desktop/experiments/RUNS/SMALLBANK/ETH_SMALLBANK_RUN"
   );
   await readFiles(
@@ -131,6 +149,27 @@ async function start() {
   await readFiles(
     runs3,
     "Users/paulmandl/Desktop/experiments/RUNS/SMALLBANK/ZK_SMALLBANK_RUN"
+  ); */
+  const runs = gather(
+    "/Users/paulmandl/Desktop/experiments/RUNS/YCSB/ETH_YCSB_RUN"
+  );
+  await readFiles(
+    runs,
+    "/Users/paulmandl/Desktop/experiments/RUNS/YCSB/ETH_YCSB_RUN"
+  );
+  const runs2 = gather(
+    "/Users/paulmandl/Desktop/experiments/RUNS/YCSB/POLY_YCSB_RUN"
+  );
+  await readFiles(
+    runs2,
+    "/Users/paulmandl/Desktop/experiments/RUNS/YCSB/POLY_YCSB_RUN"
+  );
+  const runs3 = gather(
+    "/Users/paulmandl/Desktop/experiments/RUNS/YCSB/ZK_YCSB_RUN"
+  );
+  await readFiles(
+    runs3,
+    "Users/paulmandl/Desktop/experiments/RUNS/YCSB/ZK_YCSB_RUN"
   );
   /*   const dirs = fs.readdirSync("/Users/paulmandl/Desktop/experiments/RUNS");
   if (dirs[0] == ".DS_Store") dirs.shift();
@@ -218,21 +257,32 @@ async function readFiles(runs, fileName) {
   console.log("__________________");
   console.log("__________________");
   let through = {};
+  let throughNoFail = {};
   let transactions = {};
+  let fail = 0;
+  let success = 0;
+  let notExecuted = 0;
   for (let run of runs) {
     for (let key in run.files) {
       if (!through[key]) through[key] = [];
       if (!transactions[key]) transactions[key] = [];
+      if (!throughNoFail[key]) throughNoFail[key] = [];
       let time = 0;
       let throughput = 0;
+      let throughputNoFail = 0;
       for (let file of run.files[key]) {
         const fileName = run.run + "/" + file;
         const content = await readFile(fileName);
         if (content.time > time) time = content.time;
+        fail += content.fail;
+        success += content.success;
+        notExecuted += content.notExecuted;
         throughput += content.fail + content.success;
+        throughputNoFail += content.success;
         transactions[key] = transactions[key].concat(content.transactions);
       }
       through[key].push(throughput / time);
+      throughNoFail[key].push(throughputNoFail / time);
     }
   }
   for (let key in through) {
@@ -241,5 +291,6 @@ async function readFiles(runs, fileName) {
   }
   await createThroughput(through, fileName);
   await createTransactions(transactions, fileName);
+  await createSuccess({ success, fail, notExecuted }, fileName);
 }
 start();

@@ -18,7 +18,7 @@ ETH_DATA=/home/ubuntu/node1
 LOG_DIR=/home/ubuntu/smallbank
 # folder that contains the benchmark (client) executable (make sure that you have build the client) (this could be on a network share)
 EXE_HOME=/home/ubuntu/blockbench/src/macro/smallbank
-# name/type of the benchmark
+# name/type of the benchmark !! DONT FORGET TO ALSO CHANGE THE LINE IN migrations/1_deploy_contract.js
 #BENCHMARK=ycsb
 #BENCHMARK=nft
 BENCHMARK=smallbank

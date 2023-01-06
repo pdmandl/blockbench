@@ -17,7 +17,6 @@ console.log("NR_OF_CLIENTS" + process.argv[8]);
 const ethers = require("ethers");
 const zksync = require("zksync-web3");
 const Excel = require("exceljs");
-const { NonceManager } = require("@ethersproject/experimental");
 
 let workbook = new Excel.Workbook();
 let worksheet = workbook.addWorksheet(
@@ -33,7 +32,6 @@ let fail = 0;
 let provider = new zksync.Provider(url + ":3050");
 const ethereumProvider = new ethers.providers.JsonRpcProvider(url + ":8545");
 var signer = new zksync.Wallet(process.argv[2], provider, ethereumProvider);
-var managedSigner = new NonceManager(signer);
 var address = process.argv[6];
 var abi = [
   {
@@ -80,11 +78,11 @@ var abi = [
   },
 ];
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
-const myContract_write = new ethers.Contract(address, abi, managedSigner); // Write only
+const myContract_write = new ethers.Contract(address, abi, signer); // Write only
 const myContract_read = new ethers.Contract(address, abi, provider); // Read only
 
 const savePacket = async (id, value, sleepTime) => {
-  await sleep(sleepTime);
+  await sleep(sleepTime - 0.1 * sleepTime);
   console.log("id: " + id, "value: " + value);
   const start = Date.now();
   try {

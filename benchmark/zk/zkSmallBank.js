@@ -159,7 +159,7 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 const sendPayment = async (from, to, value, id, sleepTime) => {
   console.log("from: " + from, "to: " + to, "value: " + value);
-  await sleep(sleepTime - 20);
+  await sleep(sleepTime - 0.1 * sleepTime);
   const start = Date.now();
   try {
     const res = await myContract_write.sendPayment(from, to, value, {

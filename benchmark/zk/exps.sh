@@ -2,7 +2,7 @@
 RATES=(25 50 75 100)
 NNODES=(4 4 4 4)
 NCLIENTS=(4 4 4 4 )
-SLEEPS=(350 350 350 350)
+SLEEPS=(250 250 250 250)
 
 i=0
 chmod 755 run-bench.sh

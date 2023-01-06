@@ -27,7 +27,7 @@ addresses=($(cat $ADDRESSES))
 contracts=($(cat $ETH_HOME_LOCAL/Output.txt))
 for client in `cat $CLIENTS`; do
   if [[ $j -lt $1 ]]; then
-    echo starting client $client  threads=$3 clientNo=$i nservers=$2 txrate=$4
+    echo starting client $client  threads=$3 clientNo=$j nservers=$2 txrate=$4
       if [[ "$BENCHMARK" = "ycsb" ]]; then
           rm "${client}"_kv.txt
           nohup ssh -oStrictHostKeyChecking=no $USER@$client "cd $ETH_HOME && sudo npm install @ethersproject/experimental ethers exceljs zksync-web3 && node zkKvStore.js ${wallets[j]} http://${array[0]} $4 500 ${contracts[0]} $j $1" > "${client}"_kv.txt &
@@ -41,7 +41,7 @@ for client in `cat $CLIENTS`; do
       if [[ "$BENCHMARK" = "nft" ]]; then
           rm "${client}"_nft.txt
           nohup ssh -oStrictHostKeyChecking=no $USER@$client "cd $ETH_HOME && sudo npm install @ethersproject/experimental ethers exceljs zksync-web3 && node zkNftMint.js ${wallets[j]} http://${array[0]} $4 500 ${contracts[0]} ${addresses[j]}" > "${client}"_sb.txt &
-          echo dritter: $out
+          echo host: "${array[j]}" contract: $out
       fi  
   fi
   let j=$j+1

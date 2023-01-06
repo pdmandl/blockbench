@@ -81,14 +81,23 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const myContract_write = new ethers.Contract(address, abi, signer); // Write only
 const myContract_read = new ethers.Contract(address, abi, provider); // Read only
 
-const savePacket = async (id, value, sleepTime) => {
-  await sleep(sleepTime - 0.1 * sleepTime);
+const savePacket = async (id, value, sleepTime, nonce) => {
+  await sleep(sleepTime);
+  try {
+    const txCount = await provider.getTransactionCount(signer.address);
+    if (nonce - 50 > txCount) nonce = txCount + 49;
+    if (nonce < txCount) nonce = txCount;
+  } catch (e) {
+    console.log(e);
+  }
   console.log("id: " + id, "value: " + value);
   const start = Date.now();
   try {
     const res = await myContract_write.set(id, value, {
       gasLimit: 5000000,
+      nonce,
     });
+    console.log(id, value, nonce);
     const receipt = await res.wait();
     success += 1;
   } catch (e) {
@@ -175,29 +184,36 @@ const measureTime = async () => {
   console.log("Durchsatz: " + total.length / ((end - start) / 1000) + " tx/s");
 };
 const doTxs = async (txCount, run) => {
-  await sleep(1000);
+  await sleep(2000);
   doWTransactions(txCount, run);
 };
 const doTransactions = async () => {
   let run = 0;
   while (run * parseInt(process.argv[4]) < parseInt(process.argv[5])) {
     await doTxs(
-      parseInt(process.argv[4]) < txs.length
-        ? parseInt(process.argv[4])
+      parseInt(process.argv[4]) * 2 < txs.length
+        ? parseInt(process.argv[4]) * 2
         : txs.length,
       run
     );
-    run += 1;
+    run += 2;
   }
 };
-for (let i = 0; i < parseInt(process.argv[5]); i++) {
-  const saveIndex = parseInt(process.argv[7]) * parseInt(process.argv[5]) + i;
-  txs[i] = {
-    tx: (sleep) => savePacket(saveIndex, "TEST" + i, sleep),
-    id: saveIndex,
-  };
-}
-allTxs = txs;
-measureTime();
-printer();
-doTransactions();
+const main = async () => {
+  const nonce = await provider.getTransactionCount(signer.address);
+  for (let i = 0; i < parseInt(process.argv[5]); i++) {
+    const saveIndex = parseInt(process.argv[7]) * parseInt(process.argv[5]) + i;
+    txs[i] = {
+      tx: (sleep) => savePacket(saveIndex, "TEST" + i, sleep, nonce + i),
+      id: saveIndex,
+    };
+  }
+  allTxs = txs;
+  measureTime();
+  printer();
+  doTransactions();
+};
+main().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});

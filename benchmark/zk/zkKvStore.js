@@ -146,6 +146,7 @@ const measureTime = async () => {
     await sleep(1);
   }
   const end = Date.now();
+  if (txs.length > 0) fail = fail + txs.length;
   console.log("the test ended at " + end);
   console.log("the test took " + (end - start) / 1000 + "s to finish.");
   let ttl = 0;

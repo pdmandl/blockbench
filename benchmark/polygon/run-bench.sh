@@ -6,15 +6,15 @@ cd `dirname ${BASH_SOURCE-$0}`
 ./stop-all.sh $1 
 ./init-all.sh $1 
 echo done init
-./gather.sh 
+./gather.sh $1
 echo done gather
 #./start-all.sh $1 
 
-let M=40
+let M=40+$1*60
 echo "Sleeping $M seconds to allow network to bootstrap"
 sleep $M
 
-./start-multi-clients.sh $3 $1 $2 $4 $5 
+#./start-multi-clients.sh $3 $1 $2 $4 $5 
 #BACK=$!
 #sleep 100
 #python partition.py $1

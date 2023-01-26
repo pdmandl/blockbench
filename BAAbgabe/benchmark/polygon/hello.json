@@ -1,0 +1,178 @@
+{
+    "digitalProductName": "Service_Package_V1",
+    "runStartDate": "2022-12-20T09:39:33.661Z",
+    "runUntilDate": "2022-12-20T09:39:33.661Z",
+    "runCycleInMonth": 0,
+    "baseValueItems": [
+        {
+            "forSegmentName": null,
+            "forRepititionNumber": 0,
+            "isRepititionSegment": false,
+            "varsToProvide": [
+                {
+                    "name": "operatorId",
+                    "labels": null,
+                    "varType": 2,
+                    "value": 1,
+                    "displayType": 0,
+                    "validationRules": null
+                },
+                {
+                    "name": "isRepetitive",
+                    "labels": null,
+                    "varType": 2,
+                    "value": 0,
+                    "displayType": 0,
+                    "validationRules": null
+                },
+                {
+                    "name": "runAfterWorkload",
+                    "labels": null,
+                    "varType": 5,
+                    "value": 0,
+                    "displayType": 0,
+                    "validationRules": null
+                },
+                {
+                    "name": "runAfterMonths",
+                    "labels": null,
+                    "varType": 2,
+                    "value": 1,
+                    "displayType": 0,
+                    "validationRules": null
+                },
+                {
+                    "name": "workloadInterval",
+                    "labels": null,
+                    "varType": 5,
+                    "value": 1,
+                    "displayType": 0,
+                    "validationRules": null
+                },
+                {
+                    "name": "monthInterval",
+                    "labels": null,
+                    "varType": 2,
+                    "value": 1,
+                    "displayType": 0,
+                    "validationRules": null
+                },
+                {
+                    "name": "startDate",
+                    "labels": null,
+                    "varType": 7,
+                    "value": "2022-12-20T09:39:33.661Z",
+                    "displayType": 0,
+                    "validationRules": [
+                        "!= null"
+                    ]
+                },
+                {
+                    "name": "name",
+                    "labels": null,
+                    "varType": 3,
+                    "value": "id1660635321067",
+                    "displayType": 0,
+                    "validationRules": null
+                },
+                {
+                    "name": "title",
+                    "labels": null,
+                    "varType": 3,
+                    "value": {
+                        "id": 1273,
+                        "entries": {
+                            "en": "Example Package1234",
+                            "de": "Beispielpaket"
+                        }
+                    },
+                    "displayType": 0,
+                    "validationRules": null
+                }
+            ]
+        },
+        {
+            "forSegmentName": "@p",
+            "forRepititionNumber": 0,
+            "isRepititionSegment": true,
+            "varsToProvide": [
+                {
+                    "name": "showSums",
+                    "labels": null,
+                    "varType": 4,
+                    "value": false,
+                    "displayType": 0,
+                    "validationRules": null
+                },
+                {
+                    "name": "id",
+                    "labels": null,
+                    "varType": 2,
+                    "value": 232,
+                    "displayType": 0,
+                    "validationRules": null
+                },
+                {
+                    "name": "name",
+                    "labels": null,
+                    "varType": 3,
+                    "value": {
+                        "id": 1662,
+                        "entries": {
+                            "de": "Beispiel Material",
+                            "en": "Example Material"
+                        }
+                    },
+                    "displayType": 0,
+                    "validationRules": null
+                },
+                {
+                    "name": "costs",
+                    "labels": null,
+                    "varType": 5,
+                    "value": 120,
+                    "displayType": 0,
+                    "validationRules": null
+                },
+                {
+                    "name": "margin",
+                    "labels": null,
+                    "varType": 5,
+                    "value": 20,
+                    "displayType": 0,
+                    "validationRules": null
+                },
+                {
+                    "name": "primeCosts",
+                    "labels": null,
+                    "varType": 5,
+                    "value": 100,
+                    "displayType": 0,
+                    "validationRules": null
+                },
+                {
+                    "name": "amount",
+                    "labels": null,
+                    "varType": 5,
+                    "value": 1,
+                    "displayType": 0,
+                    "validationRules": null
+                },
+                {
+                    "name": "entries",
+                    "labels": null,
+                    "varType": 8,
+                    "value": [],
+                    "displayType": 0,
+                    "validationRules": [
+                        "!= null"
+                    ]
+                }
+            ]
+        }
+    ],
+    "initializationOnly": false,
+    "baseValueOverrideItems": [],
+    "baseValueItemsDirect": [],
+    "externalDependencyItems": []
+}

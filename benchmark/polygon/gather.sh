@@ -10,7 +10,9 @@ done
 for secret in `cat $SECRETS`; do
   command="${command} --bootnode ${secret}"
 done
+i=0
 for host in `cat $HOSTS`; do
+  if [[ $i -lt $1 ]]; then
   ssh -oStrictHostKeyChecking=no $USER@$host chmod 755 $ETH_HOME/start.sh
   ssh -oStrictHostKeyChecking=no $USER@$host rm -rf $ETH_HOME/genesis.json
   ssh -oStrictHostKeyChecking=no $USER@$host "cd $ETH_HOME && $command"
@@ -18,4 +20,6 @@ for host in `cat $HOSTS`; do
   ssh -oStrictHostKeyChecking=no $USER@$host "cd $ETH_HOME && polygon-edge genesis predeploy --chain genesis.json --artifacts-path KVstore.json --predeploy-address '0x01111'"
   ssh -oStrictHostKeyChecking=no $USER@$host "cd $ETH_HOME && polygon-edge genesis predeploy --chain genesis.json --artifacts-path NftMint.json --predeploy-address '0x01112'"
   ssh -oStrictHostKeyChecking=no $USER@$host $ETH_HOME/start.sh
+  fi
+  let i=$i+1
 done

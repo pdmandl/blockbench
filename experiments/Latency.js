@@ -1,6 +1,8 @@
 const ExcelJS = require("exceljs");
 var fs = require("fs");
 
+const path = "/Users/paulmandl/Downloads/blockbench-master-mehd/experiments/";
+
 function splitByTps(tps, file) {
   let tps_25;
   let tps_50;
@@ -115,35 +117,30 @@ async function readFile(fileName, type) {
   };
 }
 async function start(type) {
-  const txEth = await readFile(
-    "/Users/paulmandl/Desktop/experiments/ETH_" + type + "_latency.xlsx"
-  );
+  const txEth = await readFile(path + "ETH_" + type + "_latency.xlsx");
   console.log(txEth);
-  const txPoly = await readFile(
-    "/Users/paulmandl/Desktop/experiments/POLY_" + type + "_latency.xlsx"
-  );
+  const txPoly = await readFile(path + "POLY_" + type + "_latency.xlsx");
   console.log(txPoly);
-  const txZk = await readFile(
-    "/Users/paulmandl/Desktop/experiments/ZK_" + type + "_latency.xlsx"
-  );
+  const txZk = await readFile(path + "ZK_" + type + "_latency.xlsx");
   const workbook = new ExcelJS.Workbook();
   const worksheet = workbook.addWorksheet("Test");
 
   worksheet.columns = [
-    { header: "Ethereum 25 tx/s", key: "tps_25_eth", width: 15 },
-    { header: "Polygon 25 tx/s", key: "tps_25_poly", width: 15 },
-    { header: "zkSync 25 tx/s", key: "tps_25_zk", width: 15 },
-    { header: "Ethereum 50 tx/s", key: "tps_50_eth", width: 15 },
-    { header: "Polygon 50 tx/s", key: "tps_50_poly", width: 15 },
-    { header: "zkSync 50 tx/s", key: "tps_50_zk", width: 15 },
-    { header: "Ethereum 75 tx/s", key: "tps_75_eth", width: 15 },
-    { header: "Polygon 75 tx/s", key: "tps_75_poly", width: 15 },
-    { header: "zkSync 75 tx/s", key: "tps_75_zk", width: 15 },
-    { header: "Ethereum 100 tx/s", key: "tps_100_eth", width: 15 },
-    { header: "Polygon 100 tx/s", key: "tps_100_poly", width: 15 },
-    { header: "zkSync 100 tx/s", key: "tps_100_zk", width: 15 },
+    { header: "Ethereum 4 Nodes", key: "tps_25_eth", width: 15 },
+    { header: "Polygon 4 Nodes", key: "tps_25_poly", width: 15 },
+    { header: "zkSync 4 Nodes", key: "tps_25_zk", width: 15 },
+    { header: "Ethereum 8 Nodes", key: "tps_50_eth", width: 15 },
+    { header: "Polygon 8 Nodes", key: "tps_50_poly", width: 15 },
+    { header: "zkSync 8 Nodes", key: "tps_50_zk", width: 15 },
+    { header: "Ethereum 12 Nodes", key: "tps_75_eth", width: 15 },
+    { header: "Polygon 12 Nodes", key: "tps_75_poly", width: 15 },
+    { header: "zkSync 12 Nodes", key: "tps_75_zk", width: 15 },
+    { header: "Ethereum 16 Nodes", key: "tps_100_eth", width: 15 },
+    { header: "Polygon 16 Nodes", key: "tps_100_poly", width: 15 },
+    { header: "zkSync 16 Nodes", key: "tps_100_zk", width: 15 },
   ];
   for (let i = 0; i < 6000; i++) {
+    console.log("done tx", i);
     worksheet.addRow({
       tps_25_eth: txEth["25_tps"][i],
       tps_25_poly: txPoly["25_tps"][i],

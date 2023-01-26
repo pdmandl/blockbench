@@ -2,6 +2,8 @@ const { fail } = require("assert");
 const ExcelJS = require("exceljs");
 var fs = require("fs");
 
+const path =
+  "/Users/paulmandl/Downloads/blockbench-master-mehd/experiments/RUNS";
 function splitByTps(tps, file) {
   let tps_25;
   let tps_50;
@@ -22,6 +24,27 @@ function splitByTps(tps, file) {
       break;
   }
   return { tps_25, tps_50, tps_75, tps_100 };
+}
+function splitByNode(node, file) {
+  let node4;
+  let node8;
+  let node12;
+  let node16;
+  switch (node) {
+    case 4:
+      node4 = file;
+      break;
+    case 8:
+      node8 = file;
+      break;
+    case 12:
+      node12 = file;
+      break;
+    case 16:
+      node16 = file;
+      break;
+  }
+  return { node4, node8, node12, node16 };
 }
 function gather(prefix) {
   const runs = [prefix + "1", prefix + "2", prefix + "3"];
@@ -44,6 +67,28 @@ function gather(prefix) {
   }
   return tempRuns;
 }
+function gatherScaling(prefix) {
+  const runs = [prefix + "1", prefix + "2", prefix + "3"];
+  const tempRuns = [];
+  for (let name of runs) {
+    const run = fs.readdirSync(name);
+    let tempRun = {};
+    const files = { node4: [], node8: [], node12: [], node16: [] };
+    for (let file of run) {
+      const tps = parseInt(file.split("_")[1]);
+      console.log(tps);
+      const splits = splitByNode(tps, file);
+      if (splits.node4) files.node4.push(splits.node4);
+      if (splits.node8) files.node8.push(splits.node8);
+      if (splits.node12) files.node12.push(splits.node12);
+      if (splits.node16) files.node16.push(splits.node16);
+    }
+    tempRun.run = name;
+    tempRun.files = files;
+    tempRuns.push(tempRun);
+  }
+  return tempRuns;
+}
 async function createThroughput(throughput, fileName) {
   const splt = fileName.split("/");
   const tmp = splt[splt.length - 1];
@@ -52,13 +97,28 @@ async function createThroughput(throughput, fileName) {
   const workbook = new ExcelJS.Workbook();
   const worksheet = workbook.addWorksheet("Test");
   worksheet.columns = [
-    { header: "25 tx/s", key: "tps_25", width: 15 },
-    { header: "50 tx/s", key: "tps_50", width: 15 },
-    { header: "75 tx/s", key: "tps_75", width: 15 },
-    { header: "100 tx/s", key: "tps_100", width: 15 },
+    { header: "4 Nodes", key: "node4", width: 15 },
+    { header: "8 Nodes", key: "node8", width: 15 },
+    { header: "12 Nodes", key: "node12", width: 15 },
+    { header: "16 Nodes", key: "node16", width: 15 },
   ];
   worksheet.addRow(throughput);
   await workbook.xlsx.writeFile(tmps.join("_") + "_throughput" + ".xlsx");
+}
+async function createSuccess(success, fileName) {
+  const splt = fileName.split("/");
+  const tmp = splt[splt.length - 1];
+  const tmps = tmp.split("_");
+  tmps.pop();
+  const workbook = new ExcelJS.Workbook();
+  const worksheet = workbook.addWorksheet("Test");
+  worksheet.columns = [
+    { header: "SUCCESS", key: "success", width: 15 },
+    { header: "FAIL", key: "fail", width: 15 },
+    { header: "NO ANSWER", key: "notExecuted", width: 15 },
+  ];
+  worksheet.addRow(success);
+  await workbook.xlsx.writeFile(tmps.join("_") + "_rate" + ".xlsx");
 }
 async function createSuccess(success, fileName) {
   const splt = fileName.split("/");
@@ -84,17 +144,18 @@ async function createTransactions(transactions, fileName) {
   const worksheet = workbook.addWorksheet("Test");
 
   worksheet.columns = [
-    { header: "25 tx/s", key: "tps_25", width: 15 },
-    { header: "50 tx/s", key: "tps_50", width: 15 },
-    { header: "75 tx/s", key: "tps_75", width: 15 },
-    { header: "100 tx/s", key: "tps_100", width: 15 },
+    { header: "4 Nodes", key: "node4", width: 15 },
+    { header: "8 Nodes", key: "node8", width: 15 },
+    { header: "12 Nodes", key: "node12", width: 15 },
+    { header: "16 Nodes", key: "node16", width: 15 },
   ];
   for (let i = 0; i < 6000; i++) {
+    console.log("doing tx:" + i);
     worksheet.addRow({
-      tps_25: transactions.tps_25[i] ? transactions.tps_25[i] : "",
-      tps_50: transactions.tps_50[i] ? transactions.tps_50[i] : "",
-      tps_75: transactions.tps_75[i] ? transactions.tps_75[i] : "",
-      tps_100: transactions.tps_100[i] ? transactions.tps_100[i] : "",
+      node4: transactions.node4[i] ? transactions.node4[i] : "",
+      node8: transactions.node8[i] ? transactions.node8[i] : "",
+      node12: transactions.node12[i] ? transactions.node12[i] : "",
+      node16: transactions.node16[i] ? transactions.node16[i] : "",
     });
   }
   await workbook.xlsx.writeFile(tmps.join("_") + "_latency" + ".xlsx");
@@ -110,10 +171,11 @@ async function readFile(fileName) {
   const c6 = ws.getColumn(6);
   const splt = fileName.split("/");
   const tmp = splt[splt.length - 1];
-  const tmps = tmp.split("_");
+  let tmps = tmp.split("_");
   tmps.pop();
+  tmps.splice(1, 1);
   const name = tmps.join("_");
-  const ws2 = wb.getWorksheet(name);
+  const ws2 = wb.getWorksheet(1);
   const c2ws2 = ws2.getColumn(2);
   const values = [];
   c2ws2.eachCell((e, index) => {
@@ -128,7 +190,7 @@ async function readFile(fileName) {
     transactions: values,
   };
 }
-async function start() {
+async function start(type) {
   /*   const runs = gather(
     "/Users/paulmandl/Desktop/experiments/RUNS/SMALLBANK/ETH_SMALLBANK_RUN"
   );
@@ -150,27 +212,21 @@ async function start() {
     runs3,
     "Users/paulmandl/Desktop/experiments/RUNS/SMALLBANK/ZK_SMALLBANK_RUN"
   ); */
-  const runs = gather(
-    "/Users/paulmandl/Desktop/experiments/RUNS/YCSB/ETH_YCSB_RUN"
-  );
-  await readFiles(
-    runs,
-    "/Users/paulmandl/Desktop/experiments/RUNS/YCSB/ETH_YCSB_RUN"
-  );
-  const runs2 = gather(
-    "/Users/paulmandl/Desktop/experiments/RUNS/YCSB/POLY_YCSB_RUN"
-  );
-  await readFiles(
-    runs2,
-    "/Users/paulmandl/Desktop/experiments/RUNS/YCSB/POLY_YCSB_RUN"
-  );
-  const runs3 = gather(
-    "/Users/paulmandl/Desktop/experiments/RUNS/YCSB/ZK_YCSB_RUN"
-  );
-  await readFiles(
-    runs3,
-    "Users/paulmandl/Desktop/experiments/RUNS/YCSB/ZK_YCSB_RUN"
-  );
+  if (type == "SKALIERUNG") {
+    const runs = gatherScaling(path + `/${type}/ETH_${type}_`);
+    await readFiles(runs, path + `/${type}/ETH_${type}_`);
+    const runs2 = gatherScaling(path + `/${type}/POLY_${type}_`);
+    await readFiles(runs2, path + `/${type}/POLY_${type}_`);
+    const runs3 = gatherScaling(path + `/${type}/ZK_${type}_`);
+    await readFiles(runs3, path + `/${type}/ZK_${type}_`);
+  } else {
+    const runs = gather(path + `/${type}/ETH_${type}_RUN`);
+    await readFiles(runs, path + `/${type}/ETH_${type}_RUN`);
+    const runs2 = gather(path + `/${type}/POLY_${type}_RUN`);
+    await readFiles(runs2, path + `/${type}/POLY_${type}_RUN`);
+    const runs3 = gather(path + `/${type}/ZK_${type}_RUN`);
+    await readFiles(runs3, path + `/${type}/ZK_${type}_RUN`);
+  }
   /*   const dirs = fs.readdirSync("/Users/paulmandl/Desktop/experiments/RUNS");
   if (dirs[0] == ".DS_Store") dirs.shift();
   const files = [];
@@ -263,6 +319,7 @@ async function readFiles(runs, fileName) {
   let success = 0;
   let notExecuted = 0;
   for (let run of runs) {
+    console.log(run);
     for (let key in run.files) {
       if (!through[key]) through[key] = [];
       if (!transactions[key]) transactions[key] = [];
@@ -281,6 +338,7 @@ async function readFiles(runs, fileName) {
         throughputNoFail += content.success;
         transactions[key] = transactions[key].concat(content.transactions);
       }
+      console.log(transactions);
       through[key].push(throughput / time);
       throughNoFail[key].push(throughputNoFail / time);
     }
@@ -293,4 +351,4 @@ async function readFiles(runs, fileName) {
   await createTransactions(transactions, fileName);
   await createSuccess({ success, fail, notExecuted }, fileName);
 }
-start();
+start(process.argv[2]);
